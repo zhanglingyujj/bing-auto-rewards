@@ -882,7 +882,7 @@ def process_account_group(group_name, accounts, search_words):
                         chrome_options.add_argument(f'--user-data-dir={temp_dir}')
                         chrome_options.add_argument(f'--remote-debugging-port={9222 + hash(group_name) % 1000}')
                         
-                        driver_result['driver'] = uc.Chrome(options=chrome_options, version_main=138)
+                        driver_result['driver'] = uc.Chrome(options=chrome_options, version_main=None)
                         logger.info(f"账号组 {group_name} Chrome浏览器启动成功！")
                     except Exception as e:
                         logger.error(f"账号组 {group_name} ChromeDriver创建失败: {e}")
