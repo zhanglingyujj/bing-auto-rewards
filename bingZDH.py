@@ -2,249 +2,198 @@ import json
 import time
 import logging
 import random
-import re
 import os
-import datetime
 import tempfile
-import threading
+import requests
+from bs4 import BeautifulSoup
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, WebDriverException
-import requests
-from bs4 import BeautifulSoup
 
-# ========== 核心配置优化 ==========
+# ========== 配置模块 ==========
 WAIT_TIMEOUT = 20
-RETRY_COUNT = 2
-BING_URL = "https://www.bing.com"
-REWARDS_URL = "https://rewards.bing.com/"
-
-# 环境检测
 IS_GITHUB_ACTIONS = os.getenv('GITHUB_ACTIONS') == 'true'
-HEADLESS = True  # 强制使用无头模式
+# 在 CI 环境下，强制开启无头模式
+HEADLESS = True 
+
+# 日志配置
 LOG_FILE = "/tmp/bing_automation.log" if IS_GITHUB_ACTIONS else "bing_automation.log"
-
-# 根据环境动态调整搜索节奏
-if IS_GITHUB_ACTIONS:
-    SLEEP_BETWEEN_SEARCH = (3, 8)
-    SLEEP_AFTER_4_SEARCH = 60 # CI 环境不需要停太久，浪费额度
-else:
-    SLEEP_BETWEEN_SEARCH = (10, 25)
-    SLEEP_AFTER_4_SEARCH = 600
-
-# ========== 日志配置 ==========
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_FILE, encoding="utf-8"),
-        logging.StreamHandler()
-    ]
+    handlers=[logging.FileHandler(LOG_FILE, encoding="utf-8"), logging.StreamHandler()]
 )
 logger = logging.getLogger(__name__)
 
-# ========== 通用工具函数 ==========
+# ========== 核心功能函数 ==========
 
-def get_driver(group_name):
+def get_bing_hotwords():
     """
-    创建并返回配置优化的 undetected_chromedriver 实例
+    修复：获取 Bing 热搜词作为搜索来源
+    """
+    logger.info("正在获取 Bing 热搜词...")
+    try:
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+        # 从 Bing 首页获取搜索建议或使用公共接口
+        resp = requests.get("https://www.bing.com/AS/Suggestions?pt=page.home&mkt=zh-cn&qry=a", headers=headers, timeout=10)
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        words = [li.get_text() for li in soup.find_all('li')]
+        
+        # 如果爬取失败，使用兜底词库
+        if not words or len(words) < 5:
+            words = ["今日天气", "GitHub 教程", "Python 自动化", "AI 新闻", "必应奖励", "微软商城", "每日英语"]
+        
+        logger.info(f"成功获取 {len(words)} 个搜索词")
+        return words
+    except Exception as e:
+        logger.warning(f"获取热词失败，使用默认词库: {e}")
+        return ["Bing Rewards", "Microsoft Azure", "Xbox Game Pass", "Edge Browser", "Windows 11"]
+
+def get_driver(email):
+    """
+    配置并启动浏览器
     """
     options = uc.ChromeOptions()
-    # 基础稳定选项
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
-    options.add_argument('--window-size=1920,1080')
     
-    # 自动识别 GitHub Actions 中的 Chrome 路径
+    # 自动定位 Chrome 二进制文件
     chrome_bin = os.getenv('CHROME_BIN')
     if chrome_bin:
         options.binary_location = chrome_bin
 
-    # 隐私与反检测
-    options.add_argument('--incognito')
-    options.add_argument('--disable-blink-features=AutomationControlled')
-    
-    # 使用临时文件夹存放用户数据，避免进程冲突
-    tmp_user_data = tempfile.mkdtemp(prefix=f"chrome_user_{group_name}_")
-    options.add_argument(f'--user-data-dir={tmp_user_data}')
+    # 使用临时目录存放 User Data，防止多账号冲突
+    user_data = tempfile.mkdtemp(prefix=f"chrome_user_{email.split('@')[0]}_")
+    options.add_argument(f'--user-data-dir={user_data}')
 
     try:
-        # 在 CI 环境中，browser_executable_path 是关键
-        driver = uc.Chrome(
-            options=options,
-            headless=HEADLESS,
-            version_main=None # 自动匹配
-        )
-        # 设置页面加载超时
+        driver = uc.Chrome(options=options, headless=HEADLESS)
         driver.set_page_load_timeout(60)
         return driver
     except Exception as e:
-        logger.error(f"启动 Chrome 失败: {e}")
+        logger.error(f"浏览器启动失败: {e}")
         return None
 
-def smart_wait_click(driver, locator, timeout=WAIT_TIMEOUT):
-    """智能等待并点击，带重试逻辑"""
-    for _ in range(2):
-        try:
-            element = WebDriverWait(driver, timeout).until(EC.element_to_be_clickable(locator))
-            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
-            time.sleep(0.5)
-            element.click()
-            return True
-        except Exception:
-            try:
-                # 备选方案：JS 点击
-                element = driver.find_element(*locator)
-                driver.execute_script("arguments[0].click();", element)
-                return True
-            except:
-                continue
-    return False
-
-# ========== 业务逻辑优化 ==========
-
-def handle_interruptions(driver):
+def handle_login(driver, email, password):
     """
-    集中处理登录过程中的各种干扰项：保持登录、通行密钥、隐私确认
+    处理登录流程及各种弹窗
     """
-    interrupt_selectors = [
-        "//button[contains(text(), '暂时跳过')]",
-        "//button[contains(text(), 'Skip for now')]",
-        "//input[@value='是']",
-        "//input[@value='Yes']",
-        "//button[@id='idSIButton9']", # 通用的“下一步/提交” ID
-        "//button[contains(@class, 'primary')]"
-    ]
-    
-    for _ in range(5): # 最多尝试处理5个连续干扰
-        try:
-            time.sleep(2)
-            found = False
-            for xpath in interrupt_selectors:
-                btns = driver.find_elements(By.XPATH, xpath)
-                for b in btns:
-                    if b.is_displayed():
-                        b.click()
-                        logger.info(f"处理干扰项成功: {xpath}")
-                        found = True
-                        break
-                if found: break
-            if not found: break
-        except:
-            break
-
-def login_bing(driver, email, password):
-    logger.info(f"尝试登录账号: {email}")
+    logger.info(f"开始登录: {email}")
     driver.get("https://login.live.com/")
     
-    # 输入邮箱
     try:
-        email_input = WebDriverWait(driver, WAIT_TIMEOUT).until(
-            EC.presence_of_element_located((By.NAME, "loginfmt"))
-        )
-        email_input.send_keys(email)
-        smart_wait_click(driver, (By.ID, "idSIButton9"))
+        # 输入邮箱
+        wait = WebDriverWait(driver, WAIT_TIMEOUT)
+        email_field = wait.until(EC.presence_of_element_located((By.NAME, "loginfmt")))
+        email_field.send_keys(email)
+        driver.find_element(By.ID, "idSIButton9").click()
+        
+        # 输入密码
+        time.sleep(2)
+        password_field = wait.until(EC.element_to_be_clickable((By.NAME, "passwd")))
+        password_field.send_keys(password)
+        driver.find_element(By.ID, "idSIButton9").click()
+        
+        # 处理“保持登录”或“通行密钥”弹窗
+        time.sleep(3)
+        for _ in range(3):
+            try:
+                # 查找常见的“是”、“确定”、“跳过”按钮
+                btns = driver.find_elements(By.XPATH, "//input[@value='是'] | //input[@value='Yes'] | //button[contains(text(), '确定')] | //button[contains(text(), 'Skip')]")
+                if btns:
+                    btns[0].click()
+                    time.sleep(2)
+            except:
+                break
+        return True
     except Exception as e:
-        logger.error(f"输入邮箱阶段失败: {e}")
+        logger.error(f"登录执行出错: {e}")
         return False
 
-    # 输入密码
-    try:
-        pass_input = WebDriverWait(driver, WAIT_TIMEOUT).until(
-            EC.element_to_be_clickable((By.NAME, "passwd"))
-        )
-        pass_input.send_keys(password)
-        time.sleep(1)
-        smart_wait_click(driver, (By.ID, "idSIButton9"))
-    except Exception as e:
-        logger.info(f"密码输入失败，可能需要验证码或已经登录: {e}")
-
-    # 处理后续弹窗
-    handle_interruptions(driver)
+def click_reward_tasks(driver):
+    """
+    修复：点击 Rewards 页面的每日任务卡片
+    """
+    logger.info("开始处理每日任务卡片...")
+    driver.get("https://rewards.bing.com/")
+    time.sleep(5)
     
-    # 验证是否到达 Bing 或 Rewards
-    driver.get(BING_URL)
-    time.sleep(3)
-    return "id_s" in driver.page_source or "meControl" in driver.page_source
-
-def search_loop(driver, words):
-    """
-    优化的搜索逻辑
-    """
-    for i, word in enumerate(words):
-        try:
-            driver.get(f"{BING_URL}/search?q={requests.utils.quote(word)}")
-            logger.info(f"搜索 [{i+1}/{len(words)}]: {word}")
-            
-            # 模拟真实浏览：随机滚动
-            if random.random() > 0.5:
-                driver.execute_script(f"window.scrollTo(0, {random.randint(300, 800)});")
-            
-            time.sleep(random.uniform(*SLEEP_BETWEEN_SEARCH))
-            
-            if (i + 1) % 4 == 0:
-                logger.info("短暂停顿以模拟真人行为...")
-                time.sleep(5)
-                
-        except Exception as e:
-            logger.error(f"搜索词 {word} 时出错: {e}")
-            continue
-
-# ========== 执行框架 ==========
-
-def process_account(account, words):
-    """
-    处理单个账号的完整生命周期
-    """
-    email = account.get('email')
-    driver = get_driver(email)
-    if not driver: return
-
     try:
-        if login_bing(driver, email, account.get('password')):
-            logger.info(f"账号 {email} 登录成功")
-            
-            # 1. 签到与任务
-            driver.get(REWARDS_URL)
-            time.sleep(5)
-            # 这里可以调用你原有的 click_reward_tasks
-            
-            # 2. 执行搜索
-            # 随机选取一部分词进行搜索，避免行为过于固定
-            selected_words = random.sample(words, min(len(words), 35))
-            search_loop(driver, selected_words)
-            
-        else:
-            logger.error(f"账号 {email} 登录失败")
+        # 获取所有任务磁贴
+        tasks = driver.find_elements(By.CSS_SELECTOR, "div[data-bi-id]")
+        for i, task in enumerate(tasks[:5]): # 每天处理前 5 个未完成任务
+            try:
+                # 检查是否已完成 (通常有 checkmark 类名)
+                if "complete" in task.get_attribute("class").lower():
+                    continue
+                
+                logger.info(f"点击第 {i+1} 个任务卡片")
+                driver.execute_script("arguments[0].click();", task)
+                time.sleep(3)
+                # 切换回主页面（如果开了新标签页）
+                if len(driver.window_handles) > 1:
+                    driver.close()
+                    driver.switch_to.window(driver.window_handles[0])
+            except:
+                continue
     except Exception as e:
-        logger.error(f"账号 {email} 执行异常: {e}")
-    finally:
+        logger.warning(f"任务卡片处理出现部分异常: {e}")
+
+def run_search(driver, words):
+    """
+    执行搜索任务
+    """
+    search_count = 35 if not IS_GITHUB_ACTIONS else 40 # 稍微多搜几次确保加分
+    selected_words = random.sample(words, min(len(words), search_count))
+    
+    for i, word in enumerate(selected_words):
         try:
-            driver.quit()
-        except:
-            pass
+            logger.info(f"[{i+1}/{len(selected_words)}] 搜索: {word}")
+            driver.get(f"https://www.bing.com/search?q={requests.utils.quote(word)}")
+            # 随机停留模拟真实人类
+            time.sleep(random.uniform(5, 12)) 
+        except Exception as e:
+            logger.error(f"单次搜索失败: {e}")
+
+# ========== 主程序流程 ==========
+
+def process_account(acc, words):
+    driver = get_driver(acc['email'])
+    if not driver: return
+    
+    try:
+        if handle_login(driver, acc['email'], acc['password']):
+            # 1. 刷任务卡片
+            click_reward_tasks(driver)
+            # 2. 刷搜索分数
+            run_search(driver, words)
+            logger.info(f"账号 {acc['email']} 任务全部完成！")
+    finally:
+        driver.quit()
 
 def main():
-    # 读取配置
-    try:
-        with open('config/accounts.json', 'r', encoding='utf-8') as f:
-            account_groups = json.load(f)
-    except FileNotFoundError:
-        logger.error("配置文件 accounts.json 未找到！")
+    # 加载配置
+    config_path = 'config/accounts.json'
+    if not os.path.exists(config_path):
+        logger.error(f"找不到配置文件: {config_path}")
         return
 
+    with open(config_path, 'r', encoding='utf-8') as f:
+        account_groups = json.load(f)
+
+    # 修复：确保调用已定义的函数
     words = get_bing_hotwords()
-    
-    # 在 GitHub Actions 中，建议 串行 或 极低并发 处理
-    # 如果账号组很多，改为串行以保证稳定性
+
+    # 在 GitHub Actions 中按顺序处理，避免 CPU 崩溃
     for group_name, accounts in account_groups.items():
-        logger.info(f"开始处理账号组: {group_name}")
+        logger.info(f">>> 开始处理分组: {group_name}")
         for acc in accounts:
             process_account(acc, words)
-            time.sleep(10) # 账号间切换停顿
+            time.sleep(5)
 
 if __name__ == "__main__":
     main()
