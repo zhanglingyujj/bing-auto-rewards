@@ -1,0 +1,1297 @@
+- generic [ref=f4e3]:
+  - main [ref=f4e16]:
+    - generic [ref=f4e17]:
+      - generic [ref=f4e18]:
+        - heading "必应" [level=1] [ref=f4e19]:
+          - img "必应" [ref=f4e20] [cursor=pointer]
+        - navigation [ref=f4e28]:
+          - menubar [ref=f4e29]:
+            - menuitem "Copilot" [ref=f4e30] [cursor=pointer]:
+              - link "Copilot" [ref=f4e31]:
+                - /url: /chat?FORM=hpcodx&intent=bing
+                - generic [ref=f4e33]: Copilot
+            - menuitem "图片" [ref=f4e34] [cursor=pointer]:
+              - link "图片" [ref=f4e35]:
+                - /url: /images?FORM=Z9LH
+            - menuitem "视频" [ref=f4e36] [cursor=pointer]:
+              - link "视频" [ref=f4e37]:
+                - /url: /videos?FORM=Z9LH1
+            - menuitem "购物" [ref=f4e38] [cursor=pointer]:
+              - link "购物" [ref=f4e39]:
+                - /url: /shop?FORM=Z9LHS4
+            - menuitem "地图" [ref=f4e40] [cursor=pointer]:
+              - link "地图" [ref=f4e41]:
+                - /url: /maps?FORM=Z9LH2
+            - menuitem "资讯" [ref=f4e42] [cursor=pointer]:
+              - link "资讯" [ref=f4e43]:
+                - /url: /news/search?q=Top+stories&nvaug=%5bNewsVertical+Category%3d%22rt_MaxClass%22%5d&FORM=Z9LH3
+            - menuitem ". . . 更多" [ref=f4e44] [cursor=pointer]:
+              - text: . . .
+              - button "更多" [ref=f4e45]
+      - generic [ref=f4e66]:
+        - link "English" [ref=f4e68] [cursor=pointer]:
+          - /url: /?setlang=en&cc=US
+        - complementary "帐户奖励和偏好设置" [ref=f4e69]:
+          - link "%e5%87%8c%… 个人资料图片" [expanded] [active] [ref=f4e70] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=f4e71]: "%e5%87%8c%…"
+            - img "个人资料图片" [ref=f4e72]
+          - generic [ref=f4e73]:
+            - generic [ref=f4e74]:
+              - link "必应徽标，在新选项卡中打开" [ref=f4e75] [cursor=pointer]
+              - link "退出" [ref=f4e78] [cursor=pointer]:
+                - /url: /fd/auth/signout/v2?provider=windows_live_id&return_url=https%3a%2f%2fwww.bing.com%2f%3fwlsso%3d0&sig=104C6AFB0F3F640D2BDC7D740E636542
+                - generic [ref=f4e79]: 退出
+              - generic [ref=f4e80]:
+                - img "个人资料图片" [ref=f4e81]
+                - generic [ref=f4e82]:
+                  - generic [ref=f4e83]: 凌宇
+                  - generic [ref=f4e84]: zhanglingyujj@hotmail.com
+                  - link "管理账户" [ref=f4e86] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=0bd36bb54417964387f2487fb3134158c523b30826ddf59528c6d4489377a5e4JmltdHM9MTc4MzM4MjQwMA&ptn=3&ver=2&hsh=4&fclid=2af78f2d-bd61-6f21-2b55-98a2bc3d6e13&u=a1aHR0cHM6Ly9hY2NvdW50Lm1pY3Jvc29mdC5jb20&ntb=1
+            - list "%e5%87%8c%… 个人资料图片"
+          - button "Microsoft Rewards" [ref=f4e87] [cursor=pointer]:
+            - generic [ref=f4e89]:
+              - generic [ref=f4e90]: Rewards
+              - img [ref=f4e92]
+          - button "手机版" [ref=f4e97] [cursor=pointer]:
+            - generic [ref=f4e98]: 手机版
+            - img [ref=f4e99]
+          - button "设置和快速链接" [ref=f4e102] [cursor=pointer]
+          - generic [ref=f4e103]:
+            - menuitem [ref=f4e104] [cursor=pointer]:
+              - generic [ref=f4e108]: 收藏
+            - generic [ref=f4e110]:
+              - menuitem [ref=f4e111]:
+                - generic [ref=f4e115]: 设置
+              - menuitem [ref=f4e117] [cursor=pointer]:
+                - generic [ref=f4e120]: 语言
+                - generic [ref=f4e121]: 中文(简体)
+              - menuitem [ref=f4e122] [cursor=pointer]:
+                - generic [ref=f4e125]: 国家/地区
+                - generic [ref=f4e126]: 美国 - 英语
+              - menuitem [ref=f4e127] [cursor=pointer]:
+                - generic [ref=f4e130]: 语音
+              - menuitem [ref=f4e131] [cursor=pointer]:
+                - generic [ref=f4e134]: 更多
+            - menuitem [ref=f4e135] [cursor=pointer]:
+              - generic [ref=f4e136]:
+                - generic [ref=f4e139]: 安全搜索
+                - generic [ref=f4e140]: 中等
+            - menuitem [ref=f4e141] [cursor=pointer]:
+              - generic [ref=f4e145]: 搜索历史记录
+            - menuitem [ref=f4e146] [cursor=pointer]:
+              - generic [ref=f4e150]: 隐私
+            - menuitem [ref=f4e151] [cursor=pointer]:
+              - generic [ref=f4e155]: 反馈
+            - generic [ref=f4e156]:
+              - menuitem [expanded] [ref=f4e157]:
+                - generic [ref=f4e161]: 外观
+              - menu [ref=f4e163]:
+                - menuitemradio [checked] [ref=f4e164] [cursor=pointer]:
+                  - generic [ref=f4e166]:
+                    - img [ref=f4e167]
+                    - text: 浅色
+                - menuitemradio [ref=f4e170] [cursor=pointer]:
+                  - generic [ref=f4e172]:
+                    - img [ref=f4e173]
+                    - text: 深色
+                - menuitemradio [ref=f4e176] [cursor=pointer]:
+                  - generic [ref=f4e178]:
+                    - img [ref=f4e179]
+                    - text: 系统默认值
+            - generic [ref=f4e182]:
+              - menuitem [ref=f4e183] [cursor=pointer]:
+                - generic [ref=f4e187]: 个性化资讯源
+              - generic [ref=f4e188]:
+                - menuitem [expanded] [ref=f4e189]:
+                  - generic [ref=f4e193]: 自定义主页
+                - option [checked] [ref=f4e195]:
+                  - generic [ref=f4e196]:
+                    - generic [ref=f4e198]: 显示菜单栏
+                    - img [ref=f4e201]
+                - option [checked] [ref=f4e204]:
+                  - generic [ref=f4e205]:
+                    - generic [ref=f4e207]: 显示新闻和关注
+                    - img [ref=f4e210]
+                - option [checked] [ref=f4e213]:
+                  - generic [ref=f4e214]:
+                    - generic [ref=f4e216]: 显示必应上的热点
+                    - img [ref=f4e219]
+                - option [checked] [ref=f4e222]:
+                  - generic [ref=f4e223]:
+                    - generic [ref=f4e225]: 显示主页图片
+                    - img [ref=f4e228]
+              - generic [ref=f4e232]:
+                - menu [ref=f4e233]:
+                  - menuitem [ref=f4e234] [cursor=pointer]: 隐私与 Cookie
+                  - text: •
+                  - menuitem [ref=f4e235] [cursor=pointer]: 法律声明
+                  - text: •
+                  - menuitem [ref=f4e236] [cursor=pointer]: 广告
+                  - text: •
+                  - menuitem [ref=f4e237] [cursor=pointer]: 关于我们的广告
+                  - text: •
+                  - menuitem [ref=f4e238] [cursor=pointer]: 帮助
+                  - text: •
+                  - menuitem [ref=f4e239] [cursor=pointer]: 消费者健康隐私
+                - generic [ref=f4e240]: © 2026 Microsoft
+    - generic [ref=f4e46]:
+      - search [ref=f4e47]:
+        - img [ref=f4e49] [cursor=pointer]
+        - generic [ref=f4e52]:
+          - status
+          - combobox "在此处输入你的搜索 — 输入时会显示搜索建议" [ref=f4e53]:
+            - status [ref=f4e241]
+        - button "语音搜索" [ref=f4e56] [cursor=pointer]:
+          - img [ref=f4e57]
+        - button "使用图像搜索" [ref=f4e244] [cursor=pointer]
+        - link "打开 Copilot" [ref=f4e62] [cursor=pointer]:
+          - /url: /chat?FORM=hpcodx&intent=bing
+      - generic [ref=f4e247]:
+        - link "创建壁纸" [ref=f4e248] [cursor=pointer]:
+          - /url: /search?q=创建壁纸&filters=aimode%3A%2235%22&FORM=bichpw
+          - generic [ref=f4e250]: 创建壁纸
+        - link "视频创建器" [ref=f4e251] [cursor=pointer]:
+          - /url: /images/create/ai-video-generator?bicsource=hp&FORM=bvcbhp
+          - generic [ref=f4e253]: 视频创建器
+        - link "文本创建器" [ref=f4e254] [cursor=pointer]:
+          - /url: /search?q=bing ai 写作&FORM=btcbhp
+          - generic [ref=f4e256]: 文本创建器
+  - generic [ref=f4e259]:
+    - generic [ref=f4e260]:
+      - dialog "必应主页测验 Which region is home to the plate-billed mountain toucan?" [ref=f4e262]:
+        - group "必应主页测验 Which region is home to the plate-billed mountain toucan?" [ref=f4e263]:
+          - generic [ref=f4e264]: 必应主页测验
+          - generic [ref=f4e265]: Which region is home to the plate-billed mountain toucan?
+          - list [ref=f4e266]:
+            - listitem [ref=f4e267]:
+              - 'link "答案: A，Ecuador and Colombia, 1 of 3" [ref=f4e268] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%220%22+UserChoices%3A%220%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%221%22&FORM=HPQUIZ
+                - generic [ref=f4e269]: A
+                - text: Ecuador and Colombia
+            - listitem [ref=f4e270]:
+              - 'link "答案: B，Peru and Chile, 2 of 3" [ref=f4e271] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%221%22+UserChoices%3A%221%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=f4e272]: B
+                - text: Peru and Chile
+            - listitem [ref=f4e273]:
+              - 'link "答案: C，Bolivia and Brazil, 3 of 3" [ref=f4e274] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%222%22+UserChoices%3A%222%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=f4e275]: C
+                - text: Bolivia and Brazil
+      - generic [ref=f4e276]:
+        - generic:
+          - generic:
+            - link "获取新版必应壁纸应用":
+              - /url: https://go.microsoft.com/fwlink/?linkid=2127455
+              - generic: 获取新版必应壁纸应用
+          - 'heading "每日一图: Plate-billed mountain toucan with orchids, Ecuador" [level=3]':
+            - 'link "每日一图: Plate-billed mountain toucan with orchids, Ecuador"':
+              - /url: /search?q=plate-billed+mountain+toucan&form=hpcapt&filters=HpDate:"20260707_0700"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+              - text: Plate-billed mountain toucan with orchids, Ecuador
+          - generic:
+            - generic: © Murray Cooper/Minden Pictures
+            - list:
+              - listitem:
+                - button "下载今日美图。仅限用作桌面壁纸。"
+        - generic [ref=f4e277]:
+          - link "Color, craft, and canopy life" [ref=f4e279] [cursor=pointer]:
+            - /url: /search?q=plate-billed+mountain+toucan&form=hpcapt&filters=HpDate:"20260707_0700"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+            - img [ref=f4e281]
+            - heading "Color, craft, and canopy life" [level=2] [ref=f4e284]
+          - generic [ref=f4e285] [cursor=pointer]:
+            - status [ref=f4e286]
+            - button "上一个图像" [ref=f4e287]
+            - button "下一个图像" [disabled] [ref=f4e289]
+    - button "反馈" [ref=f4e291] [cursor=pointer]:
+      - img [ref=f4e292]
+      - generic: 反馈
+    - generic [ref=f4e294]:
+      - region "必应热门资讯" [ref=f4e295]:
+        - generic:
+          - status [ref=f4e296]
+          - button "Toggle feed area position" [expanded] [ref=f4e297] [cursor=pointer]
+          - button "以前的资讯" [disabled]
+          - button "更多资讯" [ref=f4e299] [cursor=pointer]
+        - list [ref=f4e301]:
+          - listitem [ref=f4e302]:
+            - list [ref=f4e303]:
+              - listitem [ref=f4e304] [cursor=pointer]:
+                - link "USA's World Cup run ends © Photo by Alex Grimm/Getty Images" [ref=f4e305]:
+                  - /url: /search?q=Team+USA%27s+World+Cup+run+ends&efirst=0&ecount=50&filters=tnTID%3a%22PE_DB906FF6-C3B7-4425-92AC-FFD7C878CBDB%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e306]:
+                    - heading "USA's World Cup run ends" [level=2] [ref=f4e307]
+                    - img "© Photo by Alex Grimm/Getty Images" [ref=f4e308]
+              - listitem [ref=f4e309] [cursor=pointer]:
+                - link "Calls for Patriot Front probe ©Photo by Anna Moneymaker/Getty Images" [ref=f4e310]:
+                  - /url: /search?q=Luna+calls+for+Patriot+Front+investigation+&efirst=0&ecount=50&filters=tnTID%3a%22PE_7080700C-08AE-49CE-B3B3-B2A3EB66A11D%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e311]:
+                    - heading "Calls for Patriot Front probe" [level=2] [ref=f4e312]
+                    - img "©Photo by Anna Moneymaker/Getty Images" [ref=f4e313]
+              - listitem [ref=f4e314] [cursor=pointer]:
+                - link "Styles breaks world record © Photo by Scott A Garfitt/Invision/AP" [ref=f4e315]:
+                  - /url: /search?q=Harry+Styles+breaks+Guinness+World+Record&efirst=0&ecount=50&filters=tnTID%3a%22PE_6CE4352D-A5C8-4614-AABA-BB783D261314%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e316]:
+                    - heading "Styles breaks world record" [level=2] [ref=f4e317]
+                    - img "© Photo by Scott A Garfitt/Invision/AP" [ref=f4e318]
+              - listitem [ref=f4e319] [cursor=pointer]:
+                - link "Hair care pioneer dies © WAPT Jackson" [ref=f4e320]:
+                  - /url: /search?q=George+E.+Johnson+Sr.+dies&efirst=0&ecount=50&filters=tnTID%3a%22PE_BB209990-D3C9-47CA-BD36-CE0D707F1DAB%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e321]:
+                    - heading "Hair care pioneer dies" [level=2] [ref=f4e322]
+                    - img "© WAPT Jackson" [ref=f4e323]
+              - listitem [ref=f4e324] [cursor=pointer]:
+                - link "Swift wins copyright suit © Photo by Matt Winkelmeyer/Getty Images for iHeartRadio" [ref=f4e325]:
+                  - /url: /search?q=Taylor+Swift+wins+copyright+lawsuit&efirst=0&ecount=50&filters=tnTID%3a%22PE_3345C2E2-174D-409D-8424-3848FA9A1C25%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e326]:
+                    - heading "Swift wins copyright suit" [level=2] [ref=f4e327]
+                    - img "© Photo by Matt Winkelmeyer/Getty Images for iHeartRadio" [ref=f4e328]
+              - listitem [ref=f4e329] [cursor=pointer]:
+                - link "Oil tanker hit in Hormuz ©Ismael Mohamad/UPI" [ref=f4e330]:
+                  - /url: /search?q=Oil+tanker+hit+by+projectile+in+the+Strait+of+Hormuz&efirst=0&ecount=50&filters=tnTID%3a%22PE_2D360201-E5FD-4CD7-9544-D04398D3CDA8%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e331]:
+                    - heading "Oil tanker hit in Hormuz" [level=2] [ref=f4e332]
+                    - img "©Ismael Mohamad/UPI" [ref=f4e333]
+              - listitem [ref=f4e334] [cursor=pointer]:
+                - link "Explosions rock Damascus © REUTERS/Yamam Al Shaar" [ref=f4e335]:
+                  - /url: /search?q=Explosions+rock+Damascus&efirst=0&ecount=50&filters=tnTID%3a%22PE_FE5009CB-AB0A-4F25-B318-0BE42405C24A%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e336]:
+                    - heading "Explosions rock Damascus" [level=2] [ref=f4e337]
+                    - img "© REUTERS/Yamam Al Shaar" [ref=f4e338]
+              - listitem [ref=f4e339] [cursor=pointer]:
+                - 'link "Today in history: 1928 © John Scott/Getty Images" [ref=f4e340]':
+                  - /url: /search?q=Otto+Frederick+Rohwedder+bread+slicer&efirst=0&ecount=50&filters=tnTID%3a%22PE_21ADFDBF-8AA5-4FC0-A940-64E47F8D5722%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e341]:
+                    - 'heading "Today in history: 1928" [level=2] [ref=f4e342]'
+                    - img "© John Scott/Getty Images" [ref=f4e343]
+              - listitem [ref=f4e344] [cursor=pointer]:
+                - link "Pull Platner endorsements © Shannon Finney/NBC via Getty Images © Photo by Nathan Posner/Anadolu via Getty Images" [ref=f4e345]:
+                  - /url: /search?q=Khanna+and+Gallego+withdraw+Graham+Platner+endorsements&efirst=0&ecount=50&filters=tnTID%3a%22PE_426A0ACE-18E7-421E-BBDF-FD2E681F70A5%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e346]:
+                    - heading "Pull Platner endorsements" [level=2] [ref=f4e347]
+                    - img "© Shannon Finney/NBC via Getty Images © Photo by Nathan Posner/Anadolu via Getty Images" [ref=f4e348]
+              - listitem [ref=f4e349] [cursor=pointer]:
+                - link "Cuba suffers blackout © Times Now" [ref=f4e350]:
+                  - /url: /search?q=Cuba+suffers+nationwide+blackout&efirst=0&ecount=50&filters=tnTID%3a%22PE_3324D5F4-9383-45E8-A6B8-35ED5265EA38%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e351]:
+                    - heading "Cuba suffers blackout" [level=2] [ref=f4e352]
+                    - img "© Times Now" [ref=f4e353]
+              - listitem [ref=f4e354] [cursor=pointer]:
+                - link "Demands credible plans © The Associated Press" [ref=f4e355]:
+                  - /url: /search?q=NATO+chief+demands+allies+present+credible+plans+to+reach+defense+spending+targets&efirst=0&ecount=50&filters=tnTID%3a%22PE_1A7AEC07-7625-4754-BEDE-182B365E2873%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e356]:
+                    - heading "Demands credible plans" [level=2] [ref=f4e357]
+                    - img "© The Associated Press" [ref=f4e358]
+              - listitem [ref=f4e359] [cursor=pointer]:
+                - link "China sentences ex-official © EPA/MAXIM SHEMETOV / POOL" [ref=f4e360]:
+                  - /url: /search?q=Chinese+court+sentences+ex-official+to+death&efirst=0&ecount=50&filters=tnTID%3a%22PE_50E0E583-4932-4AB7-8BC8-EC4F7249EC80%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e361]:
+                    - heading "China sentences ex-official" [level=2] [ref=f4e362]
+                    - img "© EPA/MAXIM SHEMETOV / POOL" [ref=f4e363]
+              - listitem [ref=f4e364] [cursor=pointer]:
+                - link "Frozen blueberries recalled © Vitalii Petrushenko/iStock / Getty Images Plus" [ref=f4e365]:
+                  - /url: /search?q=Frozen+blueberries+recalled&efirst=0&ecount=50&filters=tnTID%3a%22PE_4F35F655-09FE-4A9D-B1C7-D62E60F9F293%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e366]:
+                    - heading "Frozen blueberries recalled" [level=2] [ref=f4e367]
+                    - img "© Vitalii Petrushenko/iStock / Getty Images Plus" [ref=f4e368]
+              - listitem [ref=f4e369] [cursor=pointer]:
+                - link "G.R.L. singer dies at 37 © Jim Ruymen/UPI" [ref=f4e370]:
+                  - /url: /search?q=Lauren+Bennett+dies&efirst=0&ecount=50&filters=tnTID%3a%22PE_18E809E3-A425-47B8-AEEA-78888AAAE0F1%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e371]:
+                    - heading "G.R.L. singer dies at 37" [level=2] [ref=f4e372]
+                    - img "© Jim Ruymen/UPI" [ref=f4e373]
+              - listitem [ref=f4e374] [cursor=pointer]:
+                - link "Indicted in fraud scheme ©Photo by Dylan Buell/Getty Images" [ref=f4e375]:
+                  - /url: /search?q=Kerr+Kriisa+indicted&efirst=0&ecount=50&filters=tnTID%3a%22PE_737BBB10-7EB1-4CBA-8B12-B5B6FA2E8548%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e376]:
+                    - heading "Indicted in fraud scheme" [level=2] [ref=f4e377]
+                    - img "©Photo by Dylan Buell/Getty Images" [ref=f4e378]
+              - listitem [ref=f4e379] [cursor=pointer]:
+                - link "Ex-mayor pleads guilty © File photo by Barbara Gauntt/Clarion Ledger" [ref=f4e380]:
+                  - /url: /search?q=Former+Mayor+Chokwe+Antar+Lumumba+pleads+guilty&efirst=0&ecount=50&filters=tnTID%3a%22PE_5A2D0690-2F49-410B-ABBC-4F48E473BF07%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e381]:
+                    - heading "Ex-mayor pleads guilty" [level=2] [ref=f4e382]
+                    - img "© File photo by Barbara Gauntt/Clarion Ledger" [ref=f4e383]
+              - listitem [ref=f4e384] [cursor=pointer]:
+                - link "Spain reaches quarterfinals © ESPN" [ref=f4e385]:
+                  - /url: /search?q=Spain+reaches+quarterfinals&efirst=0&ecount=50&filters=tnTID%3a%22PE_A91B8688-BA4E-4318-BF73-F3007183537F%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e386]:
+                    - heading "Spain reaches quarterfinals" [level=2] [ref=f4e387]
+                    - img "© ESPN" [ref=f4e388]
+              - listitem [ref=f4e389] [cursor=pointer]:
+                - link "2,000-yr-old gold rings found © AP via The Independent" [ref=f4e390]:
+                  - /url: /search?q=2%2c000-year-old+Indian+gold+rings+found&efirst=0&ecount=50&filters=tnTID%3a%22PE_138D9B15-46EB-4F07-A73C-E966E7D60054%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e391]:
+                    - heading "2,000-yr-old gold rings found" [level=2] [ref=f4e392]
+                    - img "© AP via The Independent" [ref=f4e393]
+              - listitem [ref=f4e394] [cursor=pointer]:
+                - link "Ex-Bucknell coach charged © WHP Harrisburg" [ref=f4e395]:
+                  - /url: /search?q=Former+Bucknell+coach+charged&efirst=0&ecount=50&filters=tnTID%3a%22PE_BD2E6788-BA6D-49DA-A00F-331469EBFA99%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e396]:
+                    - heading "Ex-Bucknell coach charged" [level=2] [ref=f4e397]
+                    - img "© WHP Harrisburg" [ref=f4e398]
+              - listitem [ref=f4e399] [cursor=pointer]:
+                - link "Oil prices rise © Kim Soo-Hyeon/Reuters" [ref=f4e400]:
+                  - /url: /search?q=Oil+prices+rise&efirst=0&ecount=50&filters=tnTID%3a%22PE_5FF594E1-5BBE-46FE-9A1A-34BCD3B304C9%22+tnVersion%3a%226756915%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnOrder%3a%22d5e16ff8-c107-46b8-9d1f-94c18bc975fc%22&form=HPNN01
+                  - generic [ref=f4e401]:
+                    - heading "Oil prices rise" [level=2] [ref=f4e402]
+                    - img "© Kim Soo-Hyeon/Reuters" [ref=f4e403]
+      - complementary [ref=f4e404]:
+        - generic [ref=f4e406]:
+          - generic [ref=f4e407]: 发现
+          - main [ref=f4e414]:
+            - generic [ref=f4e416]:
+              - generic [ref=f4e417]:
+                - generic [ref=f4e420]:
+                  - tablist [ref=f4e422]:
+                    - tab [ref=f4e423] [cursor=pointer]
+                    - tab [ref=f4e425] [cursor=pointer]
+                    - tab [ref=f4e427] [cursor=pointer]
+                    - tab [ref=f4e429] [cursor=pointer]
+                    - tab [ref=f4e431] [cursor=pointer]
+                    - tab [selected] [ref=f4e433] [cursor=pointer]
+                    - tab [ref=f4e435] [cursor=pointer]
+                    - tab [ref=f4e437] [cursor=pointer]
+                    - tab [ref=f4e439] [cursor=pointer]
+                    - tab [ref=f4e441] [cursor=pointer]
+                    - tab [ref=f4e443] [cursor=pointer]
+                    - tab [ref=f4e445] [cursor=pointer]
+                    - tab [ref=f4e447] [cursor=pointer]
+                    - tab [ref=f4e449] [cursor=pointer]
+                    - tab [ref=f4e451] [cursor=pointer]
+                    - tab [ref=f4e453] [cursor=pointer]
+                    - tab [ref=f4e455] [cursor=pointer]
+                  - button [ref=f4e459]
+                  - button [ref=f4e462]
+                  - article "Get an Idea of the Loan Amount You May Get From a Reverse Mortgage Today." [ref=f4e463] [cursor=pointer]:
+                    - generic [ref=f4e465]:
+                      - img [ref=f4e466]
+                      - generic [ref=f4e467]:
+                        - generic [ref=f4e468]:
+                          - generic [ref=f4e471]: Finance of America
+                          - link "Get an Idea of the Loan Amount You May Get From a Reverse Mortgage Today., Finance of America" [ref=f4e472]:
+                            - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=6e10ae96-0b84-4541-898b-4b1aecd8cd37&bdc=pb&bidId=2&bidderId=4&cmExpId=RSV&impId=2&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8DHZQdXwxBLDh2eXnfiq2cjVUCUynm7CzZQbtMEMDYnkqwiA78XziXL5LZWIQib-jK2Q2kdbhxDr771tkpgT5NVVHxMRpg7CbodGd4G9ldBX5JqiHBnWvxaQibY2Y1jKdw04VbgPha3c4gDR4wLS8CA_zBVyBaORV46A0MMCwSbvwzHrPP8SdOaBQdKa376bX7bqMY-Wune9-RxQiwVkdzdHifpQ%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuZmluYW5jZW9mYW1lcmljYS5jb20lMmZzdGFydCUyZmVzdGltYXRlJTJmJTNmcGlkJTNkMjQ5MyUyNnF1ZXJ5c3RyaW5nJTNka2V5d29yZCUyNmNhbXBhaWduaWQlM2Q2Mzg3ODA3OTYlMjZhZGdyb3VwaWQlM2QxMjUwMTQ2MTAwNjU1MzAzJTI2ZmVlZGl0ZW1pZCUzZCUyNmFkZ3JvdXAlM2RDb21wZXRpdG9yJTI1MjBLZXl3b3JkcyUyNTIwQ3VzdG9tJTI1MjBTZWdtZW50JTI2dGFyZ2V0aWQlM2Rrd2QtMjMyOTkzMzg1OTQ5NzcwOSUzYWxvYy00MDg0JTI2bWF0Y2h0eXBlJTNkZSUyNmJpZG1hdGNodHlwZSUzZGJlJTI2bmV0d29yayUzZGElMjZkZXZpY2UlM2RjJTI2Y3JlYXRpdmUlM2Q3ODEzNDI2NjkwOTkwNiUyNmtleXdvcmQlM2RrZXl3b3JkJTI2bG9jX3BoeXNpY2FsX21zJTNkNzk3MDklMjZsb2NfaW50ZXJlc3RfbXMlM2QlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZGtleXdvcmQlMjZ1dG1fY2FtcGFpZ24lM2RNX0RfUk1fQ3VzdG9tLVNlZ21lbnQtQ2FsY19GT0ElMjZrZW5pYnBpZCUzZGJpbmclMjZjbGlja2lkJTNkNzlkOGQ1ZmJiNmFiMWFiNmM2YTdiZmI2YmM4OTg4YjMlMjZuZXR3b3JrVHlwZSUzZGF1ZGllbmNlc2VhcmNoJTI2Y2FtcGFpZ24lM2RNX0RfUk1fQ3VzdG9tLVNlZ21lbnQtQ2FsY19GT0ElMjZzZmlkJTNkNzAxTnMwMDAwMHlpZnJOJTI2dGVzdGlkJTNkMjAzYSUyNnBpZCUzZDI0OTMlMjZtc2Nsa2lkJTNkNzlkOGQ1ZmJiNmFiMWFiNmM2YTdiZmI2YmM4OTg4YjM%26rlid%3D79d8d5fbb6ab1ab6c6a7bfb6bc8988b3&rtype=targetURL&tagId=binghp-infopane-6&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                            - text: Get an Idea of the Loan Amount You May Get From a Reverse Mortgage Today.
+                        - generic [ref=f4e473]:
+                          - link "Sponsored" [ref=f4e474]:
+                            - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=6e10ae96-0b84-4541-898b-4b1aecd8cd37&bdc=pb&bidId=2&bidderId=4&cmExpId=RSV&impId=2&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8DHZQdXwxBLDh2eXnfiq2cjVUCUynm7CzZQbtMEMDYnkqwiA78XziXL5LZWIQib-jK2Q2kdbhxDr771tkpgT5NVVHxMRpg7CbodGd4G9ldBX5JqiHBnWvxaQibY2Y1jKdw04VbgPha3c4gDR4wLS8CA_zBVyBaORV46A0MMCwSbvwzHrPP8SdOaBQdKa376bX7bqMY-Wune9-RxQiwVkdzdHifpQ%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuZmluYW5jZW9mYW1lcmljYS5jb20lMmZzdGFydCUyZmVzdGltYXRlJTJmJTNmcGlkJTNkMjQ5MyUyNnF1ZXJ5c3RyaW5nJTNka2V5d29yZCUyNmNhbXBhaWduaWQlM2Q2Mzg3ODA3OTYlMjZhZGdyb3VwaWQlM2QxMjUwMTQ2MTAwNjU1MzAzJTI2ZmVlZGl0ZW1pZCUzZCUyNmFkZ3JvdXAlM2RDb21wZXRpdG9yJTI1MjBLZXl3b3JkcyUyNTIwQ3VzdG9tJTI1MjBTZWdtZW50JTI2dGFyZ2V0aWQlM2Rrd2QtMjMyOTkzMzg1OTQ5NzcwOSUzYWxvYy00MDg0JTI2bWF0Y2h0eXBlJTNkZSUyNmJpZG1hdGNodHlwZSUzZGJlJTI2bmV0d29yayUzZGElMjZkZXZpY2UlM2RjJTI2Y3JlYXRpdmUlM2Q3ODEzNDI2NjkwOTkwNiUyNmtleXdvcmQlM2RrZXl3b3JkJTI2bG9jX3BoeXNpY2FsX21zJTNkNzk3MDklMjZsb2NfaW50ZXJlc3RfbXMlM2QlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZ1dG1fdGVybSUzZGtleXdvcmQlMjZ1dG1fY2FtcGFpZ24lM2RNX0RfUk1fQ3VzdG9tLVNlZ21lbnQtQ2FsY19GT0ElMjZrZW5pYnBpZCUzZGJpbmclMjZjbGlja2lkJTNkNzlkOGQ1ZmJiNmFiMWFiNmM2YTdiZmI2YmM4OTg4YjMlMjZuZXR3b3JrVHlwZSUzZGF1ZGllbmNlc2VhcmNoJTI2Y2FtcGFpZ24lM2RNX0RfUk1fQ3VzdG9tLVNlZ21lbnQtQ2FsY19GT0ElMjZzZmlkJTNkNzAxTnMwMDAwMHlpZnJOJTI2dGVzdGlkJTNkMjAzYSUyNnBpZCUzZDI0OTMlMjZtc2Nsa2lkJTNkNzlkOGQ1ZmJiNmFiMWFiNmM2YTdiZmI2YmM4OTg4YjM%26rlid%3D79d8d5fbb6ab1ab6c6a7bfb6bc8988b3&rtype=targetURL&tagId=binghp-infopane-6&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                          - link "Ad Choice" [ref=f4e476]:
+                            - /url: https://account.microsoft.com/privacy/ad-settings
+                            - img [ref=f4e477]
+                      - button "See more" [ref=f4e479]:
+                        - img [ref=f4e480]
+                - article "Popular Florida social media influencer killed in drive-by shooting while inside luxury SUV" [ref=f4e481] [cursor=pointer]:
+                  - generic [ref=f4e483]:
+                    - img [ref=f4e484]
+                    - generic [ref=f4e485]:
+                      - generic [ref=f4e486]:
+                        - generic [ref=f4e487]:
+                          - generic [ref=f4e488]:
+                            - img [ref=f4e489]
+                            - generic [ref=f4e490]: FOX News
+                          - generic [ref=f4e491]: ·
+                          - generic [ref=f4e492]: 13h
+                        - link "Popular Florida social media influencer killed in drive-by shooting while inside luxury SUV, FOX News" [ref=f4e493]:
+                          - /url: https://www.msn.com/en-us/news/crime/popular-florida-social-media-influencer-killed-in-drive-by-shooting-while-inside-luxury-suv/ar-AA27mmCD
+                          - text: Popular Florida social media influencer killed in drive-by shooting while inside luxury SUV
+                      - generic "Popular Florida social media influencer killed in drive-by shooting while inside luxury SUV" [ref=f4e497]:
+                        - generic [ref=f4e499]:
+                          - generic [ref=f4e500]:
+                            - button "162 Likes" [ref=f4e501]:
+                              - generic [ref=f4e502]:
+                                - img [ref=f4e503]
+                                - generic [ref=f4e505]: "162"
+                            - button "Dislike" [ref=f4e506]:
+                              - img [ref=f4e508]
+                          - link "View comments 39 Comment" [ref=f4e511]:
+                            - /url: https://www.msn.com/en-us/news/crime/popular-florida-social-media-influencer-killed-in-drive-by-shooting-while-inside-luxury-suv/ar-AA27mmCD#comments
+                            - button "View comments 39 Comment" [ref=f4e512]:
+                              - img [ref=f4e513]
+                            - generic [ref=f4e515]: "39"
+                    - generic [ref=f4e516]:
+                      - button "Hide this story" [ref=f4e517]:
+                        - img [ref=f4e518]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e519]:
+                        - img [ref=f4e520]
+                - article [ref=f4e521] [cursor=pointer]:
+                  - generic [ref=f4e527]:
+                    - generic [ref=f4e529]:
+                      - img "World Cup coverage" [ref=f4e531]
+                      - link "World Cup coverage" [ref=f4e532]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96
+                        - heading "World Cup coverage" [level=2] [ref=f4e533]
+                      - button "More interests" [ref=f4e534]
+                      - generic [ref=f4e535]:
+                        - generic "Trending now" [ref=f4e536]:
+                          - button "Trending now" [ref=f4e537]
+                        - button "More options" [ref=f4e538]
+                    - generic [ref=f4e542]:
+                      - link "USA Round of 16 1 - 4 Final · Jul 7 BEL" [ref=f4e544]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452515?uxmode=ruby&ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96
+                        - generic [ref=f4e545]:
+                          - generic [ref=f4e546]:
+                            - generic [ref=f4e547]:
+                              - button "Click to follow USA":
+                                - generic:
+                                  - img
+                            - generic "USA" [ref=f4e548]
+                          - generic [ref=f4e550]:
+                            - generic [ref=f4e551]: Round of 16
+                            - generic [ref=f4e552]:
+                              - generic [ref=f4e554]: "1"
+                              - generic [ref=f4e555]: "-"
+                              - generic [ref=f4e556]:
+                                - generic [ref=f4e557]: "4"
+                                - img [ref=f4e559]
+                            - generic "Jul 7 - Final" [ref=f4e561]: Final · Jul 7
+                          - generic [ref=f4e562]:
+                            - generic [ref=f4e563]:
+                              - button "Click to follow Belgium":
+                                - generic:
+                                  - img
+                            - generic "Belgium" [ref=f4e564]: BEL
+                      - link "POR Round of 16 0 - 1 Final · Jul 7 ESP" [ref=f4e566]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452513?uxmode=ruby&ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96
+                        - generic [ref=f4e567]:
+                          - generic [ref=f4e568]:
+                            - generic [ref=f4e569]:
+                              - button "Click to follow Portugal":
+                                - generic:
+                                  - img
+                            - generic "Portugal" [ref=f4e570]: POR
+                          - generic [ref=f4e572]:
+                            - generic [ref=f4e573]: Round of 16
+                            - generic [ref=f4e574]:
+                              - generic [ref=f4e576]: "0"
+                              - generic [ref=f4e577]: "-"
+                              - generic [ref=f4e578]:
+                                - generic [ref=f4e579]: "1"
+                                - img [ref=f4e581]
+                            - generic "Jul 7 - Final" [ref=f4e583]: Final · Jul 7
+                          - generic [ref=f4e584]:
+                            - generic [ref=f4e585]:
+                              - button "Click to follow Spain":
+                                - generic:
+                                  - img
+                            - generic "Spain" [ref=f4e586]: ESP
+                      - link "ARG Round of 16 12:00 AM · Jul 8 Injury report available EGY" [ref=f4e588]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452521?uxmode=ruby&ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96
+                        - generic [ref=f4e589]:
+                          - generic [ref=f4e590]:
+                            - generic [ref=f4e591]:
+                              - button "Click to follow Argentina":
+                                - generic:
+                                  - img
+                            - generic "Argentina" [ref=f4e592]: ARG
+                          - generic [ref=f4e594]:
+                            - generic [ref=f4e595]: Round of 16
+                            - generic "12:00 AM-Jul 8" [ref=f4e596]:
+                              - generic [ref=f4e597]: 12:00 AM
+                              - generic [ref=f4e598]: ·
+                              - generic [ref=f4e599]: Jul 8
+                            - generic "Injury report available" [ref=f4e600]:
+                              - generic [ref=f4e601]: Injury report available
+                          - generic [ref=f4e602]:
+                            - generic [ref=f4e603]:
+                              - button "Click to follow Egypt":
+                                - generic:
+                                  - img
+                            - generic "Egypt" [ref=f4e604]: EGY
+                    - generic [ref=f4e606]:
+                      - generic [ref=f4e607]:
+                        - generic "Previous" [ref=f4e608]:
+                          - button "Previous" [ref=f4e609]
+                        - tablist [ref=f4e611]:
+                          - tab "tab-0" [selected] [ref=f4e612]
+                          - tab "tab-1" [ref=f4e614]
+                          - tab "tab-2" [ref=f4e616]
+                        - generic "Next" [ref=f4e618]:
+                          - button "Next" [ref=f4e619]
+                      - link "See more" [ref=f4e621]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96
+                - article [ref=f4e622] [cursor=pointer]:
+                  - generic [ref=f4e627]:
+                    - generic [ref=f4e629]:
+                      - link "Top stories" [ref=f4e631]:
+                        - /url: https://www.msn.com/en-us/channel/topic/Top%20Stories/tp-Y_46b78bbb-31c4-4fc5-8a4a-858072348d06?cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ocid=BingHp01
+                        - heading "Top stories" [level=2] [ref=f4e632]
+                      - button "More options" [ref=f4e634]
+                    - list [ref=f4e637]:
+                      - listitem [ref=f4e638]:
+                        - link "The Wall Street Journal 47m Top Democrats push for Graham Platner to exit Senate race" [ref=f4e639]:
+                          - /url: https://www.msn.com/en-us/news/politics/top-democrats-push-for-graham-platner-to-exit-senate-race/ar-AA27l0xa
+                          - generic [ref=f4e640]:
+                            - generic [ref=f4e641]:
+                              - img [ref=f4e642]
+                              - generic [ref=f4e643]:
+                                - generic: The Wall Street Journal ·47m
+                            - generic [ref=f4e644]: Top Democrats push for Graham Platner to exit Senate race
+                      - listitem [ref=f4e645]:
+                        - link "CBS News 10m Trump lauds Erdogan, announces lifting sanctions as NATO summit begins" [ref=f4e646]:
+                          - /url: https://www.msn.com/en-us/news/world/trump-lauds-erdogan-announces-lifting-sanctions-as-nato-summit-begins/ar-AA27nLpb
+                          - generic [ref=f4e647]:
+                            - generic [ref=f4e648]:
+                              - img [ref=f4e649]
+                              - generic [ref=f4e650]:
+                                - generic: CBS News ·10m
+                            - generic [ref=f4e651]: Trump lauds Erdogan, announces lifting sanctions as NATO summit begins
+                      - listitem [ref=f4e652]:
+                        - link "USA TODAY Sports 1h Belgium players cap USA World Cup defeat with Trump dance" [ref=f4e653]:
+                          - /url: https://www.msn.com/en-us/sports/fifa_world_cup/belgium-players-cap-usa-world-cup-defeat-with-trump-dance/ar-AA27oW3V
+                          - generic [ref=f4e654]:
+                            - generic [ref=f4e655]:
+                              - img [ref=f4e656]
+                              - generic [ref=f4e657]:
+                                - generic: USA TODAY Sports ·1h
+                            - generic [ref=f4e658]: Belgium players cap USA World Cup defeat with Trump dance
+                    - generic [ref=f4e660]:
+                      - generic [ref=f4e661]:
+                        - generic "Previous" [ref=f4e662]:
+                          - button "Previous" [ref=f4e663]
+                        - tablist [ref=f4e665]:
+                          - tab "tab-0" [selected] [ref=f4e666]
+                          - tab "tab-1" [ref=f4e668]
+                          - tab "tab-2" [ref=f4e670]
+                        - generic "Next" [ref=f4e672]:
+                          - button "Next" [ref=f4e673]
+                      - link "See more" [ref=f4e675]:
+                        - /url: https://www.msn.com/en-us/channel/topic/Top%20Stories/tp-Y_46b78bbb-31c4-4fc5-8a4a-858072348d06?cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ocid=BingHp01
+                - article "Full Mouth Dental Implants In 24-Hrs" [ref=f4e676] [cursor=pointer]:
+                  - generic [ref=f4e678]:
+                    - img [ref=f4e679]
+                    - generic [ref=f4e680]:
+                      - generic [ref=f4e681]:
+                        - generic [ref=f4e684]: lp.nuviasmiles.com
+                        - link "Full Mouth Dental Implants In 24-Hrs, lp.nuviasmiles.com" [ref=f4e685]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=5912efdb-13a3-46bd-a84a-8d4f84b072a0&bdc=pb&bidId=18&bidderId=4&cmExpId=RSV&impId=5&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De86TwzrM5t8HiTJ9iVwSpUZjVUCUx1F6z9y8gW_YhayUjKAfFtClqFXkUt88xpa3dbEXfPGR3HpR3IdfCuYiowyw8uAyyFS9hShmmis6PXUcndsZakH8ztGwoDX2LWHcmG0oXKeqxGKF6djfTKr2zUXe_N6xUahzgJBvO6CRjmEMdpX_4_EX-tjKO-qYOVOIkjKZisqv1TBDH5pSE0wHhuIKw4Gd4%26u%3DaHR0cHMlM2ElMmYlMmZscC5udXZpYXNtaWxlcy5jb20lMmZob3ctbnV2aWFzLTI0LWhvdXItZGVudGFsLWltcGxhbnQtaXMtcmV2b2x1dGlvbml6aW5nLW9yYWwtaGVhbHRoOTM5MzU1LTE2MjMlM2Z1dG1fc291cmNlJTNkQk5OJTI2dXRtX3Rlcm0lM2RhcnRpY2xlJTI2dXRtX21lZGl1bSUzZGMlMjZ1dG1fY29udGVudCUzZGElMjZ1dG1fY2FtcGFpZ24lM2RCaW5nLU5hdGlvbmFsLUJOTi1BcnRpY2xlJTI2d2JyYWlkJTNkJTdiV0JSQUlEJTdkJTI2bXNjbGtpZCUzZDYwOTllNzIwZWRjNTE3YjlkNThhOGQ2ZGU3ZTdkZjRj%26rlid%3D6099e720edc517b9d58a8d6de7e7df4c&rtype=targetURL&tagId=binghp-river-1&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                          - text: Full Mouth Dental Implants In 24-Hrs
+                      - generic [ref=f4e686]:
+                        - link "Sponsored" [ref=f4e687]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=5912efdb-13a3-46bd-a84a-8d4f84b072a0&bdc=pb&bidId=18&bidderId=4&cmExpId=RSV&impId=5&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De86TwzrM5t8HiTJ9iVwSpUZjVUCUx1F6z9y8gW_YhayUjKAfFtClqFXkUt88xpa3dbEXfPGR3HpR3IdfCuYiowyw8uAyyFS9hShmmis6PXUcndsZakH8ztGwoDX2LWHcmG0oXKeqxGKF6djfTKr2zUXe_N6xUahzgJBvO6CRjmEMdpX_4_EX-tjKO-qYOVOIkjKZisqv1TBDH5pSE0wHhuIKw4Gd4%26u%3DaHR0cHMlM2ElMmYlMmZscC5udXZpYXNtaWxlcy5jb20lMmZob3ctbnV2aWFzLTI0LWhvdXItZGVudGFsLWltcGxhbnQtaXMtcmV2b2x1dGlvbml6aW5nLW9yYWwtaGVhbHRoOTM5MzU1LTE2MjMlM2Z1dG1fc291cmNlJTNkQk5OJTI2dXRtX3Rlcm0lM2RhcnRpY2xlJTI2dXRtX21lZGl1bSUzZGMlMjZ1dG1fY29udGVudCUzZGElMjZ1dG1fY2FtcGFpZ24lM2RCaW5nLU5hdGlvbmFsLUJOTi1BcnRpY2xlJTI2d2JyYWlkJTNkJTdiV0JSQUlEJTdkJTI2bXNjbGtpZCUzZDYwOTllNzIwZWRjNTE3YjlkNThhOGQ2ZGU3ZTdkZjRj%26rlid%3D6099e720edc517b9d58a8d6de7e7df4c&rtype=targetURL&tagId=binghp-river-1&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                        - link "Ad Choice" [ref=f4e689]:
+                          - /url: https://account.microsoft.com/privacy/ad-settings
+                          - img [ref=f4e690]
+                    - button "See more" [ref=f4e692]:
+                      - img [ref=f4e693]
+                - article "A white supremacist group from Texas marched through DC on July 4. Here's what to know" [ref=f4e694] [cursor=pointer]:
+                  - generic [ref=f4e696]:
+                    - img [ref=f4e697]
+                    - generic [ref=f4e698]:
+                      - generic [ref=f4e699]:
+                        - generic [ref=f4e700]:
+                          - generic [ref=f4e701]:
+                            - img [ref=f4e702]
+                            - generic [ref=f4e703]: Austin American-Statesman
+                          - generic [ref=f4e704]: ·
+                          - generic [ref=f4e705]: 20h
+                        - link "A white supremacist group from Texas marched through DC on July 4. Here's what to know, Austin American-Statesman" [ref=f4e706]:
+                          - /url: https://www.msn.com/en-us/news/us/a-white-supremacist-group-from-texas-marched-through-dc-on-july-4-here-s-what-to-know/ar-AA27lItQ
+                          - text: A white supremacist group from Texas marched through DC on July 4. Here's what to know
+                      - generic "A white supremacist group from Texas marched through DC on July 4. Here's what to know" [ref=f4e710]:
+                        - generic [ref=f4e712]:
+                          - generic [ref=f4e713]:
+                            - button "218 Likes" [ref=f4e714]:
+                              - generic [ref=f4e715]:
+                                - img [ref=f4e716]
+                                - generic [ref=f4e718]: "218"
+                            - button "Dislike" [ref=f4e719]:
+                              - img [ref=f4e721]
+                          - link "View comments 165 Comment" [ref=f4e724]:
+                            - /url: https://www.msn.com/en-us/news/us/a-white-supremacist-group-from-texas-marched-through-dc-on-july-4-here-s-what-to-know/ar-AA27lItQ#comments
+                            - button "View comments 165 Comment" [ref=f4e725]:
+                              - img [ref=f4e726]
+                            - generic [ref=f4e728]: "165"
+                    - generic [ref=f4e729]:
+                      - button "Hide this story" [ref=f4e730]:
+                        - img [ref=f4e731]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e732]:
+                        - img [ref=f4e733]
+                - article "Millennial man shares eye-opening take on baby boomers" [ref=f4e734] [cursor=pointer]:
+                  - generic [ref=f4e736]:
+                    - img [ref=f4e737]
+                    - generic [ref=f4e738]:
+                      - generic [ref=f4e739]:
+                        - generic [ref=f4e740]:
+                          - generic [ref=f4e741]:
+                            - img [ref=f4e742]
+                            - generic [ref=f4e743]: Newsweek
+                          - generic [ref=f4e744]: ·
+                          - generic [ref=f4e745]: 3w
+                        - link "Millennial man shares eye-opening take on baby boomers, Newsweek" [ref=f4e746]:
+                          - /url: https://www.msn.com/en-us/news/other/millennial-man-shares-eye-opening-take-on-baby-boomers/ar-AA25Mwn6
+                          - text: Millennial man shares eye-opening take on baby boomers
+                      - generic "Millennial man shares eye-opening take on baby boomers" [ref=f4e750]:
+                        - generic [ref=f4e752]:
+                          - generic [ref=f4e753]:
+                            - button "880 Likes" [ref=f4e754]:
+                              - generic [ref=f4e755]:
+                                - img [ref=f4e756]
+                                - generic [ref=f4e758]: "880"
+                            - button "Dislike" [ref=f4e759]:
+                              - img [ref=f4e761]
+                          - link "View comments 2k Comment" [ref=f4e764]:
+                            - /url: https://www.msn.com/en-us/news/other/millennial-man-shares-eye-opening-take-on-baby-boomers/ar-AA25Mwn6#comments
+                            - button "View comments 2k Comment" [ref=f4e765]:
+                              - img [ref=f4e766]
+                            - generic [ref=f4e768]: 2k
+                    - generic [ref=f4e769]:
+                      - button "Hide this story" [ref=f4e770]:
+                        - img [ref=f4e771]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e772]:
+                        - img [ref=f4e773]
+                - article "The Top-Rated Fantasy Game Of The Year" [ref=f4e774] [cursor=pointer]:
+                  - generic [ref=f4e776]:
+                    - img [ref=f4e777]
+                    - generic [ref=f4e778]:
+                      - generic [ref=f4e779]:
+                        - generic [ref=f4e782]: Try Mmorpg
+                        - link "The Top-Rated Fantasy Game Of The Year, Try Mmorpg" [ref=f4e783]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=9ee4bcc0-2e13-437c-84b0-f393e7050045&bdc=pb&bidId=16&bidderId=4&cmExpId=RSV&impId=6&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8rysfScLkfdXmGwwdkrt5GTVUCUzrvWmWcucuowF-5Wlh4io7betSOaTojHVoKrj_9nQqOM7hWbm1yAoH9XQBJwOuU9UHLxEnAPVHvGh7ynw5SgNwRpHAd2qvUMVaA9tR9mlYSuIQLxlu-lSKqoNmRSjcNaJhNPn67G6rHgIyQJoJpsaIGiyZ3zTmvpVn1Si0E0iYzqubTjE1zxmzGoL7Hpj7zMQ%26u%3DaHR0cHMlM2ElMmYlMmZyYWlkbW1vcnBnLmNvbSUzZm1zY2xraWQlM2Q1YzYzZWYzYmQ2NDMxNjU4ZDg0OTg1NzZkYzYxNjUyYyUyNkFkR3JvdXBJZCUzZDExNzg2Nzg0NzI5NTc1OTAlMjZBZElkJTNkNzM2Njc2MzgzNzgwODclMjZCaWRNYXRjaFR5cGUlM2RiZSUyNkNhbXBhaWduSWQlM2Q1NzA2Njc1ODQlMjZUYXJnZXRJZCUzZGt3ZC0yMzI1NDY3MDkzODIxOTc1JTNhbG9jLTE5MCUyNlF1ZXJ5U3RyaW5nJTNka2V5d29yZCUyNklmU2VhcmNoJTNhc3RyaW5nJTNkc3RyaW5nJTI2a2V5d29yZCUzZGtleXdvcmQlMjZNYXRjaFR5cGUlM2RlJTI2Y3BpZCUzZDU1NjRjYzE4LTQyNmEtNGYyMy1hNTQ4LTg3OTdiMDMxNjgzNyUyNmJhY2tncm91bmQlM2QwNA%26rlid%3D5c63ef3bd6431658d8498576dc61652c&rtype=targetURL&tagId=binghp-river-2&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                          - text: The Top-Rated Fantasy Game Of The Year
+                      - generic [ref=f4e784]:
+                        - link "Sponsored" [ref=f4e785]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=9ee4bcc0-2e13-437c-84b0-f393e7050045&bdc=pb&bidId=16&bidderId=4&cmExpId=RSV&impId=6&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=ff51a830-d808-456d-9f10-667b401dac4d&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8rysfScLkfdXmGwwdkrt5GTVUCUzrvWmWcucuowF-5Wlh4io7betSOaTojHVoKrj_9nQqOM7hWbm1yAoH9XQBJwOuU9UHLxEnAPVHvGh7ynw5SgNwRpHAd2qvUMVaA9tR9mlYSuIQLxlu-lSKqoNmRSjcNaJhNPn67G6rHgIyQJoJpsaIGiyZ3zTmvpVn1Si0E0iYzqubTjE1zxmzGoL7Hpj7zMQ%26u%3DaHR0cHMlM2ElMmYlMmZyYWlkbW1vcnBnLmNvbSUzZm1zY2xraWQlM2Q1YzYzZWYzYmQ2NDMxNjU4ZDg0OTg1NzZkYzYxNjUyYyUyNkFkR3JvdXBJZCUzZDExNzg2Nzg0NzI5NTc1OTAlMjZBZElkJTNkNzM2Njc2MzgzNzgwODclMjZCaWRNYXRjaFR5cGUlM2RiZSUyNkNhbXBhaWduSWQlM2Q1NzA2Njc1ODQlMjZUYXJnZXRJZCUzZGt3ZC0yMzI1NDY3MDkzODIxOTc1JTNhbG9jLTE5MCUyNlF1ZXJ5U3RyaW5nJTNka2V5d29yZCUyNklmU2VhcmNoJTNhc3RyaW5nJTNkc3RyaW5nJTI2a2V5d29yZCUzZGtleXdvcmQlMjZNYXRjaFR5cGUlM2RlJTI2Y3BpZCUzZDU1NjRjYzE4LTQyNmEtNGYyMy1hNTQ4LTg3OTdiMDMxNjgzNyUyNmJhY2tncm91bmQlM2QwNA%26rlid%3D5c63ef3bd6431658d8498576dc61652c&rtype=targetURL&tagId=binghp-river-2&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=erfreir
+                        - link "Ad Choice" [ref=f4e787]:
+                          - /url: https://account.microsoft.com/privacy/ad-settings
+                          - img [ref=f4e788]
+                    - button "See more" [ref=f4e790]:
+                      - img [ref=f4e791]
+                - article [ref=f4e792] [cursor=pointer]:
+                  - generic [ref=f4e798]:
+                    - generic [ref=f4e800]:
+                      - img "Watchlist suggestions" [ref=f4e802]
+                      - link "Watchlist suggestions" [ref=f4e803]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?ocid=BingHp01
+                        - heading "Watchlist suggestions" [level=2] [ref=f4e804]
+                      - button "More options" [ref=f4e806]
+                    - generic [ref=f4e811]:
+                      - link "Nasdaq 100 NASDAQ 100 Dropping fast ‎-2.04%‎ 29,092.80" [ref=f4e813]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a3yy77&noti=Price&ocid=BingHp01
+                        - generic [ref=f4e814]:
+                          - generic [ref=f4e815]:
+                            - generic [ref=f4e816]: Nasdaq 100
+                            - img "NASDAQ 100" [ref=f4e817]
+                          - generic [ref=f4e819]: Dropping fast
+                        - generic [ref=f4e824]:
+                          - generic [ref=f4e825]: ‎-2.04%‎
+                          - generic [ref=f4e826]: 29,092.80
+                        - button "Add to watchlist" [ref=f4e829]:
+                          - img [ref=f4e830]
+                      - link "VIX CBOE Market Volatility Index Rising fast ‎+3.15%‎ 16.06" [ref=f4e834]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a33pk2&noti=Price&ocid=BingHp01
+                        - generic [ref=f4e835]:
+                          - generic [ref=f4e836]:
+                            - generic [ref=f4e837]: VIX
+                            - img "CBOE Market Volatility Index" [ref=f4e838]
+                          - generic [ref=f4e840]: Rising fast
+                        - generic [ref=f4e845]:
+                          - generic [ref=f4e846]: ‎+3.15%‎
+                          - generic [ref=f4e847]: "16.06"
+                        - button "Add to watchlist" [ref=f4e850]:
+                          - img [ref=f4e851]
+                      - link "NVIDIA CORPORATION NVDA ‎-1.42%‎ 192.77" [ref=f4e855]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a1yv52&ocid=BingHp01
+                        - generic [ref=f4e856]:
+                          - generic [ref=f4e858]: NVIDIA CORPORATION
+                          - generic [ref=f4e860]: NVDA
+                        - generic [ref=f4e865]:
+                          - generic [ref=f4e866]: ‎-1.42%‎
+                          - generic [ref=f4e867]: "192.77"
+                        - button "Add to watchlist" [ref=f4e870]:
+                          - img [ref=f4e871]
+                      - link "MICROSOFT CORPORATION MICROSOFT CORPORATION Rising fast ‎+1.73%‎ 393.44" [ref=f4e875]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a1xzim&noti=Price&ocid=BingHp01
+                        - generic [ref=f4e876]:
+                          - generic [ref=f4e877]:
+                            - generic [ref=f4e878]: MICROSOFT CORPORATION
+                            - img "MICROSOFT CORPORATION" [ref=f4e879]
+                          - generic [ref=f4e881]: Rising fast
+                        - generic [ref=f4e886]:
+                          - generic [ref=f4e887]: ‎+1.73%‎
+                          - generic [ref=f4e888]: "393.44"
+                        - button "Add to watchlist" [ref=f4e891]:
+                          - img [ref=f4e892]
+                      - link "TESLA, INC. TESLA, INC. Dropping fast ‎-2.73%‎ 408.29" [ref=f4e896]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a24kar&noti=Price&ocid=BingHp01
+                        - generic [ref=f4e897]:
+                          - generic [ref=f4e898]:
+                            - generic [ref=f4e899]: TESLA, INC.
+                            - img "TESLA, INC." [ref=f4e900]
+                          - generic [ref=f4e902]: Dropping fast
+                        - generic [ref=f4e907]:
+                          - generic [ref=f4e908]: ‎-2.73%‎
+                          - generic [ref=f4e909]: "408.29"
+                        - button "Add to watchlist" [ref=f4e912]:
+                          - img [ref=f4e913]
+                    - generic [ref=f4e917]:
+                      - generic [ref=f4e918]:
+                        - generic "Previous" [ref=f4e919]:
+                          - button "Previous" [ref=f4e920]
+                        - tablist [ref=f4e922]:
+                          - tab "tab-0" [selected] [ref=f4e923]
+                          - tab "tab-1" [ref=f4e925]
+                          - tab "tab-2" [ref=f4e927]
+                          - tab "tab-3" [ref=f4e929]
+                          - tab "tab-4" [ref=f4e931]
+                          - tab "tab-5"
+                          - tab "tab-6"
+                        - generic "Next" [ref=f4e933]:
+                          - button "Next" [ref=f4e934]
+                      - link "See watchlist suggestions" [ref=f4e936]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?ocid=BingHp01
+              - generic [ref=f4e937]:
+                - article "Monaco bombing attack suspect found shot dead in Ukraine, officials say" [ref=f4e938] [cursor=pointer]:
+                  - generic [ref=f4e940]:
+                    - img [ref=f4e941]
+                    - generic [ref=f4e942]:
+                      - generic [ref=f4e943]:
+                        - generic [ref=f4e944]:
+                          - generic [ref=f4e945]:
+                            - img [ref=f4e946]
+                            - generic [ref=f4e947]: CNN
+                          - generic [ref=f4e948]: ·
+                          - generic [ref=f4e949]: 2h
+                        - link "Monaco bombing attack suspect found shot dead in Ukraine, officials say, CNN" [ref=f4e950]:
+                          - /url: https://www.msn.com/en-us/news/world/monaco-bombing-attack-suspect-found-shot-dead-in-ukraine-officials-say/ar-AA27nFdg
+                          - text: Monaco bombing attack suspect found shot dead in Ukraine, officials say
+                      - generic "Monaco bombing attack suspect found shot dead in Ukraine, officials say" [ref=f4e954]:
+                        - generic [ref=f4e956]:
+                          - generic [ref=f4e957]:
+                            - button "191 Likes" [ref=f4e958]:
+                              - generic [ref=f4e959]:
+                                - img [ref=f4e960]
+                                - generic [ref=f4e962]: "191"
+                            - button "Dislike" [ref=f4e963]:
+                              - img [ref=f4e965]
+                          - link "View comments 17 Comment" [ref=f4e968]:
+                            - /url: https://www.msn.com/en-us/news/world/monaco-bombing-attack-suspect-found-shot-dead-in-ukraine-officials-say/ar-AA27nFdg#comments
+                            - button "View comments 17 Comment" [ref=f4e969]:
+                              - img [ref=f4e970]
+                            - generic [ref=f4e972]: "17"
+                    - generic [ref=f4e973]:
+                      - button "Hide this story" [ref=f4e974]:
+                        - img [ref=f4e975]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e976]:
+                        - img [ref=f4e977]
+                - article [ref=f4e978] [cursor=pointer]
+                - article "Taylor Swift wins copyright lawsuit days after wedding" [ref=f4e985] [cursor=pointer]:
+                  - generic [ref=f4e987]:
+                    - img [ref=f4e988]
+                    - generic [ref=f4e989]:
+                      - generic [ref=f4e990]:
+                        - generic [ref=f4e991]:
+                          - generic [ref=f4e992]:
+                            - img [ref=f4e993]
+                            - generic [ref=f4e994]: USA TODAY
+                          - generic [ref=f4e995]: ·
+                          - generic [ref=f4e996]: 17h
+                        - link "Taylor Swift wins copyright lawsuit days after wedding, USA TODAY" [ref=f4e997]:
+                          - /url: https://www.msn.com/en-us/music/news/taylor-swift-wins-copyright-lawsuit-days-after-wedding/ar-AA27lnby
+                          - text: Taylor Swift wins copyright lawsuit days after wedding
+                      - generic "Taylor Swift wins copyright lawsuit days after wedding" [ref=f4e1001]:
+                        - generic [ref=f4e1003]:
+                          - generic [ref=f4e1004]:
+                            - button "452 Likes" [ref=f4e1005]:
+                              - generic [ref=f4e1006]:
+                                - img [ref=f4e1007]
+                                - generic [ref=f4e1009]: "452"
+                            - button "Dislike" [ref=f4e1010]:
+                              - img [ref=f4e1012]
+                          - link "View comments 13 Comment" [ref=f4e1015]:
+                            - /url: https://www.msn.com/en-us/music/news/taylor-swift-wins-copyright-lawsuit-days-after-wedding/ar-AA27lnby#comments
+                            - button "View comments 13 Comment" [ref=f4e1016]:
+                              - img [ref=f4e1017]
+                            - generic [ref=f4e1019]: "13"
+                    - generic [ref=f4e1020]:
+                      - button "Hide this story" [ref=f4e1021]:
+                        - img [ref=f4e1022]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1023]:
+                        - img [ref=f4e1024]
+                - article [ref=f4e1025] [cursor=pointer]:
+                  - generic [ref=f4e1031]:
+                    - generic [ref=f4e1033]:
+                      - link "Los Angeles" [ref=f4e1035]:
+                        - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                        - heading "Los Angeles" [level=2] [ref=f4e1036]
+                      - button "My location" [ref=f4e1037]
+                      - button "More options" [ref=f4e1039]
+                    - generic [ref=f4e1043]:
+                      - generic [ref=f4e1044]:
+                        - generic [ref=f4e1046]:
+                          - link "Sunny" [ref=f4e1047]:
+                            - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                            - img "Sunny" [ref=f4e1048]
+                          - link "63°F" [ref=f4e1049]:
+                            - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                            - generic [ref=f4e1050]: ‎63‎
+                            - generic [ref=f4e1052]: ‎°F‎
+                        - generic [ref=f4e1054]:
+                          - link "Heat - AdvisoryHeat advisory" [ref=f4e1056]:
+                            - /url: https://www.msn.com/en-us/weather/maps/severeweather/in-Los-Angeles,CA
+                            - img "Heat - Advisory" [ref=f4e1058]
+                            - text: Heat advisory
+                          - link "See full forecast" [ref=f4e1059]:
+                            - /url: https://www.msn.com/en-us/weather/maps/severeweather/in-Los-Angeles,CA
+                            - img "arrow" [ref=f4e1060]
+                      - generic [ref=f4e1065]:
+                        - link "Larger map" [ref=f4e1066]:
+                          - /url: ""
+                          - img
+                          - generic [ref=f4e1067]:
+                            - generic:
+                              - generic:
+                                - img
+                                - img
+                                - img
+                                - img
+                                - img
+                                - img
+                        - link "Check more alert details" [ref=f4e1068]:
+                          - /url: ""
+                          - generic "Check more alert details" [ref=f4e1069]
+                          - img [ref=f4e1071]
+                        - link "Click to see more information" [ref=f4e1072]:
+                          - /url: ""
+                          - img [ref=f4e1073]
+                    - button "See full forecast" [ref=f4e1076]
+                - article "Inside the rise and fall of Kohl's" [ref=f4e1077] [cursor=pointer]:
+                  - generic [ref=f4e1079]:
+                    - generic [ref=f4e1085]:
+                      - generic [ref=f4e1086]:
+                        - generic [ref=f4e1087]:
+                          - generic [ref=f4e1088]:
+                            - img [ref=f4e1089]
+                            - generic [ref=f4e1090]: CNBC
+                          - generic [ref=f4e1091]: ·
+                          - generic [ref=f4e1092]: 1w
+                        - link "Inside the rise and fall of Kohl's, CNBC" [ref=f4e1093]:
+                          - /url: https://www.msn.com/en-us/money/news/inside-the-rise-and-fall-of-kohl-s/vi-AA26Gi7F
+                          - text: Inside the rise and fall of Kohl's
+                      - generic "Inside the rise and fall of Kohl's" [ref=f4e1097]:
+                        - generic [ref=f4e1099]:
+                          - generic [ref=f4e1100]:
+                            - button "395 Likes" [ref=f4e1101]:
+                              - generic [ref=f4e1102]:
+                                - img [ref=f4e1103]
+                                - generic [ref=f4e1105]: "395"
+                            - button "Dislike" [ref=f4e1106]:
+                              - img [ref=f4e1108]
+                          - link "View comments 71 Comment" [ref=f4e1111]:
+                            - /url: https://www.msn.com/en-us/money/news/inside-the-rise-and-fall-of-kohl-s/vi-AA26Gi7F#comments
+                            - button "View comments 71 Comment" [ref=f4e1112]:
+                              - img [ref=f4e1113]
+                            - generic [ref=f4e1115]: "71"
+                    - generic [ref=f4e1116]:
+                      - button "Hide this story" [ref=f4e1117]:
+                        - img [ref=f4e1118]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1119]:
+                        - img [ref=f4e1120]
+                - 'article "Brown Jackson’s latest spotlight moment fuels accusations she’s forgetting her day job: ''Not celebrities''" [ref=f4e1121] [cursor=pointer]':
+                  - generic [ref=f4e1123]:
+                    - img [ref=f4e1124]
+                    - generic [ref=f4e1125]:
+                      - generic [ref=f4e1126]:
+                        - generic [ref=f4e1127]:
+                          - generic [ref=f4e1128]:
+                            - img [ref=f4e1129]
+                            - generic [ref=f4e1130]: FOX News
+                          - generic [ref=f4e1131]: ·
+                          - generic [ref=f4e1132]: 22h
+                        - 'link "Brown Jackson’s latest spotlight moment fuels accusations she’s forgetting her day job: ''Not celebrities'', FOX News" [ref=f4e1133]':
+                          - /url: https://www.msn.com/en-us/news/us/brown-jackson-s-latest-spotlight-moment-fuels-accusations-she-s-forgetting-her-day-job-not-celebrities/ar-AA27kdmg
+                          - text: "Brown Jackson’s latest spotlight moment fuels accusations she’s forgetting her day job: 'Not celebrities'"
+                      - 'generic "Brown Jackson’s latest spotlight moment fuels accusations she’s forgetting her day job: ''Not celebrities''" [ref=f4e1137]':
+                        - generic [ref=f4e1139]:
+                          - generic [ref=f4e1140]:
+                            - button "29 Likes" [ref=f4e1141]:
+                              - generic [ref=f4e1142]:
+                                - img [ref=f4e1143]
+                                - generic [ref=f4e1145]: "29"
+                            - button "Dislike" [ref=f4e1146]:
+                              - img [ref=f4e1148]
+                          - link "View comments 3 Comment" [ref=f4e1151]:
+                            - /url: https://www.msn.com/en-us/news/us/brown-jackson-s-latest-spotlight-moment-fuels-accusations-she-s-forgetting-her-day-job-not-celebrities/ar-AA27kdmg#comments
+                            - button "View comments 3 Comment" [ref=f4e1152]:
+                              - img [ref=f4e1153]
+                            - generic [ref=f4e1155]: "3"
+                    - generic [ref=f4e1156]:
+                      - button "Hide this story" [ref=f4e1157]:
+                        - img [ref=f4e1158]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1159]:
+                        - img [ref=f4e1160]
+                - article [ref=f4e1161] [cursor=pointer]
+                - article [ref=f4e1168] [cursor=pointer]:
+                  - generic [ref=f4e1173]:
+                    - generic [ref=f4e1175]:
+                      - link "Games" [ref=f4e1177]:
+                        - /url: https://www.msn.com/en-us/play
+                        - heading "Games" [level=2] [ref=f4e1178]
+                      - button "More options" [ref=f4e1180]
+                    - list [ref=f4e1184]:
+                      - generic:
+                        - listitem [ref=f4e1185]:
+                          - link "Solitaire Mahjong Classic" [ref=f4e1186]:
+                            - /url: https://www.msn.com/en-us/play/games/solitaire-mahjong-classic/cg-9p3m290dfqkb?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1187]:
+                              - img "Solitaire Mahjong Classic"
+                        - listitem [ref=f4e1188]:
+                          - link "bloxd.io" [ref=f4e1189]:
+                            - /url: https://www.msn.com/en-us/play/games/bloxdio/cg-9p0rj8ffrg7h?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1190]:
+                              - img "bloxd.io"
+                        - listitem [ref=f4e1191]:
+                          - link "FreeCell - Classic Solitaire" [ref=f4e1192]:
+                            - /url: https://www.msn.com/en-us/play/games/freecell--classic-solitaire/cg-9nvz7cjd197g?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1193]:
+                              - img "FreeCell - Classic Solitaire"
+                        - listitem [ref=f4e1194]:
+                          - link "Solitaire - Classic Klondike" [ref=f4e1195]:
+                            - /url: https://www.msn.com/en-us/play/games/solitaire-classic-mastery/cg-9pm3r8f7wm5r?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1196]:
+                              - img "Solitaire - Classic Klondike"
+                        - listitem [ref=f4e1197]:
+                          - link "Parking Jam" [ref=f4e1198]:
+                            - /url: https://www.msn.com/en-us/play/games/parking-jam/cg-9pk4qwzmhgbv?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1199]:
+                              - img "Parking Jam"
+                        - listitem [ref=f4e1200]:
+                          - link "Fruity Merge" [ref=f4e1201]:
+                            - /url: https://www.msn.com/en-us/play/games/fruity-merge/cg-9mxs1l592xgm?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1202]:
+                              - img "Fruity Merge"
+                        - listitem [ref=f4e1203]:
+                          - link "Bubble Shooter HD" [ref=f4e1204]:
+                            - /url: https://www.msn.com/en-us/play/games/bubble-shooter-hd/cg-9nzvl6gzqhkj?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1205]:
+                              - img "Bubble Shooter HD"
+                        - listitem [ref=f4e1206]:
+                          - link "Piece of Cake" [ref=f4e1207]:
+                            - /url: https://www.msn.com/en-us/play/games/piece-of-cake/cg-9n5mln8fpwg8?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1208]:
+                              - img "Piece of Cake"
+                        - listitem [ref=f4e1209]:
+                          - link "DesignVille" [ref=f4e1210]:
+                            - /url: https://www.msn.com/en-us/play/games/designville/cg-9nkmj1kxrw5n?ocid=BingHp01&cvid=3bbf54bb85ea4ffcc86cb67555d40e96&ei=9
+                            - generic [ref=f4e1211]:
+                              - img "DesignVille"
+                    - generic [ref=f4e1213]:
+                      - generic [ref=f4e1214]:
+                        - generic "Previous" [ref=f4e1215]:
+                          - button "Previous" [ref=f4e1216]
+                        - tablist [ref=f4e1218]:
+                          - tab "tab-0" [selected] [ref=f4e1219]
+                          - tab "tab-1" [ref=f4e1221]
+                          - tab "tab-2" [ref=f4e1223]
+                          - tab "tab-3" [ref=f4e1225]
+                          - tab "tab-4" [ref=f4e1227]
+                          - tab "tab-5"
+                          - tab "tab-6"
+                          - tab "tab-7"
+                          - tab "tab-8"
+                        - generic "Next" [ref=f4e1229]:
+                          - button "Next" [ref=f4e1230]
+                      - link "Explore more games" [ref=f4e1232]:
+                        - /url: https://www.msn.com/en-us/play
+                - article "Red scare revived as Trump leads push to attack Democrats as 'communists'" [ref=f4e1233] [cursor=pointer]:
+                  - generic [ref=f4e1235]:
+                    - img [ref=f4e1236]
+                    - generic [ref=f4e1237]:
+                      - generic [ref=f4e1238]:
+                        - generic [ref=f4e1239]:
+                          - generic [ref=f4e1240]:
+                            - img [ref=f4e1241]
+                            - generic [ref=f4e1242]: The Guardian
+                          - generic [ref=f4e1243]: ·
+                          - generic [ref=f4e1244]: 4h
+                        - link "Red scare revived as Trump leads push to attack Democrats as 'communists', The Guardian" [ref=f4e1245]:
+                          - /url: https://www.msn.com/en-us/news/politics/red-scare-revived-as-trump-leads-push-to-attack-democrats-as-communists/ar-AA27oiAs
+                          - text: Red scare revived as Trump leads push to attack Democrats as 'communists'
+                      - generic "Red scare revived as Trump leads push to attack Democrats as 'communists'" [ref=f4e1249]:
+                        - generic [ref=f4e1251]:
+                          - generic [ref=f4e1252]:
+                            - button "67 Likes" [ref=f4e1253]:
+                              - generic [ref=f4e1254]:
+                                - img [ref=f4e1255]
+                                - generic [ref=f4e1257]: "67"
+                            - button "Dislike" [ref=f4e1258]:
+                              - img [ref=f4e1260]
+                          - link "Comments turned off for this story" [ref=f4e1263]:
+                            - /url: https://www.msn.com/en-us/news/politics/red-scare-revived-as-trump-leads-push-to-attack-democrats-as-communists/ar-AA27oiAs
+                            - button "Comments turned off for this story" [ref=f4e1264]:
+                              - img [ref=f4e1265]
+                    - generic [ref=f4e1267]:
+                      - button "Hide this story" [ref=f4e1268]:
+                        - img [ref=f4e1269]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1270]:
+                        - img [ref=f4e1271]
+                - article "Super El Niño forecast strengthens—what it could mean for US winter" [ref=f4e1272] [cursor=pointer]:
+                  - generic [ref=f4e1274]:
+                    - img [ref=f4e1275]
+                    - generic [ref=f4e1276]:
+                      - generic [ref=f4e1277]:
+                        - generic [ref=f4e1278]:
+                          - generic [ref=f4e1279]:
+                            - img [ref=f4e1280]
+                            - generic [ref=f4e1281]: Newsweek
+                          - generic [ref=f4e1282]: ·
+                          - generic [ref=f4e1283]: 2h
+                        - link "Super El Niño forecast strengthens—what it could mean for US winter, Newsweek" [ref=f4e1284]:
+                          - /url: https://www.msn.com/en-us/weather/topstories/super-el-ni%C3%B1o-forecast-strengthens-what-it-could-mean-for-us-winter/ar-AA27nULH
+                          - text: Super El Niño forecast strengthens—what it could mean for US winter
+                      - generic "Super El Niño forecast strengthens—what it could mean for US winter" [ref=f4e1288]:
+                        - generic [ref=f4e1290]:
+                          - generic [ref=f4e1291]:
+                            - button "99 Likes" [ref=f4e1292]:
+                              - generic [ref=f4e1293]:
+                                - img [ref=f4e1294]
+                                - generic [ref=f4e1296]: "99"
+                            - button "Dislike" [ref=f4e1297]:
+                              - img [ref=f4e1299]
+                          - link "View comments 1 Comment" [ref=f4e1302]:
+                            - /url: https://www.msn.com/en-us/weather/topstories/super-el-ni%C3%B1o-forecast-strengthens-what-it-could-mean-for-us-winter/ar-AA27nULH#comments
+                            - button "View comments 1 Comment" [ref=f4e1303]:
+                              - img [ref=f4e1304]
+                            - generic [ref=f4e1306]: "1"
+                    - generic [ref=f4e1307]:
+                      - button "Hide this story" [ref=f4e1308]:
+                        - img [ref=f4e1309]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1310]:
+                        - img [ref=f4e1311]
+                - article "Hamas dissolves its government in Gaza – here’s what is happening next" [ref=f4e1312] [cursor=pointer]:
+                  - generic [ref=f4e1314]:
+                    - img [ref=f4e1315]
+                    - generic [ref=f4e1316]:
+                      - generic [ref=f4e1317]:
+                        - generic [ref=f4e1318]:
+                          - generic [ref=f4e1319]:
+                            - img [ref=f4e1320]
+                            - generic [ref=f4e1321]: The Independent
+                          - generic [ref=f4e1322]: ·
+                          - generic [ref=f4e1323]: 15h
+                        - link "Hamas dissolves its government in Gaza – here’s what is happening next, The Independent" [ref=f4e1324]:
+                          - /url: https://www.msn.com/en-us/news/world/hamas-dissolves-its-government-in-gaza-here-s-what-is-happening-next/ar-AA27lKxe
+                          - text: Hamas dissolves its government in Gaza – here’s what is happening next
+                      - generic "Hamas dissolves its government in Gaza – here’s what is happening next" [ref=f4e1328]:
+                        - generic [ref=f4e1330]:
+                          - generic [ref=f4e1331]:
+                            - button "212 Likes" [ref=f4e1332]:
+                              - generic [ref=f4e1333]:
+                                - img [ref=f4e1334]
+                                - generic [ref=f4e1336]: "212"
+                            - button "Dislike" [ref=f4e1337]:
+                              - img [ref=f4e1339]
+                          - link "View comments 17 Comment" [ref=f4e1342]:
+                            - /url: https://www.msn.com/en-us/news/world/hamas-dissolves-its-government-in-gaza-here-s-what-is-happening-next/ar-AA27lKxe#comments
+                            - button "View comments 17 Comment" [ref=f4e1343]:
+                              - img [ref=f4e1344]
+                            - generic [ref=f4e1346]: "17"
+                    - generic [ref=f4e1347]:
+                      - button "Hide this story" [ref=f4e1348]:
+                        - img [ref=f4e1349]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1350]:
+                        - img [ref=f4e1351]
+                - article "Shootout in Ohio leaves officer, mother, daughter dead" [ref=f4e1352] [cursor=pointer]:
+                  - generic [ref=f4e1354]:
+                    - generic [ref=f4e1360]:
+                      - generic [ref=f4e1361]:
+                        - generic [ref=f4e1362]:
+                          - generic [ref=f4e1363]:
+                            - img [ref=f4e1364]
+                            - generic [ref=f4e1365]: ABC News
+                          - generic [ref=f4e1366]: ·
+                          - generic [ref=f4e1367]: 12h
+                        - link "Shootout in Ohio leaves officer, mother, daughter dead, ABC News" [ref=f4e1368]:
+                          - /url: https://www.msn.com/en-us/news/crime/shootout-in-ohio-leaves-officer-mother-daughter-dead/vi-AA27lyo8
+                          - text: Shootout in Ohio leaves officer, mother, daughter dead
+                      - generic "Shootout in Ohio leaves officer, mother, daughter dead" [ref=f4e1372]:
+                        - generic [ref=f4e1374]:
+                          - generic [ref=f4e1375]:
+                            - button "148 Likes" [ref=f4e1376]:
+                              - generic [ref=f4e1377]:
+                                - img [ref=f4e1378]
+                                - generic [ref=f4e1380]: "148"
+                            - button "Dislike" [ref=f4e1381]:
+                              - img [ref=f4e1383]
+                          - link "View comments 9 Comment" [ref=f4e1386]:
+                            - /url: https://www.msn.com/en-us/news/crime/shootout-in-ohio-leaves-officer-mother-daughter-dead/vi-AA27lyo8#comments
+                            - button "View comments 9 Comment" [ref=f4e1387]:
+                              - img [ref=f4e1388]
+                            - generic [ref=f4e1390]: "9"
+                    - generic [ref=f4e1391]:
+                      - button "Hide this story" [ref=f4e1392]:
+                        - img [ref=f4e1393]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1394]:
+                        - img [ref=f4e1395]
+              - generic [ref=f4e1396]:
+                - article "She grew up in polygamy and has 44 siblings. Now she's sharing her story" [ref=f4e1397] [cursor=pointer]:
+                  - generic [ref=f4e1399]:
+                    - img [ref=f4e1400]
+                    - generic [ref=f4e1401]:
+                      - generic [ref=f4e1402]:
+                        - generic [ref=f4e1403]:
+                          - generic [ref=f4e1404]:
+                            - img [ref=f4e1405]
+                            - generic [ref=f4e1406]: USA TODAY
+                          - generic [ref=f4e1407]: ·
+                          - generic [ref=f4e1408]: 17h
+                        - link "She grew up in polygamy and has 44 siblings. Now she's sharing her story, USA TODAY" [ref=f4e1409]:
+                          - /url: https://www.msn.com/en-us/tv/celebrity/she-grew-up-in-polygamy-and-has-44-siblings-now-she-s-sharing-her-story/ar-AA27kE8K
+                          - text: She grew up in polygamy and has 44 siblings. Now she's sharing her story
+                      - generic "She grew up in polygamy and has 44 siblings. Now she's sharing her story" [ref=f4e1413]:
+                        - generic [ref=f4e1415]:
+                          - generic [ref=f4e1416]:
+                            - button "285 Likes" [ref=f4e1417]:
+                              - generic [ref=f4e1418]:
+                                - img [ref=f4e1419]
+                                - generic [ref=f4e1421]: "285"
+                            - button "Dislike" [ref=f4e1422]:
+                              - img [ref=f4e1424]
+                          - link "View comments 76 Comment" [ref=f4e1427]:
+                            - /url: https://www.msn.com/en-us/tv/celebrity/she-grew-up-in-polygamy-and-has-44-siblings-now-she-s-sharing-her-story/ar-AA27kE8K#comments
+                            - button "View comments 76 Comment" [ref=f4e1428]:
+                              - img [ref=f4e1429]
+                            - generic [ref=f4e1431]: "76"
+                    - generic [ref=f4e1432]:
+                      - button "Hide this story" [ref=f4e1433]:
+                        - img [ref=f4e1434]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1435]:
+                        - img [ref=f4e1436]
+                - 'article "The money would have been life-changing: My father told my grandmother to slash my inheritance. Is that fair?" [ref=f4e1437] [cursor=pointer]':
+                  - generic [ref=f4e1439]:
+                    - img [ref=f4e1440]
+                    - generic [ref=f4e1441]:
+                      - generic [ref=f4e1442]:
+                        - generic [ref=f4e1443]:
+                          - generic [ref=f4e1444]:
+                            - img [ref=f4e1445]
+                            - generic [ref=f4e1446]: MarketWatch
+                          - generic [ref=f4e1447]: ·
+                          - generic [ref=f4e1448]: 1d
+                        - 'link "The money would have been life-changing: My father told my grandmother to slash my inheritance. Is that fair?, MarketWatch" [ref=f4e1449]':
+                          - /url: https://www.msn.com/en-us/money/personalfinance/the-money-would-have-been-life-changing-my-father-told-my-grandmother-to-slash-my-inheritance-is-that-fair/ar-AA27iMSa
+                          - text: "The money would have been life-changing: My father told my grandmother to slash my inheritance. Is that fair?"
+                      - 'generic "The money would have been life-changing: My father told my grandmother to slash my inheritance. Is that fair?" [ref=f4e1453]':
+                        - generic [ref=f4e1455]:
+                          - generic [ref=f4e1456]:
+                            - button "38 Likes" [ref=f4e1457]:
+                              - generic [ref=f4e1458]:
+                                - img [ref=f4e1459]
+                                - generic [ref=f4e1461]: "38"
+                            - button "Dislike" [ref=f4e1462]:
+                              - img [ref=f4e1464]
+                          - link "View comments 22 Comment" [ref=f4e1467]:
+                            - /url: https://www.msn.com/en-us/money/personalfinance/the-money-would-have-been-life-changing-my-father-told-my-grandmother-to-slash-my-inheritance-is-that-fair/ar-AA27iMSa#comments
+                            - button "View comments 22 Comment" [ref=f4e1468]:
+                              - img [ref=f4e1469]
+                            - generic [ref=f4e1471]: "22"
+                    - generic [ref=f4e1472]:
+                      - button "Hide this story" [ref=f4e1473]:
+                        - img [ref=f4e1474]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1475]:
+                        - img [ref=f4e1476]
+                - article "Giannis switches to No. 7 after Heat jersey mix-up" [ref=f4e1477] [cursor=pointer]:
+                  - generic [ref=f4e1479]:
+                    - img [ref=f4e1480]
+                    - generic [ref=f4e1481]:
+                      - generic [ref=f4e1482]:
+                        - generic [ref=f4e1483]:
+                          - generic [ref=f4e1484]:
+                            - img [ref=f4e1485]
+                            - generic [ref=f4e1486]: MSN
+                          - generic [ref=f4e1487]: ·
+                          - generic [ref=f4e1488]: 5h
+                        - link "Giannis switches to No. 7 after Heat jersey mix-up, MSN" [ref=f4e1489]:
+                          - /url: https://www.msn.com/en-us/sports/nba/giannis-switches-to-no-7-after-heat-jersey-mix-up/ss-AA27lbHA
+                          - text: Giannis switches to No. 7 after Heat jersey mix-up
+                      - generic "Giannis switches to No. 7 after Heat jersey mix-up" [ref=f4e1493]:
+                        - generic [ref=f4e1495]:
+                          - generic [ref=f4e1496]:
+                            - button "2 Likes" [ref=f4e1497]:
+                              - generic [ref=f4e1498]:
+                                - img [ref=f4e1499]
+                                - generic [ref=f4e1501]: "2"
+                            - button "Dislike" [ref=f4e1502]:
+                              - img [ref=f4e1504]
+                          - link "Start the conversation" [ref=f4e1507]:
+                            - /url: https://www.msn.com/en-us/sports/nba/giannis-switches-to-no-7-after-heat-jersey-mix-up/ss-AA27lbHA#comments
+                            - button "Start the conversation" [ref=f4e1508]:
+                              - img [ref=f4e1509]
+                    - generic [ref=f4e1511]:
+                      - button "Hide this story" [ref=f4e1512]:
+                        - img [ref=f4e1513]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1514]:
+                        - img [ref=f4e1515]
+                - article "How many Americans still have landlines as AT&T wins fight over rules" [ref=f4e1516] [cursor=pointer]:
+                  - generic [ref=f4e1518]:
+                    - img [ref=f4e1519]
+                    - generic [ref=f4e1520]:
+                      - generic [ref=f4e1521]:
+                        - generic [ref=f4e1522]:
+                          - generic [ref=f4e1523]:
+                            - img [ref=f4e1524]
+                            - generic [ref=f4e1525]: Newsweek
+                          - generic [ref=f4e1526]: ·
+                          - generic [ref=f4e1527]: 23h
+                        - link "How many Americans still have landlines as AT&T wins fight over rules, Newsweek" [ref=f4e1528]:
+                          - /url: https://www.msn.com/en-us/news/technology/how-many-americans-still-have-landlines-as-at-t-wins-fight-over-rules/ar-AA27jVES
+                          - text: How many Americans still have landlines as AT&T wins fight over rules
+                      - generic "How many Americans still have landlines as AT&T wins fight over rules" [ref=f4e1532]:
+                        - generic [ref=f4e1534]:
+                          - generic [ref=f4e1535]:
+                            - button "451 Likes" [ref=f4e1536]:
+                              - generic [ref=f4e1537]:
+                                - img [ref=f4e1538]
+                                - generic [ref=f4e1540]: "451"
+                            - button "Dislike" [ref=f4e1541]:
+                              - img [ref=f4e1543]
+                          - link "View comments 288 Comment" [ref=f4e1546]:
+                            - /url: https://www.msn.com/en-us/news/technology/how-many-americans-still-have-landlines-as-at-t-wins-fight-over-rules/ar-AA27jVES#comments
+                            - button "View comments 288 Comment" [ref=f4e1547]:
+                              - img [ref=f4e1548]
+                            - generic [ref=f4e1550]: "288"
+                    - generic [ref=f4e1551]:
+                      - button "Hide this story" [ref=f4e1552]:
+                        - img [ref=f4e1553]
+                        - text: Hide this story
+                      - button "See more" [ref=f4e1554]:
+                        - img [ref=f4e1555]
+    - contentinfo:
+      - generic [ref=f4e1557]:
+        - generic [ref=f4e1558]: © 2026 Microsoft
+        - list [ref=f4e1559]:
+          - listitem [ref=f4e1560]:
+            - link "隐私与 Cookie" [ref=f4e1561] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkId=521839
+          - listitem [ref=f4e1562]:
+            - link "法律声明" [ref=f4e1563] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=246338
+          - listitem [ref=f4e1564]:
+            - link "广告" [ref=f4e1565] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?linkid=868923
+          - listitem [ref=f4e1566]:
+            - link "关于我们的广告" [ref=f4e1567] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=286759
+          - listitem [ref=f4e1568]:
+            - link "帮助" [ref=f4e1569] [cursor=pointer]:
+              - /url: //support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f
+          - listitem [ref=f4e1570]:
+            - link "反馈" [ref=f4e1571] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=f4e1572]:
+            - link "消费者健康隐私" [ref=f4e1573] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?linkid=2259814

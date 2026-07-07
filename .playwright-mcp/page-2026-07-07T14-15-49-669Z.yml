@@ -1,0 +1,22 @@
+- generic [active] [ref=f2e1]:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - img "组织背景图像" [ref=f2e2]
+          - generic [ref=f2e3]:
+            - generic [ref=f2e9]:
+              - generic [ref=f2e10]:
+                - img "Microsoft"
+              - generic [ref=f2e14]:
+                - heading "选择帐户" [level=1] [ref=f2e18]
+                - generic [ref=f2e20]: 您要注销哪个帐户?
+                - generic [ref=f2e22]:
+                  - list "选择帐户"
+            - contentinfo [ref=f2e23]:
+              - generic [ref=f2e24]:
+                - link "使用条款" [ref=f2e25] [cursor=pointer]:
+                  - /url: https://www.microsoft.com/zh-CN/servicesagreement/
+                - link "隐私与 Cookie" [ref=f2e26] [cursor=pointer]:
+                  - /url: https://privacy.microsoft.com/zh-CN/privacystatement
+                - button "单击此处获取疑难解答信息" [ref=f2e27] [cursor=pointer]: ...

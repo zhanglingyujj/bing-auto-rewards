@@ -1,0 +1,1351 @@
+- generic [ref=e3]:
+  - main [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - heading "必应" [level=1] [ref=e19]:
+          - img "必应" [ref=e20] [cursor=pointer]
+        - navigation [ref=e28]:
+          - menubar [ref=e29]:
+            - menuitem "Copilot" [ref=e30] [cursor=pointer]:
+              - link "Copilot" [ref=e31]:
+                - /url: /chat?FORM=hpcodx&intent=bing
+                - generic [ref=e33]: Copilot
+            - menuitem "图片" [ref=e34] [cursor=pointer]:
+              - link "图片" [ref=e35]:
+                - /url: /images?FORM=Z9LH
+            - menuitem "视频" [ref=e36] [cursor=pointer]:
+              - link "视频" [ref=e37]:
+                - /url: /videos?FORM=Z9LH1
+            - menuitem "购物" [ref=e38] [cursor=pointer]:
+              - link "购物" [ref=e39]:
+                - /url: /shop?FORM=Z9LHS4
+            - menuitem "地图" [ref=e40] [cursor=pointer]:
+              - link "地图" [ref=e41]:
+                - /url: /maps?FORM=Z9LH2
+            - menuitem "资讯" [ref=e42] [cursor=pointer]:
+              - link "资讯" [ref=e43]:
+                - /url: /news/search?q=Top+stories&nvaug=%5bNewsVertical+Category%3d%22rt_MaxClass%22%5d&FORM=Z9LH3
+            - menuitem ". . . 更多" [ref=e44] [cursor=pointer]:
+              - text: . . .
+              - button "更多" [ref=e45]
+      - generic [ref=e47]:
+        - link "English" [ref=e49] [cursor=pointer]:
+          - /url: /?setlang=en&cc=US
+        - complementary "帐户奖励和偏好设置" [ref=e50]:
+          - link "%e5%87%8c%… 个人资料图片" [expanded] [active] [ref=e51] [cursor=pointer]:
+            - /url: javascript:void(0)
+            - generic [ref=e52]: "%e5%87%8c%…"
+            - img "个人资料图片" [ref=e53]
+          - generic [ref=e1498]:
+            - generic [ref=e1499]:
+              - link "必应徽标，在新选项卡中打开" [ref=e1500] [cursor=pointer]
+              - link "退出" [ref=e1503] [cursor=pointer]:
+                - /url: /fd/auth/signout/v2?provider=windows_live_id&return_url=https%3a%2f%2fwww.bing.com%2f%3fwlsso%3d0&sig=104C6AFB0F3F640D2BDC7D740E636542
+                - generic [ref=e1504]: 退出
+              - generic [ref=e1505]:
+                - img "个人资料图片" [ref=e1506]
+                - generic [ref=e1507]:
+                  - generic [ref=e1508]: 凌宇
+                  - generic [ref=e1509]: zhanglingyujj@hotmail.com
+                  - link "管理账户" [ref=e1511] [cursor=pointer]:
+                    - /url: https://www.bing.com/ck/a?!&&p=0bd36bb54417964387f2487fb3134158c523b30826ddf59528c6d4489377a5e4JmltdHM9MTc4MzM4MjQwMA&ptn=3&ver=2&hsh=4&fclid=2af78f2d-bd61-6f21-2b55-98a2bc3d6e13&u=a1aHR0cHM6Ly9hY2NvdW50Lm1pY3Jvc29mdC5jb20&ntb=1
+            - list "%e5%87%8c%… 个人资料图片"
+          - button "Microsoft Rewards" [ref=e54] [cursor=pointer]:
+            - generic [ref=e56]:
+              - generic [ref=e57]: Rewards
+              - img [ref=e59]
+          - button "设置和快速链接" [ref=e64] [cursor=pointer]
+          - generic [ref=e1512]:
+            - menuitem [ref=e1513] [cursor=pointer]:
+              - generic [ref=e1517]: 收藏
+            - generic [ref=e1519]:
+              - menuitem [ref=e1520]:
+                - generic [ref=e1524]: 设置
+              - menuitem [ref=e1526] [cursor=pointer]:
+                - generic [ref=e1529]: 语言
+                - generic [ref=e1530]: 中文(简体)
+              - menuitem [ref=e1531] [cursor=pointer]:
+                - generic [ref=e1534]: 国家/地区
+                - generic [ref=e1535]: 美国 - 英语
+              - menuitem [ref=e1536] [cursor=pointer]:
+                - generic [ref=e1539]: 语音
+              - menuitem [ref=e1540] [cursor=pointer]:
+                - generic [ref=e1543]: 更多
+            - menuitem [ref=e1544] [cursor=pointer]:
+              - generic [ref=e1545]:
+                - generic [ref=e1548]: 安全搜索
+                - generic [ref=e1549]: 中等
+            - menuitem [ref=e1550] [cursor=pointer]:
+              - generic [ref=e1554]: 搜索历史记录
+            - menuitem [ref=e1555] [cursor=pointer]:
+              - generic [ref=e1559]: 隐私
+            - menuitem [ref=e1560] [cursor=pointer]:
+              - generic [ref=e1564]: 反馈
+            - generic [ref=e1565]:
+              - menuitem [expanded] [ref=e1566]:
+                - generic [ref=e1570]: 外观
+              - menu [ref=e1572]:
+                - menuitemradio [checked] [ref=e1573] [cursor=pointer]:
+                  - generic [ref=e1575]:
+                    - img [ref=e1576]
+                    - text: 浅色
+                - menuitemradio [ref=e1579] [cursor=pointer]:
+                  - generic [ref=e1581]:
+                    - img [ref=e1582]
+                    - text: 深色
+                - menuitemradio [ref=e1585] [cursor=pointer]:
+                  - generic [ref=e1587]:
+                    - img [ref=e1588]
+                    - text: 系统默认值
+            - generic [ref=e1591]:
+              - menuitem [ref=e1592] [cursor=pointer]:
+                - generic [ref=e1596]: 个性化资讯源
+              - generic [ref=e1597]:
+                - menuitem [expanded] [ref=e1598]:
+                  - generic [ref=e1602]: 自定义主页
+                - option [checked] [ref=e1604]:
+                  - generic [ref=e1605]:
+                    - generic [ref=e1607]: 显示菜单栏
+                    - img [ref=e1610]
+                - option [checked] [ref=e1613]:
+                  - generic [ref=e1614]:
+                    - generic [ref=e1616]: 显示新闻和关注
+                    - img [ref=e1619]
+                - option [checked] [ref=e1622]:
+                  - generic [ref=e1623]:
+                    - generic [ref=e1625]: 显示必应上的热点
+                    - img [ref=e1628]
+                - option [checked] [ref=e1631]:
+                  - generic [ref=e1632]:
+                    - generic [ref=e1634]: 显示主页图片
+                    - img [ref=e1637]
+              - generic [ref=e1641]:
+                - menu [ref=e1642]:
+                  - menuitem [ref=e1643] [cursor=pointer]: 隐私与 Cookie
+                  - text: •
+                  - menuitem [ref=e1644] [cursor=pointer]: 法律声明
+                  - text: •
+                  - menuitem [ref=e1645] [cursor=pointer]: 广告
+                  - text: •
+                  - menuitem [ref=e1646] [cursor=pointer]: 关于我们的广告
+                  - text: •
+                  - menuitem [ref=e1647] [cursor=pointer]: 帮助
+                  - text: •
+                  - menuitem [ref=e1648] [cursor=pointer]: 消费者健康隐私
+                - generic [ref=e1649]: © 2026 Microsoft
+    - generic [ref=e65]:
+      - search [ref=e66]:
+        - img [ref=e68] [cursor=pointer]
+        - generic [ref=e71]:
+          - status
+          - combobox "在此处输入你的搜索 — 输入时会显示搜索建议" [ref=e72]
+        - button "清除" [ref=e74]:
+          - img [ref=e75]
+        - link "打开 Copilot" [ref=e77] [cursor=pointer]:
+          - /url: /chat?FORM=hpcodx&intent=bing
+      - generic [ref=e82]:
+        - link "创建壁纸" [ref=e83] [cursor=pointer]:
+          - /url: /search?q=创建壁纸&filters=aimode%3A%2235%22&FORM=bichpw
+          - generic [ref=e85]: 创建壁纸
+        - link "视频创建器" [ref=e86] [cursor=pointer]:
+          - /url: /images/create/ai-video-generator?bicsource=hp&FORM=bvcbhp
+          - generic [ref=e88]: 视频创建器
+        - link "文本创建器" [ref=e89] [cursor=pointer]:
+          - /url: /search?q=bing ai 写作&FORM=btcbhp
+          - generic [ref=e91]: 文本创建器
+  - generic [ref=e94]:
+    - generic [ref=e95]:
+      - dialog "必应主页测验 Which region is home to the plate-billed mountain toucan?" [ref=e97]:
+        - group "必应主页测验 Which region is home to the plate-billed mountain toucan?" [ref=e98]:
+          - generic [ref=e99]: 必应主页测验
+          - generic [ref=e100]: Which region is home to the plate-billed mountain toucan?
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - 'link "答案: A，Ecuador and Colombia, 1 of 3" [ref=e103] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%220%22+UserChoices%3A%220%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%221%22&FORM=HPQUIZ
+                - generic [ref=e104]: A
+                - text: Ecuador and Colombia
+            - listitem [ref=e105]:
+              - 'link "答案: B，Peru and Chile, 2 of 3" [ref=e106] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%221%22+UserChoices%3A%221%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=e107]: B
+                - text: Peru and Chile
+            - listitem [ref=e108]:
+              - 'link "答案: C，Bolivia and Brazil, 3 of 3" [ref=e109] [cursor=pointer]':
+                - /url: /search?q=Ecuador+and+Colombia&filters=mgzv3configlist%3A%22BingQA_Quiz_layout%22+IsConversation%3A%22True%22+btrequestsource%3A%22homepage%22+WQOskey%3A%22HPQuiz_20260707_MountainToucanOrchids%22+WQId%3A%221%22+WQQI%3A%220%22+WQCI%3A%222%22+UserChoices%3A%222%22+ShowTimesTaskPaneTrigger%3A%22false%22+WQSCORE%3A%220%22&FORM=HPQUIZ
+                - generic [ref=e110]: C
+                - text: Bolivia and Brazil
+      - generic [ref=e111]:
+        - generic:
+          - generic:
+            - link "获取新版必应壁纸应用":
+              - /url: https://go.microsoft.com/fwlink/?linkid=2127455
+              - generic: 获取新版必应壁纸应用
+          - 'heading "每日一图: Plate-billed mountain toucan with orchids, Ecuador" [level=3]':
+            - 'link "每日一图: Plate-billed mountain toucan with orchids, Ecuador"':
+              - /url: /search?q=plate-billed+mountain+toucan&form=hpcapt&filters=HpDate:"20260707_0700"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+              - text: Plate-billed mountain toucan with orchids, Ecuador
+          - generic:
+            - generic: © Murray Cooper/Minden Pictures
+            - list:
+              - listitem:
+                - button "下载今日美图。仅限用作桌面壁纸。"
+        - generic [ref=e112]:
+          - link "Color, craft, and canopy life" [ref=e114] [cursor=pointer]:
+            - /url: /search?q=plate-billed+mountain+toucan&form=hpcapt&filters=HpDate:"20260707_0700"+mgzv3configlist:"BingQA_Encyclopedia_Layout"
+            - img [ref=e116]
+            - heading "Color, craft, and canopy life" [level=2] [ref=e119]
+          - generic [ref=e120] [cursor=pointer]:
+            - status [ref=e121]
+            - button "上一个图像" [ref=e122]
+            - button "下一个图像" [disabled] [ref=e124]
+    - button "反馈" [ref=e126] [cursor=pointer]:
+      - img [ref=e127]
+      - generic: 反馈
+    - generic [ref=e129]:
+      - region "必应热门资讯" [ref=e130]:
+        - generic:
+          - status [ref=e131]
+          - button "Toggle feed area position" [expanded] [ref=e132] [cursor=pointer]
+          - button "以前的资讯" [disabled]
+          - button "更多资讯" [ref=e134] [cursor=pointer]
+        - list [ref=e136]:
+          - listitem [ref=e137]:
+            - list [ref=e138]:
+              - listitem [ref=e139] [cursor=pointer]:
+                - link "USA's World Cup run ends © Photo by Alex Grimm/Getty Images" [ref=e140]:
+                  - /url: /search?q=Team+USA%27s+World+Cup+run+ends&efirst=0&ecount=50&filters=tnTID%3a%22PE_DB906FF6-C3B7-4425-92AC-FFD7C878CBDB%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%220%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e141]:
+                    - heading "USA's World Cup run ends" [level=2] [ref=e142]
+                    - img "© Photo by Alex Grimm/Getty Images" [ref=e143]
+              - listitem [ref=e144] [cursor=pointer]:
+                - link "Calls for Patriot Front probe ©Photo by Anna Moneymaker/Getty Images" [ref=e145]:
+                  - /url: /search?q=Luna+calls+for+Patriot+Front+investigation+&efirst=0&ecount=50&filters=tnTID%3a%22PE_7080700C-08AE-49CE-B3B3-B2A3EB66A11D%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%221%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e146]:
+                    - heading "Calls for Patriot Front probe" [level=2] [ref=e147]
+                    - img "©Photo by Anna Moneymaker/Getty Images" [ref=e148]
+              - listitem [ref=e149] [cursor=pointer]:
+                - link "Styles breaks world record © Photo by Scott A Garfitt/Invision/AP" [ref=e150]:
+                  - /url: /search?q=Harry+Styles+breaks+Guinness+World+Record&efirst=0&ecount=50&filters=tnTID%3a%22PE_6CE4352D-A5C8-4614-AABA-BB783D261314%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%222%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e151]:
+                    - heading "Styles breaks world record" [level=2] [ref=e152]
+                    - img "© Photo by Scott A Garfitt/Invision/AP" [ref=e153]
+              - listitem [ref=e154] [cursor=pointer]:
+                - link "Hair care pioneer dies © WAPT Jackson" [ref=e155]:
+                  - /url: /search?q=George+E.+Johnson+Sr.+dies&efirst=0&ecount=50&filters=tnTID%3a%22PE_BB209990-D3C9-47CA-BD36-CE0D707F1DAB%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%223%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e156]:
+                    - heading "Hair care pioneer dies" [level=2] [ref=e157]
+                    - img "© WAPT Jackson" [ref=e158]
+              - listitem [ref=e159] [cursor=pointer]:
+                - link "Swift wins copyright suit © Photo by Matt Winkelmeyer/Getty Images for iHeartRadio" [ref=e160]:
+                  - /url: /search?q=Taylor+Swift+wins+copyright+lawsuit&efirst=0&ecount=50&filters=tnTID%3a%22PE_3345C2E2-174D-409D-8424-3848FA9A1C25%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%224%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e161]:
+                    - heading "Swift wins copyright suit" [level=2] [ref=e162]
+                    - img "© Photo by Matt Winkelmeyer/Getty Images for iHeartRadio" [ref=e163]
+              - listitem [ref=e164] [cursor=pointer]:
+                - link "Oil tanker hit in Hormuz ©Ismael Mohamad/UPI" [ref=e165]:
+                  - /url: /search?q=Oil+tanker+hit+by+projectile+in+the+Strait+of+Hormuz&efirst=0&ecount=50&filters=tnTID%3a%22PE_2D360201-E5FD-4CD7-9544-D04398D3CDA8%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%225%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e166]:
+                    - heading "Oil tanker hit in Hormuz" [level=2] [ref=e167]
+                    - img "©Ismael Mohamad/UPI" [ref=e168]
+              - listitem [ref=e169] [cursor=pointer]:
+                - link "Pull Platner endorsements © Shannon Finney/NBC via Getty Images © Photo by Nathan Posner/Anadolu via Getty Images" [ref=e170]:
+                  - /url: /search?q=Khanna+and+Gallego+withdraw+Graham+Platner+endorsements&efirst=0&ecount=50&filters=tnTID%3a%22PE_426A0ACE-18E7-421E-BBDF-FD2E681F70A5%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%226%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e171]:
+                    - heading "Pull Platner endorsements" [level=2] [ref=e172]
+                    - img "© Shannon Finney/NBC via Getty Images © Photo by Nathan Posner/Anadolu via Getty Images" [ref=e173]
+              - listitem [ref=e174] [cursor=pointer]:
+                - 'link "Today in history: 1928 © John Scott/Getty Images" [ref=e175]':
+                  - /url: /search?q=Otto+Frederick+Rohwedder+bread+slicer&efirst=0&ecount=50&filters=tnTID%3a%22PE_21ADFDBF-8AA5-4FC0-A940-64E47F8D5722%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%227%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e176]:
+                    - 'heading "Today in history: 1928" [level=2] [ref=e177]'
+                    - img "© John Scott/Getty Images" [ref=e178]
+              - listitem [ref=e179] [cursor=pointer]:
+                - link "Explosions rock Damascus © REUTERS/Yamam Al Shaar" [ref=e180]:
+                  - /url: /search?q=Explosions+rock+Damascus&efirst=0&ecount=50&filters=tnTID%3a%22PE_FE5009CB-AB0A-4F25-B318-0BE42405C24A%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%228%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e181]:
+                    - heading "Explosions rock Damascus" [level=2] [ref=e182]
+                    - img "© REUTERS/Yamam Al Shaar" [ref=e183]
+              - listitem [ref=e184] [cursor=pointer]:
+                - link "Cuba suffers blackout © Times Now" [ref=e185]:
+                  - /url: /search?q=Cuba+suffers+nationwide+blackout&efirst=0&ecount=50&filters=tnTID%3a%22PE_3324D5F4-9383-45E8-A6B8-35ED5265EA38%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%229%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e186]:
+                    - heading "Cuba suffers blackout" [level=2] [ref=e187]
+                    - img "© Times Now" [ref=e188]
+              - listitem [ref=e189] [cursor=pointer]:
+                - link "Demands credible plans © The Associated Press" [ref=e190]:
+                  - /url: /search?q=NATO+chief+demands+allies+present+credible+plans+to+reach+defense+spending+targets&efirst=0&ecount=50&filters=tnTID%3a%22PE_1A7AEC07-7625-4754-BEDE-182B365E2873%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2210%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e191]:
+                    - heading "Demands credible plans" [level=2] [ref=e192]
+                    - img "© The Associated Press" [ref=e193]
+              - listitem [ref=e194] [cursor=pointer]:
+                - link "China sentences ex-official © EPA/MAXIM SHEMETOV / POOL" [ref=e195]:
+                  - /url: /search?q=Chinese+court+sentences+ex-official+to+death&efirst=0&ecount=50&filters=tnTID%3a%22PE_50E0E583-4932-4AB7-8BC8-EC4F7249EC80%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2211%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e196]:
+                    - heading "China sentences ex-official" [level=2] [ref=e197]
+                    - img "© EPA/MAXIM SHEMETOV / POOL" [ref=e198]
+              - listitem [ref=e199] [cursor=pointer]:
+                - link "Indicted in fraud scheme ©Photo by Dylan Buell/Getty Images" [ref=e200]:
+                  - /url: /search?q=Kerr+Kriisa+indicted&efirst=0&ecount=50&filters=tnTID%3a%22PE_737BBB10-7EB1-4CBA-8B12-B5B6FA2E8548%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2212%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e201]:
+                    - heading "Indicted in fraud scheme" [level=2] [ref=e202]
+                    - img "©Photo by Dylan Buell/Getty Images" [ref=e203]
+              - listitem [ref=e204] [cursor=pointer]:
+                - link "Frozen blueberries recalled © Vitalii Petrushenko/iStock / Getty Images Plus" [ref=e205]:
+                  - /url: /search?q=Frozen+blueberries+recalled&efirst=0&ecount=50&filters=tnTID%3a%22PE_4F35F655-09FE-4A9D-B1C7-D62E60F9F293%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2213%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e206]:
+                    - heading "Frozen blueberries recalled" [level=2] [ref=e207]
+                    - img "© Vitalii Petrushenko/iStock / Getty Images Plus" [ref=e208]
+              - listitem [ref=e209] [cursor=pointer]:
+                - link "G.R.L. singer dies at 37 © Jim Ruymen/UPI" [ref=e210]:
+                  - /url: /search?q=Lauren+Bennett+dies&efirst=0&ecount=50&filters=tnTID%3a%22PE_18E809E3-A425-47B8-AEEA-78888AAAE0F1%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2214%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e211]:
+                    - heading "G.R.L. singer dies at 37" [level=2] [ref=e212]
+                    - img "© Jim Ruymen/UPI" [ref=e213]
+              - listitem [ref=e214] [cursor=pointer]:
+                - link "Spain reaches quarterfinals © ESPN" [ref=e215]:
+                  - /url: /search?q=Spain+reaches+quarterfinals&efirst=0&ecount=50&filters=tnTID%3a%22PE_A91B8688-BA4E-4318-BF73-F3007183537F%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2215%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e216]:
+                    - heading "Spain reaches quarterfinals" [level=2] [ref=e217]
+                    - img "© ESPN" [ref=e218]
+              - listitem [ref=e219] [cursor=pointer]:
+                - link "Ex-mayor pleads guilty © File photo by Barbara Gauntt/Clarion Ledger" [ref=e220]:
+                  - /url: /search?q=Former+Mayor+Chokwe+Antar+Lumumba+pleads+guilty&efirst=0&ecount=50&filters=tnTID%3a%22PE_5A2D0690-2F49-410B-ABBC-4F48E473BF07%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2216%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e221]:
+                    - heading "Ex-mayor pleads guilty" [level=2] [ref=e222]
+                    - img "© File photo by Barbara Gauntt/Clarion Ledger" [ref=e223]
+              - listitem [ref=e224] [cursor=pointer]:
+                - link "2,000-yr-old gold rings found © AP via The Independent" [ref=e225]:
+                  - /url: /search?q=2%2c000-year-old+Indian+gold+rings+found&efirst=0&ecount=50&filters=tnTID%3a%22PE_138D9B15-46EB-4F07-A73C-E966E7D60054%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2217%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e226]:
+                    - heading "2,000-yr-old gold rings found" [level=2] [ref=e227]
+                    - img "© AP via The Independent" [ref=e228]
+              - listitem [ref=e229] [cursor=pointer]:
+                - link "Ex-Bucknell coach charged © WHP Harrisburg" [ref=e230]:
+                  - /url: /search?q=Former+Bucknell+coach+charged&efirst=0&ecount=50&filters=tnTID%3a%22PE_BD2E6788-BA6D-49DA-A00F-331469EBFA99%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2218%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e231]:
+                    - heading "Ex-Bucknell coach charged" [level=2] [ref=e232]
+                    - img "© WHP Harrisburg" [ref=e233]
+              - listitem [ref=e234] [cursor=pointer]:
+                - link "Oil prices rise © Kim Soo-Hyeon/Reuters" [ref=e235]:
+                  - /url: /search?q=Oil+prices+rise&efirst=0&ecount=50&filters=tnTID%3a%22PE_5FF594E1-5BBE-46FE-9A1A-34BCD3B304C9%22+tnVersion%3a%226756910%22+Segment%3a%22popularnow.carousel%22+tnCol%3a%2219%22+tnOrder%3a%22082a45ae-4397-4f8b-8572-347e3aa2964e%22&form=HPNN01
+                  - generic [ref=e236]:
+                    - heading "Oil prices rise" [level=2] [ref=e237]
+                    - img "© Kim Soo-Hyeon/Reuters" [ref=e238]
+      - complementary [ref=e239]:
+        - generic [ref=e241]:
+          - generic [ref=e242]: 发现
+          - main [ref=e249]:
+            - generic [ref=e251]:
+              - generic [ref=e252]:
+                - generic [ref=e255]:
+                  - tablist [ref=e257]:
+                    - tab [ref=e258] [cursor=pointer]
+                    - tab [ref=e260] [cursor=pointer]
+                    - tab [ref=e262] [cursor=pointer]
+                    - tab [ref=e264] [cursor=pointer]
+                    - tab [ref=e266] [cursor=pointer]
+                    - tab [ref=e268] [cursor=pointer]
+                    - tab [selected] [ref=e270] [cursor=pointer]
+                    - tab [ref=e272] [cursor=pointer]
+                    - tab [ref=e274] [cursor=pointer]
+                    - tab [ref=e276] [cursor=pointer]
+                    - tab [ref=e278] [cursor=pointer]
+                    - tab [ref=e280] [cursor=pointer]
+                    - tab [ref=e282] [cursor=pointer]
+                    - tab [ref=e284] [cursor=pointer]
+                    - tab [ref=e286] [cursor=pointer]
+                    - tab [ref=e288] [cursor=pointer]
+                    - tab [ref=e290] [cursor=pointer]
+                  - button [ref=e294]
+                  - button [ref=e297]
+                  - article "Justin and Hailey Bieber just added a new property to their multimillion-dollar real estate portfolio" [ref=e1650] [cursor=pointer]:
+                    - generic [ref=e1652]:
+                      - img [ref=e1653]
+                      - generic [ref=e1654]:
+                        - generic [ref=e1655]:
+                          - generic [ref=e1656]:
+                            - generic [ref=e1657]:
+                              - img [ref=e1658]
+                              - generic [ref=e1659]: ELLE DECOR
+                            - generic [ref=e1660]: ·
+                            - generic [ref=e1661]: 18h
+                          - link "Justin and Hailey Bieber just added a new property to their multimillion-dollar real estate portfolio, ELLE DECOR" [ref=e1662]:
+                            - /url: https://www.msn.com/en-us/lifestyle/home-and-garden/justin-and-hailey-bieber-just-added-a-new-property-to-their-multimillion-dollar-real-estate-portfolio/ar-AA27li3A
+                            - text: Justin and Hailey Bieber just added a new property to their multimillion-dollar real estate portfolio
+                        - generic "Justin and Hailey Bieber just added a new property to their multimillion-dollar real estate portfolio" [ref=e1666]:
+                          - generic [ref=e1668]:
+                            - generic [ref=e1669]:
+                              - button "61 Likes" [ref=e1670]:
+                                - generic [ref=e1671]:
+                                  - img [ref=e1672]
+                                  - generic [ref=e1674]: "61"
+                              - button "Dislike" [ref=e1675]:
+                                - img [ref=e1677]
+                            - link "View comments 1 Comment" [ref=e1680]:
+                              - /url: https://www.msn.com/en-us/lifestyle/home-and-garden/justin-and-hailey-bieber-just-added-a-new-property-to-their-multimillion-dollar-real-estate-portfolio/ar-AA27li3A#comments
+                              - button "View comments 1 Comment" [ref=e1681]:
+                                - img [ref=e1682]
+                              - generic [ref=e1684]: "1"
+                      - generic [ref=e1685]:
+                        - button "Hide this story" [ref=e1686]:
+                          - img [ref=e1687]
+                          - text: Hide this story
+                        - button "See more" [ref=e1688]:
+                          - img [ref=e1689]
+                - article "DMV could revoke thousands of California licenses due to mysterious testing anomalies" [ref=e336] [cursor=pointer]:
+                  - generic [ref=e338]:
+                    - img [ref=e339]
+                    - generic [ref=e340]:
+                      - generic [ref=e341]:
+                        - generic [ref=e342]:
+                          - generic [ref=e343]:
+                            - img [ref=e344]
+                            - generic [ref=e345]: Los Angeles Times
+                          - generic [ref=e346]: ·
+                          - generic [ref=e347]: 4h
+                        - link "DMV could revoke thousands of California licenses due to mysterious testing anomalies, Los Angeles Times" [ref=e348]:
+                          - /url: https://www.msn.com/en-us/autos/news/dmv-could-revoke-thousands-of-california-licenses-due-to-mysterious-testing-anomalies/ar-AA27ovmr
+                          - text: DMV could revoke thousands of California licenses due to mysterious testing anomalies
+                      - generic [ref=e349]:
+                        - generic "DMV could revoke thousands of California licenses due to mysterious testing anomalies" [ref=e352]:
+                          - generic [ref=e354]:
+                            - generic [ref=e355]:
+                              - button "1 Like" [ref=e356]:
+                                - generic [ref=e357]:
+                                  - img [ref=e358]
+                                  - generic [ref=e360]: "1"
+                              - button "Dislike" [ref=e361]:
+                                - img [ref=e363]
+                            - link "Start the conversation" [ref=e366]:
+                              - /url: https://www.msn.com/en-us/autos/news/dmv-could-revoke-thousands-of-california-licenses-due-to-mysterious-testing-anomalies/ar-AA27ovmr#comments
+                              - button "Start the conversation" [ref=e367]:
+                                - img [ref=e368]
+                        - button "This is local content" [ref=e370]:
+                          - img [ref=e371]
+                          - generic [ref=e372]: Local
+                    - generic [ref=e373]:
+                      - button "Hide this story" [ref=e374]:
+                        - img [ref=e375]
+                        - text: Hide this story
+                      - button "See more" [ref=e376]:
+                        - img [ref=e377]
+                - article [ref=e378] [cursor=pointer]:
+                  - generic [ref=e384]:
+                    - generic [ref=e386]:
+                      - img "World Cup coverage" [ref=e388]
+                      - link "World Cup coverage" [ref=e389]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=0bd3de095aaa4ddc886db787c1ce5ecf
+                        - heading "World Cup coverage" [level=2] [ref=e390]
+                      - button "More interests" [ref=e391]
+                      - generic [ref=e392]:
+                        - generic "Trending now" [ref=e393]:
+                          - button "Trending now" [ref=e394]
+                        - button "More options" [ref=e395]
+                    - generic [ref=e399]:
+                      - link "USA Round of 16 1 - 4 Final · Jul 7 BEL" [ref=e401]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452515?uxmode=ruby&ocid=BingHp01&cvid=0bd3de095aaa4ddc886db787c1ce5ecf
+                        - generic [ref=e402]:
+                          - generic [ref=e403]:
+                            - generic [ref=e404]:
+                              - button "Click to follow USA":
+                                - generic:
+                                  - img
+                            - generic "USA" [ref=e405]
+                          - generic [ref=e407]:
+                            - generic [ref=e408]: Round of 16
+                            - generic [ref=e409]:
+                              - generic [ref=e411]: "1"
+                              - generic [ref=e412]: "-"
+                              - generic [ref=e413]:
+                                - generic [ref=e414]: "4"
+                                - img [ref=e416]
+                            - generic "Jul 7 - Final" [ref=e418]: Final · Jul 7
+                          - generic [ref=e419]:
+                            - generic [ref=e420]:
+                              - button "Click to follow Belgium":
+                                - generic:
+                                  - img
+                            - generic "Belgium" [ref=e421]: BEL
+                      - link "POR Round of 16 0 - 1 Final · Jul 7 ESP" [ref=e423]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452513?uxmode=ruby&ocid=BingHp01&cvid=0bd3de095aaa4ddc886db787c1ce5ecf
+                        - generic [ref=e424]:
+                          - generic [ref=e425]:
+                            - generic [ref=e426]:
+                              - button "Click to follow Portugal":
+                                - generic:
+                                  - img
+                            - generic "Portugal" [ref=e427]: POR
+                          - generic [ref=e429]:
+                            - generic [ref=e430]: Round of 16
+                            - generic [ref=e431]:
+                              - generic [ref=e433]: "0"
+                              - generic [ref=e434]: "-"
+                              - generic [ref=e435]:
+                                - generic [ref=e436]: "1"
+                                - img [ref=e438]
+                            - generic "Jul 7 - Final" [ref=e440]: Final · Jul 7
+                          - generic [ref=e441]:
+                            - generic [ref=e442]:
+                              - button "Click to follow Spain":
+                                - generic:
+                                  - img
+                            - generic "Spain" [ref=e443]: ESP
+                      - link "ARG Round of 16 12:00 AM · Jul 8 Injury report available EGY" [ref=e445]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup/game-center/sp-id-53452521?uxmode=ruby&ocid=BingHp01&cvid=0bd3de095aaa4ddc886db787c1ce5ecf
+                        - generic [ref=e446]:
+                          - generic [ref=e447]:
+                            - generic [ref=e448]:
+                              - button "Click to follow Argentina":
+                                - generic:
+                                  - img
+                            - generic "Argentina" [ref=e449]: ARG
+                          - generic [ref=e451]:
+                            - generic [ref=e452]: Round of 16
+                            - generic "12:00 AM-Jul 8" [ref=e453]:
+                              - generic [ref=e454]: 12:00 AM
+                              - generic [ref=e455]: ·
+                              - generic [ref=e456]: Jul 8
+                            - generic "Injury report available" [ref=e457]:
+                              - generic [ref=e458]: Injury report available
+                          - generic [ref=e459]:
+                            - generic [ref=e460]:
+                              - button "Click to follow Egypt":
+                                - generic:
+                                  - img
+                            - generic "Egypt" [ref=e461]: EGY
+                    - generic [ref=e463]:
+                      - generic [ref=e464]:
+                        - generic "Previous" [ref=e465]:
+                          - button "Previous" [ref=e466]
+                        - tablist [ref=e468]:
+                          - tab "tab-0" [selected] [ref=e469]
+                          - tab "tab-1" [ref=e471]
+                          - tab "tab-2" [ref=e473]
+                        - generic "Next" [ref=e475]:
+                          - button "Next" [ref=e476]
+                      - link "See more" [ref=e478]:
+                        - /url: https://www.msn.com/en-us/sports/soccer/fifa_world_cup?uxmode=ruby&ocid=BingHp01&cvid=0bd3de095aaa4ddc886db787c1ce5ecf
+                - article "Four dead in Ohio including police sergeant; 4 other officers shot" [ref=e479] [cursor=pointer]:
+                  - generic [ref=e481]:
+                    - img [ref=e482]
+                    - generic [ref=e483]:
+                      - generic [ref=e484]:
+                        - generic [ref=e485]:
+                          - generic [ref=e486]:
+                            - img [ref=e487]
+                            - generic [ref=e488]: USA TODAY
+                          - generic [ref=e489]: ·
+                          - generic [ref=e490]: 36m
+                        - link "Four dead in Ohio including police sergeant; 4 other officers shot, USA TODAY" [ref=e491]:
+                          - /url: https://www.msn.com/en-us/news/crime/four-dead-in-ohio-including-police-sergeant-4-other-officers-shot/ar-AA27kg0q
+                          - text: Four dead in Ohio including police sergeant; 4 other officers shot
+                      - generic "Four dead in Ohio including police sergeant; 4 other officers shot" [ref=e495]:
+                        - generic [ref=e497]:
+                          - generic [ref=e498]:
+                            - button "330 Likes" [ref=e499]:
+                              - generic [ref=e500]:
+                                - img [ref=e501]
+                                - generic [ref=e503]: "330"
+                            - button "Dislike" [ref=e504]:
+                              - img [ref=e506]
+                          - link "View comments 122 Comment" [ref=e509]:
+                            - /url: https://www.msn.com/en-us/news/crime/four-dead-in-ohio-including-police-sergeant-4-other-officers-shot/ar-AA27kg0q#comments
+                            - button "View comments 122 Comment" [ref=e510]:
+                              - img [ref=e511]
+                            - generic [ref=e513]: "122"
+                    - generic [ref=e514]:
+                      - button "Hide this story" [ref=e515]:
+                        - img [ref=e516]
+                        - text: Hide this story
+                      - button "See more" [ref=e517]:
+                        - img [ref=e518]
+                - article "Affordable Business Loans - Business Loans $25K to $5M - Kapitus Business Loans" [ref=e519] [cursor=pointer]:
+                  - generic [ref=e521]:
+                    - img [ref=e522]
+                    - generic [ref=e523]:
+                      - generic [ref=e524]:
+                        - generic [ref=e527]: kapitus.com
+                        - link "Affordable Business Loans - Business Loans $25K to $5M - Kapitus Business Loans, kapitus.com" [ref=e528]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=2a9cba38-7cf0-4e35-aa72-1a5bf78b1650&bdc=pb&bidId=1&bidderId=4&cmExpId=RSV&impId=5&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=fff5f955-e916-4350-9d75-b1436c2d0362&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8V3Cr4BjhhnaI-ZAIAWIxGzVUCUwCac5f60a_SsP_rAYs0qgujkT4wWY050n5UR1naC_8B58Avq3MriQs7EX25fozdkmFJQn6277a9hycgKq-i5LMJzEWFmgTYW35256DnkVHd_Pb1EB9mgMTmIcVcgeOix7KxxR5CKGrtE7OJyUUh1Nxrx53HYGCASC4QcIo3ePVOcEzWpv0NQ_diqHw3X1IW7E%26u%3DaHR0cHMlM2ElMmYlMmZrYXBpdHVzLmNvbSUyZmZsZXhpYmxlLXRlcm1zLXRvLW1lZXQtYnVzaW5lc3MtbmVlZHMlMmYlM2ZyZWYlM2RiaW5nYWRzJTI2a2V5d29yZCUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2Y2FtcGFpZ24lM2Q0NTg1NTQxMTElMjZ1dG1fdGVybSUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2dXRtX2NhbXBhaWduJTNkJTI1MjBVU19LUF9TZWFyY2hfQnVzaW5lc3MrTG9hbnNfTkJSX0VYUE1fQWxsX0hpZ2grUHJpb3JpdHlfTmV3JTI1MjAlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZoc2FfYWNjJTNkRjEzMlZMMkMlMjZoc2FfY2FtJTNkNDU4NTU0MTExJTI2aHNhX2dycCUzZDExNDM0OTM5NzUzOTMyNzAlMjZoc2FfYWQlM2QlMjZoc2Ffc3JjJTNkYSUyNmhzYV90Z3QlM2Rrd2QtNzE0NjkxMTUxNTYzMjQlM2Fsb2MtNDA4NCUyNmhzYV9rdyUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2aHNhX210JTNkZSUyNmhzYV9uZXQlM2RiaW5nJTI2aHNhX3ZlciUzZDMlMjZtc2Nsa2lkJTNkNzU0ZmI2NjdkNmFiMWQwOGY2ZWJkYzJhZGYxNTUyNzMlMjZ1dG1fY29udGVudCUzZEJ1c2luZXNzJTI1MjBGaW5hbmNpbmc%26rlid%3D754fb667d6ab1d08f6ebdc2adf155273&rtype=targetURL&tagId=binghp-river-1&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=pbageby_5
+                          - text: Affordable Business Loans - Business Loans $25K to $5M - Kapitus Business Loans
+                      - generic [ref=e529]:
+                        - link "Sponsored" [ref=e530]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=2a9cba38-7cf0-4e35-aa72-1a5bf78b1650&bdc=pb&bidId=1&bidderId=4&cmExpId=RSV&impId=5&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=fff5f955-e916-4350-9d75-b1436c2d0362&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8V3Cr4BjhhnaI-ZAIAWIxGzVUCUwCac5f60a_SsP_rAYs0qgujkT4wWY050n5UR1naC_8B58Avq3MriQs7EX25fozdkmFJQn6277a9hycgKq-i5LMJzEWFmgTYW35256DnkVHd_Pb1EB9mgMTmIcVcgeOix7KxxR5CKGrtE7OJyUUh1Nxrx53HYGCASC4QcIo3ePVOcEzWpv0NQ_diqHw3X1IW7E%26u%3DaHR0cHMlM2ElMmYlMmZrYXBpdHVzLmNvbSUyZmZsZXhpYmxlLXRlcm1zLXRvLW1lZXQtYnVzaW5lc3MtbmVlZHMlMmYlM2ZyZWYlM2RiaW5nYWRzJTI2a2V5d29yZCUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2Y2FtcGFpZ24lM2Q0NTg1NTQxMTElMjZ1dG1fdGVybSUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2dXRtX2NhbXBhaWduJTNkJTI1MjBVU19LUF9TZWFyY2hfQnVzaW5lc3MrTG9hbnNfTkJSX0VYUE1fQWxsX0hpZ2grUHJpb3JpdHlfTmV3JTI1MjAlMjZ1dG1fc291cmNlJTNkYmluZyUyNnV0bV9tZWRpdW0lM2RjcGMlMjZoc2FfYWNjJTNkRjEzMlZMMkMlMjZoc2FfY2FtJTNkNDU4NTU0MTExJTI2aHNhX2dycCUzZDExNDM0OTM5NzUzOTMyNzAlMjZoc2FfYWQlM2QlMjZoc2Ffc3JjJTNkYSUyNmhzYV90Z3QlM2Rrd2QtNzE0NjkxMTUxNTYzMjQlM2Fsb2MtNDA4NCUyNmhzYV9rdyUzZGJ1c2luZXNzJTI1MjBsZW5kaW5nJTI2aHNhX210JTNkZSUyNmhzYV9uZXQlM2RiaW5nJTI2aHNhX3ZlciUzZDMlMjZtc2Nsa2lkJTNkNzU0ZmI2NjdkNmFiMWQwOGY2ZWJkYzJhZGYxNTUyNzMlMjZ1dG1fY29udGVudCUzZEJ1c2luZXNzJTI1MjBGaW5hbmNpbmc%26rlid%3D754fb667d6ab1d08f6ebdc2adf155273&rtype=targetURL&tagId=binghp-river-1&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=pbageby_5
+                        - link "Ad Choice" [ref=e532]:
+                          - /url: https://account.microsoft.com/privacy/ad-settings
+                          - img [ref=e533]
+                    - button "See more" [ref=e535]:
+                      - img [ref=e536]
+                - article "These are the millionaires and billionaires pledging to fund Trump accounts" [ref=e537] [cursor=pointer]:
+                  - generic [ref=e539]:
+                    - img [ref=e540]
+                    - generic [ref=e541]:
+                      - generic [ref=e542]:
+                        - generic [ref=e543]:
+                          - generic [ref=e544]:
+                            - img [ref=e545]
+                            - generic [ref=e546]: Business Insider
+                          - generic [ref=e547]: ·
+                          - generic [ref=e548]: 5h
+                        - link "These are the millionaires and billionaires pledging to fund Trump accounts, Business Insider" [ref=e549]:
+                          - /url: https://www.msn.com/en-us/money/savingandinvesting/these-are-the-millionaires-and-billionaires-pledging-to-fund-trump-accounts/ss-AA27nGtm
+                          - text: These are the millionaires and billionaires pledging to fund Trump accounts
+                      - generic "These are the millionaires and billionaires pledging to fund Trump accounts" [ref=e553]:
+                        - generic [ref=e555]:
+                          - generic [ref=e556]:
+                            - button "354 Likes" [ref=e557]:
+                              - generic [ref=e558]:
+                                - img [ref=e559]
+                                - generic [ref=e561]: "354"
+                            - button "Dislike" [ref=e562]:
+                              - img [ref=e564]
+                          - link "View comments 78 Comment" [ref=e567]:
+                            - /url: https://www.msn.com/en-us/money/savingandinvesting/these-are-the-millionaires-and-billionaires-pledging-to-fund-trump-accounts/ss-AA27nGtm#comments
+                            - button "View comments 78 Comment" [ref=e568]:
+                              - img [ref=e569]
+                            - generic [ref=e571]: "78"
+                    - generic [ref=e572]:
+                      - button "Hide this story" [ref=e573]:
+                        - img [ref=e574]
+                        - text: Hide this story
+                      - button "See more" [ref=e575]:
+                        - img [ref=e576]
+                - article "COVID vaccine may have unexpected effect on new disease spread" [ref=e577] [cursor=pointer]:
+                  - generic [ref=e579]:
+                    - img [ref=e580]
+                    - generic [ref=e581]:
+                      - generic [ref=e582]:
+                        - generic [ref=e583]:
+                          - generic [ref=e584]:
+                            - img [ref=e585]
+                            - generic [ref=e586]: Newsweek
+                          - generic [ref=e587]: ·
+                          - generic [ref=e588]: 2h
+                        - link "COVID vaccine may have unexpected effect on new disease spread, Newsweek" [ref=e589]:
+                          - /url: https://www.msn.com/en-us/health/other/covid-vaccine-may-have-unexpected-effect-on-new-disease-spread/ar-AA27nZuS
+                          - text: COVID vaccine may have unexpected effect on new disease spread
+                      - generic "COVID vaccine may have unexpected effect on new disease spread" [ref=e593]:
+                        - generic [ref=e595]:
+                          - generic [ref=e596]:
+                            - button "39 Likes" [ref=e597]:
+                              - generic [ref=e598]:
+                                - img [ref=e599]
+                                - generic [ref=e601]: "39"
+                            - button "Dislike" [ref=e602]:
+                              - img [ref=e604]
+                          - link "View comments 8 Comment" [ref=e607]:
+                            - /url: https://www.msn.com/en-us/health/other/covid-vaccine-may-have-unexpected-effect-on-new-disease-spread/ar-AA27nZuS#comments
+                            - button "View comments 8 Comment" [ref=e608]:
+                              - img [ref=e609]
+                            - generic [ref=e611]: "8"
+                    - generic [ref=e612]:
+                      - button "Hide this story" [ref=e613]:
+                        - img [ref=e614]
+                        - text: Hide this story
+                      - button "See more" [ref=e615]:
+                        - img [ref=e616]
+                - 'article "Experts Tested 17 Hearing Aids. The #1 Pick Isn''t Sold at Costco or Best Buy" [ref=e617] [cursor=pointer]':
+                  - generic [ref=e619]:
+                    - img [ref=e620]
+                    - generic [ref=e621]:
+                      - generic [ref=e622]:
+                        - generic [ref=e625]: hear.com
+                        - 'link "Experts Tested 17 Hearing Aids. The #1 Pick Isn''t Sold at Costco or Best Buy, hear.com" [ref=e626]':
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=9c247992-ef59-456f-82ba-b84e574b376b&bdc=pb&bidId=18&bidderId=4&cmExpId=RSV&impId=6&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=fff5f955-e916-4350-9d75-b1436c2d0362&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8kC8oARXdzqZQ6KvBGwirxTVUCUz15Jxf7U0w_lsYoR8iMOcI--ke5MytxGOAfBhYB1M83QeamPUEUZ-3QOoygJYMtyQhbj0KyhTBi1QjuVMebK8WCDJJT1HP_M74PvMZd6tBKnEpMwvweT-INZ0JMu_vvy3n3-tLkACpYkcX5gAJ4t3Ym6HjGpgIm9ceeRuYDKnsh-9jbnT4aVSrJcdCxU4AwWM%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuaGVhci5jb20lMmZkJTJmYmVzdF9oZWFyaW5nX2FpZHNfZGlzMDElMmYlM2ZhY3QlM2RBQ1QwMDAwMDgzMDU0QUNUJTI2dXRtX3NvdXJjZSUzZG1jcnMlMjZ1dG1fbWVkaXVtJTNkZGlyZWN0LWJ1eSUyNnV0bV9jYW1wYWlnbiUzZHVzX2VuX2FsX2hlYV9kaXJlY3RidXlfbWNyc19oZWEtbWlyYWNsZS1kb3VibGVfYWNxX2Rlc2t0b3BfdGIxMDYxNWhsMl9BQ1QwMDAwMDgzMDU0QUNUJTI2YWRpZCUzZDgyNDYzNzgzNTUxNDEzJTI2ZGV2aWNlJTNkYyUyNm5ldHdvcmslM2RhJTI2dGFyZ2V0JTNka3dkLTIzMzQyNjMxODY4ODgzMDQlM2Fsb2MtMTkwJTI2ZmVlZF9pZCUzZCUyNmNsaWNrX2lkJTNkNzI5MDk3YWI2ODg2MTQ5NWZhZWFmZGU2NjEzODA3ZmIlMjZtc2Nsa2lkJTNkNzI5MDk3YWI2ODg2MTQ5NWZhZWFmZGU2NjEzODA3ZmI%26rlid%3D729097ab68861495faeafde6613807fb&rtype=targetURL&tagId=binghp-river-2&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=pbageby_5
+                          - text: "Experts Tested 17 Hearing Aids. The #1 Pick Isn't Sold at Costco or Best Buy"
+                      - generic [ref=e627]:
+                        - link "Sponsored" [ref=e628]:
+                          - /url: https://www.bing.com/api/v1/mediation/tracking?adUnit=1732768568&auId=9c247992-ef59-456f-82ba-b84e574b376b&bdc=pb&bidId=18&bidderId=4&cmExpId=RSV&impId=6&impTy=1&ldc=jhf2pczr&mkt=en-us&oAdUnit=1732768568&pId=1&publisherId=17160724&rId=fff5f955-e916-4350-9d75-b1436c2d0362&region=na&rlink=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8kC8oARXdzqZQ6KvBGwirxTVUCUz15Jxf7U0w_lsYoR8iMOcI--ke5MytxGOAfBhYB1M83QeamPUEUZ-3QOoygJYMtyQhbj0KyhTBi1QjuVMebK8WCDJJT1HP_M74PvMZd6tBKnEpMwvweT-INZ0JMu_vvy3n3-tLkACpYkcX5gAJ4t3Ym6HjGpgIm9ceeRuYDKnsh-9jbnT4aVSrJcdCxU4AwWM%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cuaGVhci5jb20lMmZkJTJmYmVzdF9oZWFyaW5nX2FpZHNfZGlzMDElMmYlM2ZhY3QlM2RBQ1QwMDAwMDgzMDU0QUNUJTI2dXRtX3NvdXJjZSUzZG1jcnMlMjZ1dG1fbWVkaXVtJTNkZGlyZWN0LWJ1eSUyNnV0bV9jYW1wYWlnbiUzZHVzX2VuX2FsX2hlYV9kaXJlY3RidXlfbWNyc19oZWEtbWlyYWNsZS1kb3VibGVfYWNxX2Rlc2t0b3BfdGIxMDYxNWhsMl9BQ1QwMDAwMDgzMDU0QUNUJTI2YWRpZCUzZDgyNDYzNzgzNTUxNDEzJTI2ZGV2aWNlJTNkYyUyNm5ldHdvcmslM2RhJTI2dGFyZ2V0JTNka3dkLTIzMzQyNjMxODY4ODgzMDQlM2Fsb2MtMTkwJTI2ZmVlZF9pZCUzZCUyNmNsaWNrX2lkJTNkNzI5MDk3YWI2ODg2MTQ5NWZhZWFmZGU2NjEzODA3ZmIlMjZtc2Nsa2lkJTNkNzI5MDk3YWI2ODg2MTQ5NWZhZWFmZGU2NjEzODA3ZmI%26rlid%3D729097ab68861495faeafde6613807fb&rtype=targetURL&tagId=binghp-river-2&trafficGroup=zfa_angvir&trafficSubGroup=erfreir&uberGroup=hore_1c&uberSubGroup=pbageby_5
+                        - link "Ad Choice" [ref=e630]:
+                          - /url: https://account.microsoft.com/privacy/ad-settings
+                          - img [ref=e631]
+                    - button "See more" [ref=e633]:
+                      - img [ref=e634]
+                - article [ref=e635] [cursor=pointer]:
+                  - generic [ref=e641]:
+                    - generic [ref=e643]:
+                      - img "Watchlist suggestions" [ref=e645]
+                      - link "Watchlist suggestions" [ref=e646]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?ocid=BingHp01
+                        - heading "Watchlist suggestions" [level=2] [ref=e647]
+                      - button "More options" [ref=e649]
+                    - generic [ref=e654]:
+                      - link "Nasdaq 100 NASDAQ 100 Dropping fast ‎-1.96%‎ 29,114.87" [ref=e656]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a3yy77&noti=Price&ocid=BingHp01
+                        - generic [ref=e657]:
+                          - generic [ref=e658]:
+                            - generic [ref=e659]: Nasdaq 100
+                            - img "NASDAQ 100" [ref=e660]
+                          - generic [ref=e662]: Dropping fast
+                        - generic [ref=e667]:
+                          - generic [ref=e668]: ‎-1.96%‎
+                          - generic [ref=e669]: 29,114.87
+                        - button "Add to watchlist" [ref=e672]:
+                          - img [ref=e673]
+                      - link "VIX CBOE Market Volatility Index Rising fast ‎+3.40%‎ 16.10" [ref=e677]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a33pk2&noti=Price&ocid=BingHp01
+                        - generic [ref=e678]:
+                          - generic [ref=e679]:
+                            - generic [ref=e680]: VIX
+                            - img "CBOE Market Volatility Index" [ref=e681]
+                          - generic [ref=e683]: Rising fast
+                        - generic [ref=e688]:
+                          - generic [ref=e689]: ‎+3.40%‎
+                          - generic [ref=e690]: "16.10"
+                        - button "Add to watchlist" [ref=e693]:
+                          - img [ref=e694]
+                      - link "NVIDIA CORPORATION NVDA ‎-1.39%‎ 192.83" [ref=e698]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a1yv52&ocid=BingHp01
+                        - generic [ref=e699]:
+                          - generic [ref=e701]: NVIDIA CORPORATION
+                          - generic [ref=e703]: NVDA
+                        - generic [ref=e708]:
+                          - generic [ref=e709]: ‎-1.39%‎
+                          - generic [ref=e710]: "192.83"
+                        - button "Add to watchlist" [ref=e713]:
+                          - img [ref=e714]
+                      - link "MICROSOFT CORPORATION MICROSOFT CORPORATION Rising fast ‎+1.59%‎ 392.89" [ref=e718]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a1xzim&noti=Price&ocid=BingHp01
+                        - generic [ref=e719]:
+                          - generic [ref=e720]:
+                            - generic [ref=e721]: MICROSOFT CORPORATION
+                            - img "MICROSOFT CORPORATION" [ref=e722]
+                          - generic [ref=e724]: Rising fast
+                        - generic [ref=e729]:
+                          - generic [ref=e730]: ‎+1.59%‎
+                          - generic [ref=e731]: "392.89"
+                        - button "Add to watchlist" [ref=e734]:
+                          - img [ref=e735]
+                      - link "TESLA, INC. TESLA, INC. Dropping fast ‎-2.59%‎ 408.89" [ref=e739]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?id=a24kar&noti=Price&ocid=BingHp01
+                        - generic [ref=e740]:
+                          - generic [ref=e741]:
+                            - generic [ref=e742]: TESLA, INC.
+                            - img "TESLA, INC." [ref=e743]
+                          - generic [ref=e745]: Dropping fast
+                        - generic [ref=e750]:
+                          - generic [ref=e751]: ‎-2.59%‎
+                          - generic [ref=e752]: "408.89"
+                        - button "Add to watchlist" [ref=e755]:
+                          - img [ref=e756]
+                    - generic [ref=e760]:
+                      - generic [ref=e761]:
+                        - generic "Previous" [ref=e762]:
+                          - button "Previous" [ref=e763]
+                        - tablist [ref=e765]:
+                          - tab "tab-0" [selected] [ref=e766]
+                          - tab "tab-1" [ref=e768]
+                          - tab "tab-2" [ref=e770]
+                          - tab "tab-3" [ref=e772]
+                          - tab "tab-4" [ref=e774]
+                          - tab "tab-5"
+                          - tab "tab-6"
+                        - generic "Next" [ref=e776]:
+                          - button "Next" [ref=e777]
+                      - link "See watchlist suggestions" [ref=e779]:
+                        - /url: https://www.msn.com/en-us/money/watchlist?ocid=BingHp01
+              - generic [ref=e780]:
+                - 'article "Taylor Swift & Travis Kelce donations: Charities react to wedding gift" [ref=e781] [cursor=pointer]':
+                  - generic [ref=e783]:
+                    - img [ref=e784]
+                    - generic [ref=e785]:
+                      - generic [ref=e786]:
+                        - generic [ref=e787]:
+                          - generic [ref=e788]:
+                            - img [ref=e789]
+                            - generic [ref=e790]: Billboard
+                          - generic [ref=e791]: ·
+                          - generic [ref=e792]: 3d
+                        - 'link "Taylor Swift & Travis Kelce donations: Charities react to wedding gift, Billboard" [ref=e793]':
+                          - /url: https://www.msn.com/en-us/music/news/taylor-swift-travis-kelce-donations-charities-react-to-wedding-gift/ar-AA275rWU
+                          - text: "Taylor Swift & Travis Kelce donations: Charities react to wedding gift"
+                      - 'generic "Taylor Swift & Travis Kelce donations: Charities react to wedding gift" [ref=e797]':
+                        - generic [ref=e799]:
+                          - generic [ref=e800]:
+                            - button "152 Likes" [ref=e801]:
+                              - generic [ref=e802]:
+                                - img [ref=e803]
+                                - generic [ref=e805]: "152"
+                            - button "Dislike" [ref=e806]:
+                              - img [ref=e808]
+                          - link "View comments 9 Comment" [ref=e811]:
+                            - /url: https://www.msn.com/en-us/music/news/taylor-swift-travis-kelce-donations-charities-react-to-wedding-gift/ar-AA275rWU#comments
+                            - button "View comments 9 Comment" [ref=e812]:
+                              - img [ref=e813]
+                            - generic [ref=e815]: "9"
+                    - generic [ref=e816]:
+                      - button "Hide this story" [ref=e817]:
+                        - img [ref=e818]
+                        - text: Hide this story
+                      - button "See more" [ref=e819]:
+                        - img [ref=e820]
+                - article [ref=e821] [cursor=pointer]
+                - article "If you do these 3 things, you have self-discipline, according to a psychology PhD" [ref=e828] [cursor=pointer]:
+                  - generic [ref=e830]:
+                    - img [ref=e831]
+                    - generic [ref=e832]:
+                      - generic [ref=e833]:
+                        - generic [ref=e834]:
+                          - generic [ref=e835]:
+                            - img [ref=e836]
+                            - generic [ref=e837]: Inc.
+                          - generic [ref=e838]: ·
+                          - generic [ref=e839]: 2w
+                        - link "If you do these 3 things, you have self-discipline, according to a psychology PhD, Inc." [ref=e840]:
+                          - /url: https://www.msn.com/en-us/money/smallbusiness/if-you-do-these-3-things-you-have-self-discipline-according-to-a-psychology-phd/ar-AA26gtRA
+                          - text: If you do these 3 things, you have self-discipline, according to a psychology PhD
+                      - generic "If you do these 3 things, you have self-discipline, according to a psychology PhD" [ref=e844]:
+                        - generic [ref=e846]:
+                          - generic [ref=e847]:
+                            - button "189 Likes" [ref=e848]:
+                              - generic [ref=e849]:
+                                - img [ref=e850]
+                                - generic [ref=e852]: "189"
+                            - button "Dislike" [ref=e853]:
+                              - img [ref=e855]
+                          - link "View comments 4 Comment" [ref=e858]:
+                            - /url: https://www.msn.com/en-us/money/smallbusiness/if-you-do-these-3-things-you-have-self-discipline-according-to-a-psychology-phd/ar-AA26gtRA#comments
+                            - button "View comments 4 Comment" [ref=e859]:
+                              - img [ref=e860]
+                            - generic [ref=e862]: "4"
+                    - generic [ref=e863]:
+                      - button "Hide this story" [ref=e864]:
+                        - img [ref=e865]
+                        - text: Hide this story
+                      - button "See more" [ref=e866]:
+                        - img [ref=e867]
+                - article [ref=e868] [cursor=pointer]:
+                  - generic [ref=e874]:
+                    - generic [ref=e876]:
+                      - link "Los Angeles" [ref=e878]:
+                        - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                        - heading "Los Angeles" [level=2] [ref=e879]
+                      - button "My location" [ref=e880]
+                      - button "More options" [ref=e882]
+                    - generic [ref=e886]:
+                      - generic [ref=e887]:
+                        - generic [ref=e889]:
+                          - link "Sunny" [ref=e890]:
+                            - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                            - img "Sunny" [ref=e891]
+                          - link "63°F" [ref=e892]:
+                            - /url: https://www.msn.com/en-us/weather/forecast/in-Los-Angeles,CA
+                            - generic [ref=e893]: ‎63‎
+                            - generic [ref=e895]: ‎°F‎
+                        - generic [ref=e897]:
+                          - link "Heat - AdvisoryHeat advisory" [ref=e899]:
+                            - /url: https://www.msn.com/en-us/weather/maps/severeweather/in-Los-Angeles,CA
+                            - img "Heat - Advisory" [ref=e901]
+                            - text: Heat advisory
+                          - link "See full forecast" [ref=e902]:
+                            - /url: https://www.msn.com/en-us/weather/maps/severeweather/in-Los-Angeles,CA
+                            - img "arrow" [ref=e903]
+                      - generic [ref=e908]:
+                        - link "Larger map" [ref=e909]:
+                          - /url: ""
+                          - img
+                          - generic [ref=e910]:
+                            - generic:
+                              - generic:
+                                - img
+                                - img
+                                - img
+                                - img
+                                - img
+                                - img
+                        - link "Check more alert details" [ref=e911]:
+                          - /url: ""
+                          - generic "Check more alert details" [ref=e912]
+                          - img [ref=e914]
+                        - link "Click to see more information" [ref=e915]:
+                          - /url: ""
+                          - img [ref=e916]
+                    - button "See full forecast" [ref=e919]
+                - article "Ship hit in Hormuz as millions march for ayatollah; Iran says no talks unless Trump halts threats" [ref=e920] [cursor=pointer]:
+                  - generic [ref=e922]:
+                    - img [ref=e923]
+                    - generic [ref=e924]:
+                      - generic [ref=e925]:
+                        - generic [ref=e926]:
+                          - generic [ref=e927]:
+                            - img [ref=e928]
+                            - generic [ref=e929]: Reuters
+                          - generic [ref=e930]: ·
+                          - generic [ref=e931]: 4h
+                        - link "Ship hit in Hormuz as millions march for ayatollah; Iran says no talks unless Trump halts threats, Reuters" [ref=e932]:
+                          - /url: https://www.msn.com/en-us/news/world/ship-hit-in-hormuz-as-millions-march-for-ayatollah-iran-says-no-talks-unless-trump-halts-threats/ar-AA27nwVH
+                          - text: Ship hit in Hormuz as millions march for ayatollah; Iran says no talks unless Trump halts threats
+                      - generic "Ship hit in Hormuz as millions march for ayatollah; Iran says no talks unless Trump halts threats" [ref=e936]:
+                        - generic [ref=e938]:
+                          - generic [ref=e939]:
+                            - button "164 Likes" [ref=e940]:
+                              - generic [ref=e941]:
+                                - img [ref=e942]
+                                - generic [ref=e944]: "164"
+                            - button "Dislike" [ref=e945]:
+                              - img [ref=e947]
+                          - link "View comments 77 Comment" [ref=e950]:
+                            - /url: https://www.msn.com/en-us/news/world/ship-hit-in-hormuz-as-millions-march-for-ayatollah-iran-says-no-talks-unless-trump-halts-threats/ar-AA27nwVH#comments
+                            - button "View comments 77 Comment" [ref=e951]:
+                              - img [ref=e952]
+                            - generic [ref=e954]: "77"
+                    - generic [ref=e955]:
+                      - button "Hide this story" [ref=e956]:
+                        - img [ref=e957]
+                        - text: Hide this story
+                      - button "See more" [ref=e958]:
+                        - img [ref=e959]
+                - 'article "''Unprecedented'': Trump draws outrage for World Cup meddling, calling FIFA boss who gave him made-up peace prize" [ref=e960] [cursor=pointer]':
+                  - generic [ref=e962]:
+                    - generic [ref=e968]:
+                      - generic [ref=e969]:
+                        - generic [ref=e970]:
+                          - generic [ref=e971]:
+                            - img [ref=e972]
+                            - generic [ref=e973]: CNN
+                          - generic [ref=e974]: ·
+                          - generic [ref=e975]: 14h
+                        - 'link "''Unprecedented'': Trump draws outrage for World Cup meddling, calling FIFA boss who gave him made-up peace prize, CNN" [ref=e976]':
+                          - /url: https://www.msn.com/en-us/sports/soccer/unprecedented-trump-draws-outrage-for-world-cup-meddling-calling-fifa-boss-who-gave-him-made-up-peace-prize/vi-AA27lXjE
+                          - text: "'Unprecedented': Trump draws outrage for World Cup meddling, calling FIFA boss who gave him made-up peace prize"
+                      - 'generic "''Unprecedented'': Trump draws outrage for World Cup meddling, calling FIFA boss who gave him made-up peace prize" [ref=e980]':
+                        - generic [ref=e982]:
+                          - generic [ref=e983]:
+                            - button "287 Likes" [ref=e984]:
+                              - generic [ref=e985]:
+                                - img [ref=e986]
+                                - generic [ref=e988]: "287"
+                            - button "Dislike" [ref=e989]:
+                              - img [ref=e991]
+                          - link "View comments 26 Comment" [ref=e994]:
+                            - /url: https://www.msn.com/en-us/sports/soccer/unprecedented-trump-draws-outrage-for-world-cup-meddling-calling-fifa-boss-who-gave-him-made-up-peace-prize/vi-AA27lXjE#comments
+                            - button "View comments 26 Comment" [ref=e995]:
+                              - img [ref=e996]
+                            - generic [ref=e998]: "26"
+                    - generic [ref=e999]:
+                      - button "Hide this story" [ref=e1000]:
+                        - img [ref=e1001]
+                        - text: Hide this story
+                      - button "See more" [ref=e1002]:
+                        - img [ref=e1003]
+                - article [ref=e1004] [cursor=pointer]
+                - article "Legal war on Trump’s agenda gains firepower as federal lawyers defect to Democrats" [ref=e1011] [cursor=pointer]:
+                  - generic [ref=e1013]:
+                    - img [ref=e1014]
+                    - generic [ref=e1015]:
+                      - generic [ref=e1016]:
+                        - generic [ref=e1017]:
+                          - generic [ref=e1018]:
+                            - img [ref=e1019]
+                            - generic [ref=e1020]: FOX News
+                          - generic [ref=e1021]: ·
+                          - generic [ref=e1022]: 4h
+                        - link "Legal war on Trump’s agenda gains firepower as federal lawyers defect to Democrats, FOX News" [ref=e1023]:
+                          - /url: https://www.msn.com/en-us/news/politics/legal-war-on-trump-s-agenda-gains-firepower-as-federal-lawyers-defect-to-democrats/ar-AA27oq3P
+                          - text: Legal war on Trump’s agenda gains firepower as federal lawyers defect to Democrats
+                      - generic "Legal war on Trump’s agenda gains firepower as federal lawyers defect to Democrats" [ref=e1027]:
+                        - generic [ref=e1029]:
+                          - generic [ref=e1030]:
+                            - button "213 Likes" [ref=e1031]:
+                              - generic [ref=e1032]:
+                                - img [ref=e1033]
+                                - generic [ref=e1035]: "213"
+                            - button "Dislike" [ref=e1036]:
+                              - img [ref=e1038]
+                          - link "View comments 81 Comment" [ref=e1041]:
+                            - /url: https://www.msn.com/en-us/news/politics/legal-war-on-trump-s-agenda-gains-firepower-as-federal-lawyers-defect-to-democrats/ar-AA27oq3P#comments
+                            - button "View comments 81 Comment" [ref=e1042]:
+                              - img [ref=e1043]
+                            - generic [ref=e1045]: "81"
+                    - generic [ref=e1046]:
+                      - button "Hide this story" [ref=e1047]:
+                        - img [ref=e1048]
+                        - text: Hide this story
+                      - button "See more" [ref=e1049]:
+                        - img [ref=e1050]
+                - article "Mamdani speaks out after Coney Island July 4 mass shooting" [ref=e1051] [cursor=pointer]:
+                  - generic [ref=e1053]:
+                    - img [ref=e1054]
+                    - generic [ref=e1055]:
+                      - generic [ref=e1056]:
+                        - generic [ref=e1057]:
+                          - generic [ref=e1058]:
+                            - img [ref=e1059]
+                            - generic [ref=e1060]: USA TODAY
+                          - generic [ref=e1061]: ·
+                          - generic [ref=e1062]: 21h
+                        - link "Mamdani speaks out after Coney Island July 4 mass shooting, USA TODAY" [ref=e1063]:
+                          - /url: https://www.msn.com/en-us/news/us/mamdani-speaks-out-after-coney-island-july-4-mass-shooting/ar-AA27l98q
+                          - text: Mamdani speaks out after Coney Island July 4 mass shooting
+                      - generic "Mamdani speaks out after Coney Island July 4 mass shooting" [ref=e1067]:
+                        - generic [ref=e1069]:
+                          - generic [ref=e1070]:
+                            - button "263 Likes" [ref=e1071]:
+                              - generic [ref=e1072]:
+                                - img [ref=e1073]
+                                - generic [ref=e1075]: "263"
+                            - button "Dislike" [ref=e1076]:
+                              - img [ref=e1078]
+                          - link "View comments 232 Comment" [ref=e1081]:
+                            - /url: https://www.msn.com/en-us/news/us/mamdani-speaks-out-after-coney-island-july-4-mass-shooting/ar-AA27l98q#comments
+                            - button "View comments 232 Comment" [ref=e1082]:
+                              - img [ref=e1083]
+                            - generic [ref=e1085]: "232"
+                    - generic [ref=e1086]:
+                      - button "Hide this story" [ref=e1087]:
+                        - img [ref=e1088]
+                        - text: Hide this story
+                      - button "See more" [ref=e1089]:
+                        - img [ref=e1090]
+                - article "Woman avoids paying rent or owning home while living dream life, here's how" [ref=e1091] [cursor=pointer]:
+                  - generic [ref=e1093]:
+                    - img [ref=e1094]
+                    - generic [ref=e1095]:
+                      - generic [ref=e1096]:
+                        - generic [ref=e1098]:
+                          - img [ref=e1099]
+                          - generic [ref=e1100]: Newsweek
+                        - link "Woman avoids paying rent or owning home while living dream life, here's how, Newsweek" [ref=e1101]:
+                          - /url: https://www.msn.com/en-us/news/technology/woman-avoids-paying-rent-or-owning-home-while-living-dream-life-here-s-how/ar-AA1Tvru9
+                          - text: Woman avoids paying rent or owning home while living dream life, here's how
+                      - generic "Woman avoids paying rent or owning home while living dream life, here's how" [ref=e1105]:
+                        - generic [ref=e1107]:
+                          - generic [ref=e1108]:
+                            - button "426 Likes" [ref=e1109]:
+                              - generic [ref=e1110]:
+                                - img [ref=e1111]
+                                - generic [ref=e1113]: "426"
+                            - button "Dislike" [ref=e1114]:
+                              - img [ref=e1116]
+                          - link "View comments 45 Comment" [ref=e1119]:
+                            - /url: https://www.msn.com/en-us/news/technology/woman-avoids-paying-rent-or-owning-home-while-living-dream-life-here-s-how/ar-AA1Tvru9#comments
+                            - button "View comments 45 Comment" [ref=e1120]:
+                              - img [ref=e1121]
+                            - generic [ref=e1123]: "45"
+                    - generic [ref=e1124]:
+                      - button "Hide this story" [ref=e1125]:
+                        - img [ref=e1126]
+                        - text: Hide this story
+                      - button "See more" [ref=e1127]:
+                        - img [ref=e1128]
+                - article "California woman killed by alligator while swimming in Florida" [ref=e1129] [cursor=pointer]:
+                  - generic [ref=e1131]:
+                    - img [ref=e1132]
+                    - generic [ref=e1133]:
+                      - generic [ref=e1134]:
+                        - generic [ref=e1135]:
+                          - generic [ref=e1136]:
+                            - img [ref=e1137]
+                            - generic [ref=e1138]: San Francisco Chronicle
+                          - generic [ref=e1139]: ·
+                          - generic [ref=e1140]: 19h
+                        - link "California woman killed by alligator while swimming in Florida, San Francisco Chronicle" [ref=e1141]:
+                          - /url: https://www.msn.com/en-us/news/us/california-woman-killed-by-alligator-while-swimming-in-florida/ar-AA27l5W4
+                          - text: California woman killed by alligator while swimming in Florida
+                      - generic "California woman killed by alligator while swimming in Florida" [ref=e1145]:
+                        - generic [ref=e1147]:
+                          - generic [ref=e1148]:
+                            - button "120 Likes" [ref=e1149]:
+                              - generic [ref=e1150]:
+                                - img [ref=e1151]
+                                - generic [ref=e1153]: "120"
+                            - button "Dislike" [ref=e1154]:
+                              - img [ref=e1156]
+                          - link "View comments 24 Comment" [ref=e1159]:
+                            - /url: https://www.msn.com/en-us/news/us/california-woman-killed-by-alligator-while-swimming-in-florida/ar-AA27l5W4#comments
+                            - button "View comments 24 Comment" [ref=e1160]:
+                              - img [ref=e1161]
+                            - generic [ref=e1163]: "24"
+                    - generic [ref=e1164]:
+                      - button "Hide this story" [ref=e1165]:
+                        - img [ref=e1166]
+                        - text: Hide this story
+                      - button "See more" [ref=e1167]:
+                        - img [ref=e1168]
+                - article "My dog killed my neighbor's cat. I had no idea how much my life would change because of it." [ref=e1169] [cursor=pointer]:
+                  - generic [ref=e1171]:
+                    - img [ref=e1172]
+                    - generic [ref=e1173]:
+                      - generic [ref=e1174]:
+                        - generic [ref=e1176]:
+                          - img [ref=e1177]
+                          - generic [ref=e1178]: HuffPost
+                        - link "My dog killed my neighbor's cat. I had no idea how much my life would change because of it., HuffPost" [ref=e1179]:
+                          - /url: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/my-dog-killed-my-neighbor-s-cat-i-had-no-idea-how-much-my-life-would-change-because-of-it/ar-AA1TxSWj
+                          - text: My dog killed my neighbor's cat. I had no idea how much my life would change because of it.
+                      - generic "My dog killed my neighbor's cat. I had no idea how much my life would change because of it." [ref=e1183]:
+                        - generic [ref=e1185]:
+                          - generic [ref=e1186]:
+                            - button "2,645 Likes" [ref=e1187]:
+                              - generic [ref=e1188]:
+                                - img [ref=e1189]
+                                - generic [ref=e1191]: 3k
+                            - button "Dislike" [ref=e1192]:
+                              - img [ref=e1194]
+                          - link "View comments 1k Comment" [ref=e1197]:
+                            - /url: https://www.msn.com/en-us/lifestyle/lifestyle-buzz/my-dog-killed-my-neighbor-s-cat-i-had-no-idea-how-much-my-life-would-change-because-of-it/ar-AA1TxSWj#comments
+                            - button "View comments 1k Comment" [ref=e1198]:
+                              - img [ref=e1199]
+                            - generic [ref=e1201]: 1k
+                    - generic [ref=e1202]:
+                      - button "Hide this story" [ref=e1203]:
+                        - img [ref=e1204]
+                        - text: Hide this story
+                      - button "See more" [ref=e1205]:
+                        - img [ref=e1206]
+              - generic [ref=e1207]:
+                - article [ref=e1208] [cursor=pointer]:
+                  - link "Free online games See more" [ref=e1211]:
+                    - /url: https://www.msn.com/en-us/play?cgfrom=cg_ntp_carousel
+                    - generic [ref=e1214]:
+                      - generic [ref=e1215]:
+                        - generic [ref=e1216]:
+                          - link "Free online games" [ref=e1217]:
+                            - /url: https://www.msn.com/en-us/play?cgfrom=cg_ntp_carousel
+                            - img [ref=e1218]
+                          - link "Free online games" [ref=e1220]:
+                            - /url: https://www.msn.com/en-us/play?cgfrom=cg_ntp_carousel
+                        - link "See more" [ref=e1222]:
+                          - /url: https://www.msn.com/en-us/play?cgfrom=cg_ntp_carousel
+                      - tabpanel [ref=e1224]:
+                        - generic [ref=e1226]:
+                          - generic [ref=e1228]:
+                            - generic:
+                              - link "bloxd.io" [ref=e1230]:
+                                - /url: https://www.msn.com/en-us/play/games/bloxdio/cg-9p0rj8ffrg7h?ocid=BingHp01
+                                - img "bloxd.io" [ref=e1232]
+                                - generic [ref=e1233]:
+                                  - paragraph [ref=e1234]: bloxd.io
+                                  - generic [ref=e1235]:
+                                    - img "Io" [ref=e1236]
+                                    - generic [ref=e1237]:
+                                      - generic: Io
+                              - link "Solitaire Mahjong Classic" [ref=e1239]:
+                                - /url: https://www.msn.com/en-us/play/games/solitaire-mahjong-classic/cg-9p3m290dfqkb?ocid=BingHp01
+                                - img "Solitaire Mahjong Classic" [ref=e1241]
+                                - generic [ref=e1242]:
+                                  - paragraph [ref=e1243]: Solitaire Mahjong Classic
+                                  - generic [ref=e1244]:
+                                    - img "Classic" [ref=e1245]
+                                    - generic [ref=e1246]:
+                                      - generic: Classic
+                              - link "Solitaire - Classic Klondike" [ref=e1248]:
+                                - /url: https://www.msn.com/en-us/play/games/solitaire-classic-mastery/cg-9pm3r8f7wm5r?ocid=BingHp01
+                                - img "Solitaire - Classic Klondike" [ref=e1250]
+                                - generic [ref=e1251]:
+                                  - paragraph [ref=e1252]: Solitaire - Classic Klondike
+                                  - generic [ref=e1253]:
+                                    - img "Card" [ref=e1254]
+                                    - generic [ref=e1255]:
+                                      - generic: Card
+                              - link "Piece of Cake" [ref=e1257]:
+                                - /url: https://www.msn.com/en-us/play/games/piece-of-cake/cg-9n5mln8fpwg8?ocid=BingHp01
+                                - img "Piece of Cake" [ref=e1259]
+                                - generic [ref=e1260]:
+                                  - paragraph [ref=e1261]: Piece of Cake
+                                  - generic [ref=e1262]:
+                                    - img "Puzzle" [ref=e1263]
+                                    - generic [ref=e1264]:
+                                      - generic: Puzzle
+                              - link "Veck.io" [ref=e1266]:
+                                - /url: https://www.msn.com/en-us/play/games/veckio/cg-9mz3sdptqwm2?ocid=BingHp01
+                                - img "Veck.io" [ref=e1268]
+                                - generic [ref=e1269]:
+                                  - paragraph [ref=e1270]: Veck.io
+                                  - generic [ref=e1271]:
+                                    - img "Arcade" [ref=e1272]
+                                    - generic [ref=e1273]:
+                                      - generic: Arcade
+                              - link "Bubble Shooter HD" [ref=e1275]:
+                                - /url: https://www.msn.com/en-us/play/games/bubble-shooter-hd/cg-9nzvl6gzqhkj?ocid=BingHp01
+                                - img "Bubble Shooter HD" [ref=e1277]
+                                - generic [ref=e1278]:
+                                  - paragraph [ref=e1279]: Bubble Shooter HD
+                                  - generic [ref=e1280]:
+                                    - img "Bubble" [ref=e1281]
+                                    - generic [ref=e1282]:
+                                      - generic: Bubble
+                              - link "TapTap Arrow" [ref=e1284]:
+                                - /url: https://www.msn.com/en-us/play/games/taptap-arrow/cg-9ng0c12cnfsk?ocid=BingHp01
+                                - img "TapTap Arrow" [ref=e1286]
+                                - generic [ref=e1287]:
+                                  - paragraph [ref=e1288]: TapTap Arrow
+                                  - generic [ref=e1289]:
+                                    - img "Puzzle" [ref=e1290]
+                                    - generic [ref=e1291]:
+                                      - generic: Puzzle
+                              - link "Poxel.io" [ref=e1293]:
+                                - /url: https://www.msn.com/en-us/play/games/poxelio/cg-9p8cv7cvz5rl?ocid=BingHp01
+                                - img "Poxel.io" [ref=e1295]
+                                - generic [ref=e1296]:
+                                  - paragraph [ref=e1297]: Poxel.io
+                                  - generic [ref=e1298]:
+                                    - img "Arcade" [ref=e1299]
+                                    - generic [ref=e1300]:
+                                      - generic: Arcade
+                              - link "See more" [ref=e1302]:
+                                - /url: https://www.msn.com/en-us/play?cgfrom=cg_ntp_carousel
+                                - img [ref=e1303]
+                                - text: See more
+                          - button "next" [ref=e1307]:
+                            - img [ref=e1310]
+                - article "California eliminates 'sell by' labels" [ref=e1312] [cursor=pointer]:
+                  - generic [ref=e1314]:
+                    - generic [ref=e1320]:
+                      - generic [ref=e1321]:
+                        - generic [ref=e1322]:
+                          - generic [ref=e1323]:
+                            - img [ref=e1324]
+                            - generic [ref=e1325]: ABC News
+                          - generic [ref=e1326]: ·
+                          - generic [ref=e1327]: 1d
+                        - link "California eliminates 'sell by' labels, ABC News" [ref=e1328]:
+                          - /url: https://www.msn.com/en-us/foodanddrink/foodnews/california-eliminates-sell-by-labels/vi-AA27jWiW
+                          - text: California eliminates 'sell by' labels
+                      - generic "California eliminates 'sell by' labels" [ref=e1332]:
+                        - generic [ref=e1334]:
+                          - generic [ref=e1335]:
+                            - button "120 Likes" [ref=e1336]:
+                              - generic [ref=e1337]:
+                                - img [ref=e1338]
+                                - generic [ref=e1340]: "120"
+                            - button "Dislike" [ref=e1341]:
+                              - img [ref=e1343]
+                          - link "View comments 50 Comment" [ref=e1346]:
+                            - /url: https://www.msn.com/en-us/foodanddrink/foodnews/california-eliminates-sell-by-labels/vi-AA27jWiW#comments
+                            - button "View comments 50 Comment" [ref=e1347]:
+                              - img [ref=e1348]
+                            - generic [ref=e1350]: "50"
+                    - generic [ref=e1351]:
+                      - button "Hide this story" [ref=e1352]:
+                        - img [ref=e1353]
+                        - text: Hide this story
+                      - button "See more" [ref=e1354]:
+                        - img [ref=e1355]
+                - article "Trump launches \"Trump Accounts\" from Oval Office" [ref=e1356] [cursor=pointer]:
+                  - generic [ref=e1358]:
+                    - generic [ref=e1364]:
+                      - generic [ref=e1365]:
+                        - generic [ref=e1366]:
+                          - generic [ref=e1367]:
+                            - img [ref=e1368]
+                            - generic [ref=e1369]: CBS News - Video
+                          - generic [ref=e1370]: ·
+                          - generic [ref=e1371]: 23h
+                        - link "Trump launches \"Trump Accounts\" from Oval Office, CBS News - Video" [ref=e1372]:
+                          - /url: https://www.msn.com/en-us/news/politics/trump-launches-trump-accounts-from-oval-office/vi-AA27kktC
+                          - text: Trump launches "Trump Accounts" from Oval Office
+                      - generic "Trump launches \"Trump Accounts\" from Oval Office" [ref=e1376]:
+                        - generic [ref=e1378]:
+                          - generic [ref=e1379]:
+                            - button "179 Likes" [ref=e1380]:
+                              - generic [ref=e1381]:
+                                - img [ref=e1382]
+                                - generic [ref=e1384]: "179"
+                            - button "Dislike" [ref=e1385]:
+                              - img [ref=e1387]
+                          - link "View comments 16 Comment" [ref=e1390]:
+                            - /url: https://www.msn.com/en-us/news/politics/trump-launches-trump-accounts-from-oval-office/vi-AA27kktC#comments
+                            - button "View comments 16 Comment" [ref=e1391]:
+                              - img [ref=e1392]
+                            - generic [ref=e1394]: "16"
+                    - generic [ref=e1395]:
+                      - button "Hide this story" [ref=e1396]:
+                        - img [ref=e1397]
+                        - text: Hide this story
+                      - button "See more" [ref=e1398]:
+                        - img [ref=e1399]
+                - article "Italy will no longer respond to Trump's provocations, foreign minister says" [ref=e1400] [cursor=pointer]:
+                  - generic [ref=e1402]:
+                    - img [ref=e1403]
+                    - generic [ref=e1404]:
+                      - generic [ref=e1405]:
+                        - generic [ref=e1406]:
+                          - generic [ref=e1407]:
+                            - img [ref=e1408]
+                            - generic [ref=e1409]: HuffPost
+                          - generic [ref=e1410]: ·
+                          - generic [ref=e1411]: 4h
+                        - link "Italy will no longer respond to Trump's provocations, foreign minister says, HuffPost" [ref=e1412]:
+                          - /url: https://www.msn.com/en-us/news/world/italy-will-no-longer-respond-to-trump-s-provocations-foreign-minister-says/ar-AA27nT8t
+                          - text: Italy will no longer respond to Trump's provocations, foreign minister says
+                      - generic "Italy will no longer respond to Trump's provocations, foreign minister says" [ref=e1416]:
+                        - generic [ref=e1418]:
+                          - generic [ref=e1419]:
+                            - button "754 Likes" [ref=e1420]:
+                              - generic [ref=e1421]:
+                                - img [ref=e1422]
+                                - generic [ref=e1424]: "754"
+                            - button "Dislike" [ref=e1425]:
+                              - img [ref=e1427]
+                          - link "View comments 48 Comment" [ref=e1430]:
+                            - /url: https://www.msn.com/en-us/news/world/italy-will-no-longer-respond-to-trump-s-provocations-foreign-minister-says/ar-AA27nT8t#comments
+                            - button "View comments 48 Comment" [ref=e1431]:
+                              - img [ref=e1432]
+                            - generic [ref=e1434]: "48"
+                    - generic [ref=e1435]:
+                      - button "Hide this story" [ref=e1436]:
+                        - img [ref=e1437]
+                        - text: Hide this story
+                      - button "See more" [ref=e1438]:
+                        - img [ref=e1439]
+                - article "Nancy Pelosi's husband could face hit-and-run charge, authorities say" [ref=e1440] [cursor=pointer]:
+                  - generic [ref=e1442]:
+                    - img [ref=e1443]
+                    - generic [ref=e1444]:
+                      - generic [ref=e1445]:
+                        - generic [ref=e1446]:
+                          - generic [ref=e1447]:
+                            - img [ref=e1448]
+                            - generic [ref=e1449]: USA TODAY
+                          - generic [ref=e1450]: ·
+                          - generic [ref=e1451]: 21h
+                        - link "Nancy Pelosi's husband could face hit-and-run charge, authorities say, USA TODAY" [ref=e1452]:
+                          - /url: https://www.msn.com/en-us/news/crime/nancy-pelosi-s-husband-could-face-hit-and-run-charge-authorities-say/ar-AA27kwlO
+                          - text: Nancy Pelosi's husband could face hit-and-run charge, authorities say
+                      - generic "Nancy Pelosi's husband could face hit-and-run charge, authorities say" [ref=e1456]:
+                        - generic [ref=e1458]:
+                          - generic [ref=e1459]:
+                            - button "2,382 Likes" [ref=e1460]:
+                              - generic [ref=e1461]:
+                                - img [ref=e1462]
+                                - generic [ref=e1464]: 2k
+                            - button "Dislike" [ref=e1465]:
+                              - img [ref=e1467]
+                          - link "View comments 422 Comment" [ref=e1470]:
+                            - /url: https://www.msn.com/en-us/news/crime/nancy-pelosi-s-husband-could-face-hit-and-run-charge-authorities-say/ar-AA27kwlO#comments
+                            - button "View comments 422 Comment" [ref=e1471]:
+                              - img [ref=e1472]
+                            - generic [ref=e1474]: "422"
+                    - generic [ref=e1475]:
+                      - button "Hide this story" [ref=e1476]:
+                        - img [ref=e1477]
+                        - text: Hide this story
+                      - button "See more" [ref=e1478]:
+                        - img [ref=e1479]
+    - contentinfo:
+      - generic [ref=e1481]:
+        - generic [ref=e1482]: © 2026 Microsoft
+        - list [ref=e1483]:
+          - listitem [ref=e1484]:
+            - link "隐私与 Cookie" [ref=e1485] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkId=521839
+          - listitem [ref=e1486]:
+            - link "法律声明" [ref=e1487] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=246338
+          - listitem [ref=e1488]:
+            - link "广告" [ref=e1489] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?linkid=868923
+          - listitem [ref=e1490]:
+            - link "关于我们的广告" [ref=e1491] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?LinkID=286759
+          - listitem [ref=e1492]:
+            - link "帮助" [ref=e1493] [cursor=pointer]:
+              - /url: //support.microsoft.com/topic/82d20721-2d6f-4012-a13d-d1910ccf203f
+          - listitem [ref=e1494]:
+            - link "反馈" [ref=e1495] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e1496]:
+            - link "消费者健康隐私" [ref=e1497] [cursor=pointer]:
+              - /url: //go.microsoft.com/fwlink/?linkid=2259814

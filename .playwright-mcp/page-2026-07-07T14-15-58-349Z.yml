@@ -1,0 +1,38 @@
+- main [ref=f4e16]:
+  - generic [ref=f4e18]:
+    - heading "必应" [level=1] [ref=f4e19]:
+      - img "必应" [ref=f4e20] [cursor=pointer]
+    - navigation [ref=f4e28]:
+      - menubar [ref=f4e29]:
+        - menuitem "Copilot" [ref=f4e30] [cursor=pointer]:
+          - link "Copilot" [ref=f4e31]:
+            - /url: /chat?FORM=hpcodx&intent=bing
+            - generic [ref=f4e33]: Copilot
+        - menuitem "图片" [ref=f4e34] [cursor=pointer]:
+          - link "图片" [ref=f4e35]:
+            - /url: /images?FORM=Z9LH
+        - menuitem "视频" [ref=f4e36] [cursor=pointer]:
+          - link "视频" [ref=f4e37]:
+            - /url: /videos?FORM=Z9LH1
+        - menuitem "购物" [ref=f4e38] [cursor=pointer]:
+          - link "购物" [ref=f4e39]:
+            - /url: /shop?FORM=Z9LHS4
+        - menuitem "地图" [ref=f4e40] [cursor=pointer]:
+          - link "地图" [ref=f4e41]:
+            - /url: /maps?FORM=Z9LH2
+        - menuitem "资讯" [ref=f4e42] [cursor=pointer]:
+          - link "资讯" [ref=f4e43]:
+            - /url: /news/search?q=Top+stories&nvaug=%5bNewsVertical+Category%3d%22rt_MaxClass%22%5d&FORM=Z9LH3
+        - menuitem ". . . 更多" [ref=f4e44] [cursor=pointer]:
+          - text: . . .
+          - button "更多" [ref=f4e45]
+  - search [ref=f4e47]:
+    - img [ref=f4e49] [cursor=pointer]
+    - generic [ref=f4e52]:
+      - status
+      - combobox "在此处输入你的搜索 — 输入时会显示搜索建议" [active] [ref=f4e53]
+    - button "语音搜索" [ref=f4e56]:
+      - img [ref=f4e57]
+    - button "使用图像搜索" [ref=f4e61] [cursor=pointer]
+    - link "打开 Copilot" [ref=f4e62] [cursor=pointer]:
+      - /url: /chat?FORM=hpcodx&intent=bing

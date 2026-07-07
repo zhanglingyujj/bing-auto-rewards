@@ -148,6 +148,29 @@ def robust_wait_and_click(driver, by, value, timeout=WAIT_TIMEOUT, retries=RETRY
                     logger.warning(f"截图保存失败: {screenshot_error}")
     return False
 
+def log_page_state(driver, context_label):
+    """记录当前页面诊断信息（URL、标题、可见文本片段、截图），用于排查登录失败"""
+    try:
+        url = driver.current_url
+        title = driver.title
+        logger.info(f"[诊断-{context_label}] URL: {url}")
+        logger.info(f"[诊断-{context_label}] 标题: {title}")
+        try:
+            body_text = driver.find_element(By.TAG_NAME, "body").text
+            snippet = body_text[:800].replace('\n', ' | ')
+            logger.info(f"[诊断-{context_label}] 页面文本: {snippet}")
+        except Exception:
+            logger.info(f"[诊断-{context_label}] 页面文本获取失败")
+        try:
+            ts = int(time.time())
+            shot = f"diag_{context_label}_{ts}.png"
+            driver.save_screenshot(shot)
+            logger.info(f"[诊断-{context_label}] 截图已保存: {shot}")
+        except Exception as e:
+            logger.warning(f"[诊断-{context_label}] 截图失败: {e}")
+    except Exception as e:
+        logger.warning(f"[诊断-{context_label}] 诊断信息获取失败: {e}")
+
 def handle_stay_signed_in_popup(driver, idx):
     """
     专门处理"保持登录状态"弹窗的函数
@@ -381,6 +404,7 @@ def login_bing(driver, email, password, idx, group_name=None):
     
     # 处理可能的验证码页面
     time.sleep(3)
+    log_page_state(driver, "after_next")
     try:
         # 检查是否出现验证码页面
         page_text = driver.page_source
@@ -414,6 +438,7 @@ def login_bing(driver, email, password, idx, group_name=None):
     except Exception as e:
         logger.warning(f"检查验证码页面失败: {e}")
     
+    log_page_state(driver, "vericode_check_done")
     for _ in range(MAX_SKIP):
         time.sleep(1)
         current_url = driver.current_url
@@ -454,6 +479,7 @@ def login_bing(driver, email, password, idx, group_name=None):
             driver.get(BING_URL)
             time.sleep(2)
             break
+    log_page_state(driver, "passkey_loop_end")
     try:
         WebDriverWait(driver, WAIT_TIMEOUT).until(
             EC.invisibility_of_element_located((By.ID, "usernameEntry"))
@@ -478,6 +504,7 @@ def login_bing(driver, email, password, idx, group_name=None):
                 pass
             time.sleep(1)
         if not password_input or not password_input.is_displayed():
+            log_page_state(driver, "pwd_not_found")
             raise Exception("未找到密码输入框")
     except Exception as e:
         logger.error("未找到密码输入框")
