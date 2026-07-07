@@ -1,36 +1,6 @@
 {
   "group1": [
     {
-      "email": "1269738129@qq.com",
-      "password": "zhoulixiang599."
-    }
-  ],
-  "group2": [
-    {
-      "email": "599711766@qq.com",
-      "password": "zhoulixiang599."
-    }
-  ],
-  "group3": [
-    {
-      "email": "z1269738129@2925.com",
-      "password": "zhoulixiang599."
-    }
-  ],
-  "group4": [
-    {
-      "email": "zlx599711@126.com",
-      "password": "zhoulixiang599."
-    }
-  ],
-  "group5": [
-    { 
-      "email": "z599711766@2925.com",
-      "password": "zlx1010..."
-    }
-  ],
-  "group6": [
-    {
       "email": "idealzhou@outlook.com",
       "password": "zlx1010..."
     }
