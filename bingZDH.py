@@ -45,6 +45,33 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ========== 工具函数 ==========
+_CHROME_MAIN_VERSION = None
+
+def get_chrome_main_version():
+    """获取 Chrome 主版本号，优先从 CHROME_BIN 环境变量读取，结果缓存"""
+    global _CHROME_MAIN_VERSION
+    if _CHROME_MAIN_VERSION is not None:
+        return _CHROME_MAIN_VERSION
+    chrome_bin = os.getenv('CHROME_BIN')
+    if not chrome_bin:
+        logger.info("未设置 CHROME_BIN 环境变量，由 undetected-chromedriver 自动检测版本")
+        return None
+    try:
+        import subprocess
+        result = subprocess.run(
+            [chrome_bin, '--version'],
+            capture_output=True, text=True, timeout=10
+        )
+        match = re.search(r'(\d+)\.', result.stdout)
+        if match:
+            _CHROME_MAIN_VERSION = int(match.group(1))
+            logger.info(f"检测到 Chrome 主版本: {_CHROME_MAIN_VERSION}")
+            return _CHROME_MAIN_VERSION
+        logger.warning(f"无法从输出解析 Chrome 版本: {result.stdout.strip()}")
+    except Exception as e:
+        logger.warning(f"获取 Chrome 版本失败: {e}")
+    return None
+
 def check_driver_connection(driver, group_name):
     """检查WebDriver连接是否正常"""
     try:
@@ -775,6 +802,9 @@ def create_chrome_options():
     创建Chrome选项
     """
     chrome_options = uc.ChromeOptions()
+    chrome_bin = os.getenv('CHROME_BIN')
+    if chrome_bin:
+        chrome_options.binary_location = chrome_bin
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
     chrome_options.add_argument('--incognito')
@@ -882,7 +912,7 @@ def process_account_group(group_name, accounts, search_words):
                         chrome_options.add_argument(f'--user-data-dir={temp_dir}')
                         chrome_options.add_argument(f'--remote-debugging-port={9222 + hash(group_name) % 1000}')
                         
-                        driver_result['driver'] = uc.Chrome(options=chrome_options, version_main=None)
+                        driver_result['driver'] = uc.Chrome(options=chrome_options, version_main=get_chrome_main_version())
                         logger.info(f"账号组 {group_name} Chrome浏览器启动成功！")
                     except Exception as e:
                         logger.error(f"账号组 {group_name} ChromeDriver创建失败: {e}")
@@ -949,7 +979,7 @@ def process_account_group(group_name, accounts, search_words):
                             new_chrome_options.add_argument(f'--user-data-dir={temp_dir}')
                             new_chrome_options.add_argument(f'--remote-debugging-port={9222 + hash(group_name) % 1000 + attempt}')
                             
-                            driver = uc.Chrome(options=new_chrome_options, version_main=138)
+                            driver = uc.Chrome(options=new_chrome_options, version_main=get_chrome_main_version())
                             logger.info(f"账号组 {group_name} Chrome浏览器重新启动成功！")
                             break
                         except Exception as e:
@@ -999,7 +1029,7 @@ def process_account_group(group_name, accounts, search_words):
                             new_chrome_options.add_argument(f'--user-data-dir={temp_dir}')
                             new_chrome_options.add_argument(f'--remote-debugging-port={9222 + hash(group_name) % 1000 + attempt}')
                             
-                            driver = uc.Chrome(options=new_chrome_options, version_main=138)
+                            driver = uc.Chrome(options=new_chrome_options, version_main=get_chrome_main_version())
                             logger.info(f"账号组 {group_name} Chrome浏览器重新启动成功！")
                             break
                         except Exception as e2:

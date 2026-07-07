@@ -28,11 +28,6 @@ jobs:
         python-version: '3.9'
         cache: 'pip' # 自动开启 pip 缓存，加快后续运行速度
 
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@v1
-      with:
-        chrome-version: stable
-
     - name: Verify Chrome and ChromeDriver
       run: |
         google-chrome --version

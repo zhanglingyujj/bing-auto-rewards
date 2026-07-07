@@ -4,6 +4,7 @@ config/accounts.json
 
 # 日志文件
 *.log
+logs_*
 
 # 截图文件
 *.png
