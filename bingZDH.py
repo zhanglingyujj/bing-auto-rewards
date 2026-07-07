@@ -408,17 +408,18 @@ def login_bing(driver, email, password, idx, group_name=None):
     try:
         # 检查是否出现验证码页面
         page_text = driver.page_source
-        if "获取用于登录的代码" in page_text or "发送验证码" in page_text:
+        if "获取用于登录的代码" in page_text or "发送验证码" in page_text or "Verify your email" in page_text or "We'll send a code" in page_text or "Send code" in page_text:
             logger.info("检测到验证码页面，尝试点击'使用密码'按钮")
             try:
                 # 尝试多种方式找到"使用密码"按钮
                 password_buttons = [
                     (By.XPATH, "//*[text()='使用密码']"),
                     (By.XPATH, "//*[text()='Use password']"),
+                    (By.XPATH, "//*[text()='Use your password']"),
                     (By.XPATH, "//button[contains(text(), '使用密码')]"),
-                    (By.XPATH, "//button[contains(text(), 'Use password')]"),
+                    (By.XPATH, "//button[contains(text(), 'Use your password')]"),
                     (By.XPATH, "//a[contains(text(), '使用密码')]"),
-                    (By.XPATH, "//a[contains(text(), 'Use password')]"),
+                    (By.XPATH, "//a[contains(text(), 'Use your password')]"),
                     (By.CSS_SELECTOR, "button[data-testid='secondaryButton']"),
                     (By.CSS_SELECTOR, "a[data-testid='secondaryButton']")
                 ]
