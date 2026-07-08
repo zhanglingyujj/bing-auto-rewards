@@ -341,7 +341,7 @@ def handle_post_login(page, email):
 
 # ========== Rewards 操作 ==========
 def get_bing_points(page):
-    """获取积分信息（从页面文本提取，不依赖 JSON 嵌入）"""
+    """获取积分信息"""
     page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
     time.sleep(5)
 
@@ -349,13 +349,21 @@ def get_bing_points(page):
     today_points = "未找到"
 
     try:
-        content = page.inner_text("body")
-        m = re.search(r'可用积分\s*[\n\r\s]*([\d,]+)', content)
+        html = page.content()
+        # 从 JS 数据中提取（availablePoints 嵌入在 HTML 中）
+        m = re.search(r'"availablePoints"\s*:\s*(\d+)', html)
         if m:
             total_points = m.group(1)
-        m = re.search(r'今日积分\s*[\n\r\s]*([\d,]+)', content)
+        # 今日积分
+        m = re.search(r'"todayPoints"\s*:\s*(\d+)', html)
         if m:
             today_points = m.group(1)
+        else:
+            # 备用：从可见文本提取
+            content = page.inner_text("body")
+            m = re.search(r'(?:Available points|今日积分|today.?s points)\s*[\n\r\s]*([\d,]+)', content, re.I)
+            if m:
+                today_points = m.group(1)
     except Exception as e:
         logger.warning(f"获取积分失败: {e}")
 
@@ -365,11 +373,13 @@ def get_bing_points(page):
 def claim_expiring_points(page, email):
     """领取即将过期的积分"""
     try:
-        btn = page.get_by_role("button", name="领取")
-        if btn.count() > 0 and btn.first.is_visible():
-            btn.first.click(timeout=5000)
-            logger.info(f"账号{email} 已领取过期积分")
-            time.sleep(2)
+        for name in [re.compile("领取|Claim", re.I)]:
+            btn = page.get_by_role("button", name=name)
+            if btn.count() > 0 and btn.first.is_visible():
+                btn.first.click(timeout=5000)
+                logger.info(f"账号{email} 已领取过期积分")
+                time.sleep(2)
+                break
     except Exception:
         pass
 
@@ -628,7 +638,7 @@ def manual_login():
     with sync_playwright() as p:
         browser = p.chromium.launch(
             channel="chrome" if os.path.exists("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe") else None,
-            headless=False,  # 可见模式
+            headless=False,
             args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-blink-features=AutomationControlled']
         )
 
@@ -644,31 +654,43 @@ def manual_login():
                 )
                 apply_stealth(context)
                 page = context.new_page()
-                page.goto(BING_URL, wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
 
-                # 等待用户手动登录，最多等10分钟
-                logger.info("等待登录完成（最多10分钟）...")
-                for i in range(600):  # 10分钟 = 600秒
+                # 直接导航到 rewards.bing.com，会跳转到登录页
+                logger.info("正在打开 Rewards 页面（将跳转到登录页）...")
+                page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=30000)
+                logger.info("请在浏览器中完成登录（输入邮箱、密码、2FA验证码等）。")
+                logger.info("登录成功后页面会自动跳转回 Rewards 页面，脚本将自动保存状态。")
+
+                # 等待用户完成登录，检测 rewards.bing.com 页面加载
+                logged_in = False
+                for i in range(600):  # 最多等10分钟
                     time.sleep(1)
                     try:
                         url = page.url
-                        if "bing.com" in url and "login" not in url and "rewards" not in url:
-                            # 确认是真正的 bing.com 主页
-                            if page.title() and "bing" in page.title().lower():
-                                logger.info(f"检测到登录成功！保存状态...")
-                                save_state(context, email)
-                                break
+                        # 登录成功的标志：URL 回到 rewards.bing.com 且不在 login/oauth 页面
+                        if "rewards.bing.com" in url and "login" not in url and "oauth" not in url:
+                            logger.info(f"检测到登录成功！URL: {url}")
+                            # 额外等待5秒确保所有 cookie 设置完成
+                            time.sleep(5)
+                            save_state(context, email)
+                            logged_in = True
+                            break
                     except Exception:
                         pass
-                else:
-                    logger.warning(f"账号 {email} 等待超时，未检测到登录成功")
 
-                # 额外等待3秒确保页面稳定
-                time.sleep(3)
-                try:
-                    save_state(context, email)
-                except Exception:
-                    pass
+                if not logged_in:
+                    # 超时后仍尝试保存（用户可能已登录但URL匹配失败）
+                    logger.warning(f"账号 {email} 等待超时，尝试保存当前状态...")
+                    try:
+                        page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=15000)
+                        time.sleep(3)
+                    except Exception:
+                        pass
+                    try:
+                        save_state(context, email)
+                    except Exception:
+                        pass
+
                 context.close()
 
         browser.close()
