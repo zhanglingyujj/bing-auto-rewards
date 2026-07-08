@@ -38,13 +38,27 @@ jobs:
         # 从GitHub Secrets读取账号配置
         echo "$ACCOUNTS_CONFIG" > accounts.json
         
-    - name: Restore state
+    - name: Restore state from cache
       uses: actions/cache@v4
       with:
         path: state_*.json
         key: bing-state-${{ github.run_id }}
         restore-keys: |
           bing-state-
+
+    - name: Write state from secret
+      env:
+        BING_STATE: ${{ secrets.BING_STATE }}
+      run: |
+        # 如果 cache 未命中且 secret 存在，则从 secret 写入
+        if [ ! -f state_zhanglingyujj_at_hotmail_com.json ] && [ -n "$BING_STATE" ]; then
+          echo "$BING_STATE" > state_zhanglingyujj_at_hotmail_com.json
+          echo "已从 BING_STATE secret 写入 state 文件"
+        elif [ -f state_zhanglingyujj_at_hotmail_com.json ]; then
+          echo "已从 cache 恢复 state 文件"
+        else
+          echo "未找到 state 文件，将尝试完整登录（可能因2FA失败）"
+        fi
         
     - name: Run Bing automation
       run: |
