@@ -389,25 +389,35 @@ def click_reward_tasks(page, context, email):
     page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
     time.sleep(5)
 
+    # 用 aria-label 积分检测 + 锁定状态过滤，替代 URL 模式匹配
     tasks = page.evaluate("""() => {
         const links = Array.from(document.querySelectorAll('a[href]'));
         const seen = new Set();
         const results = [];
         for (const a of links) {
             const href = a.href;
-            if (!href || seen.has(href) || !href.startsWith('http')) continue;
-            // 排除 Bing 首页链接（在必应上浏览任务的通用 URL）
-            if (href.match(/bing\\.com\\/\\?(form|OCID|PUBL)/) || href === 'https://www.bing.com/') continue;
-            // 包含搜索链接（带 form 参数 = 积分任务）
-            if (href.includes('bing.com/search') && (href.includes('form=') || href.includes('FORM='))) {
-                seen.add(href);
-                results.push({ href, label: (a.getAttribute('aria-label') || '').substring(0, 60) });
+            if (!href || !href.startsWith('http')) continue;
+
+            const label = a.getAttribute('aria-label') || '';
+            // 必须包含积分/points + 数字
+            if (!(/积分|points/i.test(label) && /\\d+/.test(label))) continue;
+
+            // 排除无效 URL（# 锚点、非 bing/rewards 域名的外链）
+            if (href.endsWith('#') || href.endsWith('/#')) continue;
+            if (!href.includes('bing.com') && !href.includes('rewards.bing.com')) continue;
+
+            // 跳过锁定任务（父元素内有 img alt 含"锁定"/"locked"）
+            const parent = a.closest('li, div, [class*="card"], [class*="item"]');
+            if (parent) {
+                const lockImg = parent.querySelector('img[alt*="锁定"], img[alt*="locked"], img[alt*="Locked"]');
+                if (lockImg) continue;
             }
-            // 包含测验/投票链接
-            else if (href.includes('bing.com/rewards/checkuser')) {
-                seen.add(href);
-                results.push({ href, label: (a.getAttribute('aria-label') || '').substring(0, 60) });
-            }
+
+            // 按 label 去重（非 href），同 URL 不同任务都能收集
+            if (seen.has(label)) continue;
+            seen.add(label);
+
+            results.push({ href, label: label.substring(0, 80) });
         }
         return results;
     }""")
@@ -420,7 +430,7 @@ def click_reward_tasks(page, context, email):
             tp.goto(task['href'], wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
             time.sleep(8)
             tp.close()
-            logger.info(f"账号{email} 完成第 {i+1}/{len(tasks)} 个任务: {task['label'][:30]}")
+            logger.info(f"账号{email} 完成第 {i+1}/{len(tasks)} 个任务: {task['label'][:40]}")
         except Exception as e:
             logger.warning(f"账号{email} 第 {i+1} 个任务失败: {e}")
             try:
