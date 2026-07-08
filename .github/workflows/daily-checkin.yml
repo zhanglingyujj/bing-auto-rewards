@@ -49,6 +49,14 @@ jobs:
         # 从GitHub Secrets读取账号配置
         echo "$ACCOUNTS_CONFIG" > accounts.json
         
+    - name: Restore cookies
+      uses: actions/cache@v4
+      with:
+        path: cookies_*.json
+        key: bing-cookies-${{ github.run_id }}
+        restore-keys: |
+          bing-cookies-
+        
     - name: Run Bing automation
       run: |
         python bingZDH.py --once

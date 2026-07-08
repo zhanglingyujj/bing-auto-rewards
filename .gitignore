@@ -2,6 +2,9 @@
 accounts.json
 config/accounts.json
 
+# Cookie文件
+cookies_*.json
+
 # 日志文件
 *.log
 logs_*

@@ -342,11 +342,64 @@ def get_bing_hotwords():
 
 
 
+# ========== Cookie 持久化 ==========
+def get_cookie_filename(email):
+    safe_email = email.replace('@', '_at_').replace('.', '_')
+    return f"cookies_{safe_email}.json"
+
+def save_cookies(driver, email):
+    try:
+        cookies = driver.get_cookies()
+        cookie_file = get_cookie_filename(email)
+        with open(cookie_file, 'w') as f:
+            json.dump(cookies, f)
+        logger.info(f"已保存 {len(cookies)} 个cookies到 {cookie_file}")
+    except Exception as e:
+        logger.warning(f"保存cookies失败: {e}")
+
+def try_cookie_login(driver, email):
+    cookie_file = get_cookie_filename(email)
+    if not os.path.exists(cookie_file):
+        logger.info(f"未找到cookie文件: {cookie_file}")
+        return False
+    try:
+        with open(cookie_file, 'r') as f:
+            cookies = json.load(f)
+        if not cookies:
+            logger.info("cookie文件为空")
+            return False
+        driver.get(BING_URL)
+        time.sleep(2)
+        for cookie in cookies:
+            cookie.pop('sameSite', None)
+            try:
+                driver.add_cookie(cookie)
+            except Exception:
+                pass
+        logger.info(f"已加载 {len(cookies)} 个cookies")
+        driver.get(REWARDS_URL)
+        time.sleep(5)
+        current_url = driver.current_url
+        if "login.live.com" not in current_url and "login.microsoftonline.com" not in current_url:
+            logger.info("Cookie登录成功！")
+            return True
+        logger.info("Cookies已过期，需要重新登录")
+        return False
+    except Exception as e:
+        logger.warning(f"加载cookies失败: {e}")
+        return False
+
 # ========== 业务逻辑 ==========
 def login_bing(driver, email, password, idx, group_name=None):
     # 检查WebDriver连接
     if group_name and not check_driver_connection(driver, group_name):
         raise Exception("WebDriver连接已断开")
+
+    # 优先尝试Cookie登录（避免2FA验证）
+    if try_cookie_login(driver, email):
+        logger.info(f"账号{email} Cookie登录成功，跳过密码登录流程")
+        return
+    logger.info(f"Cookie不可用或已过期，进行正常登录流程...")
     
     max_page_retry = 3  # 页面整体重试次数
     for page_try in range(max_page_retry):
@@ -438,6 +491,46 @@ def login_bing(driver, email, password, idx, group_name=None):
                 logger.warning(f"处理验证码页面失败: {e}")
     except Exception as e:
         logger.warning(f"检查验证码页面失败: {e}")
+    
+    # 处理Authenticator验证器页面
+    try:
+        page_text = driver.page_source
+        if "Authenticator" in page_text or "authenticator" in page_text:
+            logger.info("检测到Authenticator验证页面，尝试切换到密码登录...")
+            other_ways_selectors = [
+                (By.XPATH, "//*[text()='Other ways to sign in']"),
+                (By.XPATH, "//a[contains(text(), 'Other ways to sign in')]"),
+                (By.XPATH, "//button[contains(text(), 'Other ways to sign in')]"),
+                (By.ID, "idDiv_SAOTCS_Proofs"),
+            ]
+            clicked_other = False
+            for sel_type, sel_value in other_ways_selectors:
+                if robust_wait_and_click(driver, sel_type, sel_value, timeout=3):
+                    logger.info(f"成功点击'Other ways to sign in': {sel_type} = {sel_value}")
+                    clicked_other = True
+                    time.sleep(3)
+                    break
+            if not clicked_other:
+                logger.warning("未找到'Other ways to sign in'按钮")
+            else:
+                log_page_state(driver, "authenticator_other_ways")
+                password_option_selectors = [
+                    (By.XPATH, "//*[text()='Use your password']"),
+                    (By.XPATH, "//*[text()='Use password']"),
+                    (By.XPATH, "//a[contains(text(), 'password')]"),
+                    (By.XPATH, "//button[contains(text(), 'password')]"),
+                    (By.CSS_SELECTOR, "button[data-testid='secondaryButton']"),
+                    (By.CSS_SELECTOR, "a[data-testid='secondaryButton']"),
+                ]
+                for sel_type, sel_value in password_option_selectors:
+                    if robust_wait_and_click(driver, sel_type, sel_value, timeout=3):
+                        logger.info(f"成功点击'Use your password': {sel_type} = {sel_value}")
+                        time.sleep(3)
+                        break
+                else:
+                    logger.warning("未找到'Use your password'选项，尝试继续...")
+    except Exception as e:
+        logger.warning(f"处理Authenticator页面失败: {e}")
     
     log_page_state(driver, "vericode_check_done")
     for _ in range(MAX_SKIP):
@@ -644,6 +737,9 @@ def login_bing(driver, email, password, idx, group_name=None):
             logger.info(f"账号{email}登录流程完成！当前页面: {current_url}")
     except Exception as e:
         logger.warning(f"检查登录状态失败: {e}")
+    
+    # 保存cookies供下次使用
+    save_cookies(driver, email)
     
     time.sleep(1)
 
@@ -1078,7 +1174,6 @@ def process_account_group(group_name, accounts, search_words):
         if driver:
             try:
                 logger.info(f"正在关闭账号组 {group_name} 的浏览器...")
-                logout_bing(driver)
                 driver.quit()
                 logger.info(f"账号组 {group_name} 浏览器已成功关闭")
             except Exception as e:
