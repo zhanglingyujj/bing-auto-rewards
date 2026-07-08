@@ -42,13 +42,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         
-    - name: Create config directory
-      run: mkdir -p config
-      
     - name: Setup accounts configuration
+      env:
+        ACCOUNTS_CONFIG: ${{ secrets.ACCOUNTS_CONFIG }}
       run: |
         # 从GitHub Secrets读取账号配置
-        echo '${{ secrets.ACCOUNTS_CONFIG }}' > config/accounts.json
+        echo "$ACCOUNTS_CONFIG" > accounts.json
         
     - name: Run Bing automation
       run: |
