@@ -166,6 +166,16 @@ def try_2fa_push(page):
             logger.info(f"2FA: 已通过！URL: {url[:100]}")
             time.sleep(3)
             return True
+        # 检测 "Stay signed in?" 弹窗并点击 Yes
+        try:
+            yes_btn = page.get_by_role("button", name=re.compile("Yes|是", re.I))
+            if yes_btn.count() > 0 and yes_btn.first.is_visible(timeout=1000):
+                yes_btn.first.click(timeout=3000)
+                logger.info("2FA: 点击 'Yes' (Stay signed in)")
+                time.sleep(3)
+                continue
+        except Exception:
+            pass
         if i % 10 == 0:
             logger.info(f"2FA: 等待 approve[{i*2}s]...")
         time.sleep(2)
@@ -182,19 +192,22 @@ def sso_refresh(page):
         except Exception:
             pass
 
-        logger.info(f"SSO 诊断: goto 后 URL: {page.url[:120]}")
-
         # 等待 SSO 完成：URL 回到 rewards.bing.com（非 auth/login），最多等 60 秒
         for i in range(30):
             url = page.url
             if "rewards.bing.com" in url and "auth" not in url and "login" not in url:
                 break
-            if i % 5 == 0:
-                logger.info(f"SSO 诊断: 等待[{i*2}s] URL: {url[:120]}")
+            # 检测 "Stay signed in?" 弹窗并点击 Yes
+            try:
+                yes_btn = page.get_by_role("button", name=re.compile("Yes|是", re.I))
+                if yes_btn.count() > 0 and yes_btn.first.is_visible(timeout=1000):
+                    yes_btn.first.click(timeout=3000)
+                    logger.info("SSO: 点击 'Yes' (Stay signed in)")
+                    time.sleep(3)
+                    continue
+            except Exception:
+                pass
             time.sleep(2)
-
-        final_url = page.url
-        logger.info(f"SSO 诊断: 最终 URL: {final_url[:120]}")
 
         # 检测是否到了 2FA 验证码页面
         try:
@@ -207,16 +220,7 @@ def sso_refresh(page):
         except Exception:
             pass
 
-        # 诊断：如果仍在 login/auth 页面（非 2FA），记录页面内容
-        if "login" in final_url or "auth" in final_url:
-            try:
-                title = page.title()
-                body = page.inner_text("body")[:200].replace('\n', ' ')
-                logger.warning(f"SSO 诊断: 页面标题='{title}', 内容='{body}'")
-            except Exception:
-                pass
-
-        time.sleep(3)  # 等 JS 渲染
+        time.sleep(3)
         return is_rewards_authenticated(page)
     except Exception as e:
         logger.warning(f"SSO 续期异常: {e}")
@@ -515,12 +519,17 @@ def get_bing_points(page):
         m = re.search(r'"todayPoints"\s*:\s*(\d+)', html)
         if m:
             today_points = m.group(1)
-        else:
-            # 备用：从可见文本提取
+        # 备用：从可见文本提取（新版 Rewards 页面）
+        if total_points == "未找到" or today_points == "未找到":
             content = page.inner_text("body")
-            m = re.search(r'(?:Available points|今日积分|today.?s points)\s*[\n\r\s]*([\d,]+)', content, re.I)
-            if m:
-                today_points = m.group(1)
+            if total_points == "未找到":
+                m = re.search(r'available\s*points\s*[\n\r\s]*([\d,]+)', content, re.I)
+                if m:
+                    total_points = m.group(1)
+            if today_points == "未找到":
+                m = re.search(r'(?:today.?s points|今日积分)\s*[\n\r\s]*([\d,]+)', content, re.I)
+                if m:
+                    today_points = m.group(1)
     except Exception as e:
         logger.warning(f"获取积分失败: {e}")
 
