@@ -120,12 +120,28 @@ def sso_refresh(page):
         except Exception:
             pass  # SSO 重定向链可能触发多次导航，goto 超时可接受
 
+        logger.info(f"SSO 诊断: goto 后 URL: {page.url[:120]}")
+
         # 等待 SSO 完成：URL 回到 rewards.bing.com（非 auth/login），最多等 60 秒
-        for _ in range(30):
+        for i in range(30):
             url = page.url
             if "rewards.bing.com" in url and "auth" not in url and "login" not in url:
                 break
+            if i % 5 == 0:
+                logger.info(f"SSO 诊断: 等待[{i*2}s] URL: {url[:120]}")
             time.sleep(2)
+
+        final_url = page.url
+        logger.info(f"SSO 诊断: 最终 URL: {final_url[:120]}")
+
+        # 诊断：如果仍在 login/auth 页面，记录页面内容
+        if "login" in final_url or "auth" in final_url:
+            try:
+                title = page.title()
+                body = page.inner_text("body")[:200].replace('\n', ' ')
+                logger.warning(f"SSO 诊断: 页面标题='{title}', 内容='{body}'")
+            except Exception:
+                pass
 
         time.sleep(3)  # 等 JS 渲染
         return is_rewards_authenticated(page)
