@@ -109,6 +109,70 @@ def is_rewards_authenticated(page):
     except Exception:
         return False
 
+def try_2fa_push(page):
+    """检测到 2FA 验证码页面时，尝试切换到推送通知并等待 approve（最多 120 秒）"""
+    # 点击 "Other ways to sign in" 切换到其他 2FA 方式
+    try:
+        other = page.get_by_text("Other ways to sign in", exact=False)
+        if other.count() > 0:
+            other.first.click(timeout=5000)
+            time.sleep(2)
+            logger.info(f"2FA: 'Other ways' 后页面: {page.inner_text('body')[:300].replace(chr(10), ' ')}")
+    except Exception as e:
+        logger.warning(f"2FA: 点击 'Other ways' 失败: {e}")
+
+    # 尝试选择推送通知 / Approve 选项
+    clicked_push = False
+    for sel in ["text='Approve'", "text='notification'", "text='推送'",
+                "text='Approve on authenticator'", "text='Use my authenticator app'"]:
+        try:
+            el = page.get_by_text(sel, exact=False)
+            if el.count() > 0 and el.first.is_visible(timeout=2000):
+                el.first.click(timeout=5000)
+                logger.info(f"2FA: 已选择推送通知: {sel}")
+                clicked_push = True
+                time.sleep(2)
+                break
+        except Exception:
+            continue
+
+    if not clicked_push:
+        try:
+            body = page.inner_text("body")[:300].replace('\n', ' ')
+            logger.warning(f"2FA: 未找到推送选项，页面内容: {body}")
+        except Exception:
+            pass
+        return False
+
+    # 勾选 "Don't ask me again on this device"
+    try:
+        for sel in ["label:has-text('Don't ask')", "text='Don't ask me again'"]:
+            try:
+                el = page.locator(sel).first
+                if el.is_visible(timeout=2000):
+                    el.click(timeout=3000)
+                    logger.info("2FA: 已勾选 'Don't ask me again on this device'")
+                    time.sleep(1)
+                    break
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    logger.warning("2FA: 请在手机上 approve 推送通知（最多 120 秒）...")
+    for i in range(60):
+        url = page.url
+        if "bing.com" in url and "login" not in url:
+            logger.info(f"2FA: 已通过！URL: {url[:100]}")
+            time.sleep(3)
+            return True
+        if i % 10 == 0:
+            logger.info(f"2FA: 等待 approve[{i*2}s]...")
+        time.sleep(2)
+
+    logger.warning("2FA: 等待 120 秒超时")
+    return False
+
 def sso_refresh(page):
     """rewards 会话过期但 .live.com SSO cookie 可能仍有效，通过 auth/login 触发 SSO 续期"""
     try:
@@ -133,79 +197,15 @@ def sso_refresh(page):
         logger.info(f"SSO 诊断: 最终 URL: {final_url[:120]}")
 
         # 检测是否到了 2FA 验证码页面
-        is_2fa = False
         try:
             title = page.title()
             if "Enter the code" in title or "输入代码" in title or "输入验证码" in title:
-                is_2fa = True
+                logger.warning("SSO: 检测到 2FA 页面，尝试推送通知...")
+                if try_2fa_push(page):
+                    return is_rewards_authenticated(page)
+                return False
         except Exception:
             pass
-
-        if is_2fa:
-            logger.warning("SSO: 检测到 2FA 验证码页面，尝试切换到推送通知模式...")
-            # 点击 "Other ways to sign in" 切换到其他 2FA 方式
-            try:
-                other = page.get_by_text("Other ways to sign in", exact=False)
-                if other.count() > 0:
-                    other.first.click(timeout=5000)
-                    time.sleep(2)
-                    logger.info(f"SSO: 点击 'Other ways' 后页面内容: {page.inner_text('body')[:300].replace(chr(10), ' ')}")
-            except Exception as e:
-                logger.warning(f"SSO: 点击 'Other ways' 失败: {e}")
-
-            # 尝试选择推送通知 / Approve 选项
-            clicked_push = False
-            for sel in ["text='Approve'", "text='notification'", "text='推送'",
-                        "text='Approve on authenticator'", "text='Use my authenticator app'"]:
-                try:
-                    el = page.get_by_text(sel, exact=False)
-                    if el.count() > 0 and el.first.is_visible(timeout=2000):
-                        el.first.click(timeout=5000)
-                        logger.info(f"SSO: 已选择推送通知: {sel}")
-                        clicked_push = True
-                        time.sleep(2)
-                        break
-                except Exception:
-                    continue
-
-            if not clicked_push:
-                # 记录可用选项供诊断
-                try:
-                    body = page.inner_text("body")[:300].replace('\n', ' ')
-                    logger.warning(f"SSO: 未找到推送选项，当前页面内容: {body}")
-                except Exception:
-                    pass
-                return False
-
-            # 勾选 "Don't ask me again on this device"
-            try:
-                for sel in ["label:has-text('Don't ask')", "text='Don't ask me again'"]:
-                    try:
-                        el = page.locator(sel).first
-                        if el.is_visible(timeout=2000):
-                            el.click(timeout=3000)
-                            logger.info("SSO: 已勾选 'Don't ask me again on this device'")
-                            time.sleep(1)
-                            break
-                    except Exception:
-                        continue
-            except Exception:
-                pass
-
-            logger.warning("SSO: 请在手机上 approve 推送通知（最多 120 秒）...")
-            # 等待手机 approve 2FA，最多 120 秒
-            for i in range(60):
-                url = page.url
-                if "rewards.bing.com" in url and "auth" not in url and "login" not in url:
-                    logger.info(f"SSO: 2FA 已通过！URL: {url[:100]}")
-                    time.sleep(3)
-                    return is_rewards_authenticated(page)
-                if i % 10 == 0:
-                    logger.info(f"SSO: 等待 2FA approve[{i*2}s]...")
-                time.sleep(2)
-
-            logger.warning("SSO: 2FA 等待 120 秒超时")
-            return False
 
         # 诊断：如果仍在 login/auth 页面（非 2FA），记录页面内容
         if "login" in final_url or "auth" in final_url:
@@ -438,11 +438,14 @@ def handle_post_login(page, email):
             logger.info(f"账号 {email} 登录成功！")
             return True
 
-        # 检测 2FA 验证码页面（无法自动处理）
+        # 检测 2FA 验证码页面，尝试推送通知
         try:
             title = page.title()
             if "Enter the code" in title or "输入代码" in title or "输入验证码" in title:
-                logger.error(f"账号 {email} 需要输入2FA验证码，自动化无法处理。请先运行 --manual 模式手动登录。")
+                logger.info(f"账号 {email} 检测到 2FA，尝试推送通知...")
+                if try_2fa_push(page):
+                    continue  # 2FA 通过，继续处理后续流程
+                logger.error(f"账号 {email} 2FA 推送通知失败")
                 return False
         except Exception:
             pass
