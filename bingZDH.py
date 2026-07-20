@@ -123,8 +123,8 @@ def try_2fa_push(page):
 
     # 尝试选择推送通知 / Approve 选项
     clicked_push = False
-    for sel in ["text='Approve'", "text='notification'", "text='推送'",
-                "text='Approve on authenticator'", "text='Use my authenticator app'"]:
+    for sel in ["Approve sign-in request", "Approve sign-in", "Approve",
+                "notification", "推送"]:
         try:
             el = page.get_by_text(sel, exact=False)
             if el.count() > 0 and el.first.is_visible(timeout=2000):
