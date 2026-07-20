@@ -735,46 +735,38 @@ def manual_login():
                 apply_stealth(context)
                 page = context.new_page()
 
-                # 直接导航到 rewards.bing.com，会跳转到登录页
-                logger.info("正在打开 Rewards 页面（将跳转到登录页）...")
-                page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=30000)
-                logger.info("请在浏览器中完成登录（输入邮箱、密码、2FA验证码等）。")
-                logger.info("登录成功后页面会自动跳转回 Rewards 页面，脚本将自动保存状态。")
+                # 导航到 bing.com（而非 rewards.bing.com，避免 OAuth 跳转循环）
+                logger.info("正在打开 bing.com，请点击右上角 'Sign in' 按钮登录...")
+                page.goto("https://www.bing.com", wait_until="domcontentloaded", timeout=30000)
+                logger.info("请在浏览器中完成登录（邮箱、密码、2FA、Stay signed in 选 Yes）。")
+                logger.info("脚本会自动检测 SSO cookie 并保存状态。")
 
-                # 等待用户完成登录，检测 rewards.bing.com 页面加载
+                # 等待用户完成登录，检测 .live.com SSO cookie（MSPAuth/WLSSC/PPLState）
                 logged_in = False
                 for i in range(600):  # 最多等10分钟
                     time.sleep(1)
                     try:
-                        url = page.url
-                        # 登录成功的标志：URL 回到 rewards.bing.com 且不在 login/oauth 页面
-                        if "rewards.bing.com" in url and "login" not in url and "oauth" not in url:
-                            logger.info(f"检测到登录成功！URL: {url}")
-                            # 导航到 bing.com 再回到 rewards，触发 .live.com SSO cookie 设置
-                            logger.info("确保 SSO cookie 完整...")
+                        cookies = context.cookies()
+                        has_sso = any(c['name'] in ('MSPAuth', 'WLSSC', 'PPLState')
+                                      for c in cookies if '.live.com' in c.get('domain', ''))
+                        if has_sso:
+                            logger.info("检测到 SSO cookie，验证 rewards 认证状态...")
                             try:
-                                page.goto("https://www.bing.com", wait_until="domcontentloaded", timeout=15000)
-                                time.sleep(3)
                                 page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=15000)
                                 time.sleep(3)
                             except Exception:
                                 pass
-                            # 保存前验证 cookie 完整性
-                            state = context.storage_state()
-                            live_cookies = [c for c in state.get("cookies", [])
-                                            if ".live.com" in c.get("domain", "") or "login.live.com" in c.get("domain", "")]
-                            if not live_cookies:
-                                logger.warning("警告：未检测到 .live.com SSO cookie！")
-                                logger.warning("请确保登录时 'Stay signed in?' 选 'Yes'，否则 rewards 会话过期后无法自动续期。")
-                            else:
-                                logger.info(f"检测到 {len(live_cookies)} 个 .live.com SSO cookie")
                             if is_rewards_authenticated(page):
-                                logger.info("rewards 认证状态验证通过")
+                                logger.info("rewards 认证验证通过！")
+                                state = context.storage_state()
+                                live_cookies = [c for c in state.get("cookies", [])
+                                                if ".live.com" in c.get("domain", "") or "login.live.com" in c.get("domain", "")]
+                                logger.info(f"检测到 {len(live_cookies)} 个 .live.com SSO cookie")
+                                save_state(context, email)
+                                logged_in = True
+                                break
                             else:
-                                logger.warning("警告：rewards 页面未检测到积分数据，登录可能未完全完成")
-                            save_state(context, email)
-                            logged_in = True
-                            break
+                                logger.info("SSO cookie 已出现但 rewards 未认证，继续等待...")
                     except Exception:
                         pass
 
