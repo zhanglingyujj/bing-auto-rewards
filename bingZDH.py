@@ -425,7 +425,7 @@ def login_bing(page, email, password):
     logger.info("已提交密码，等待响应...")
 
     # 处理登录后页面
-    handle_post_login(page, email)
+    return handle_post_login(page, email)
 
 def handle_post_login(page, email):
     """处理登录后的弹窗和跳转"""
