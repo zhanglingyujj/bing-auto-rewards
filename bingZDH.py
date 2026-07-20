@@ -750,8 +750,28 @@ def manual_login():
                         # 登录成功的标志：URL 回到 rewards.bing.com 且不在 login/oauth 页面
                         if "rewards.bing.com" in url and "login" not in url and "oauth" not in url:
                             logger.info(f"检测到登录成功！URL: {url}")
-                            # 额外等待5秒确保所有 cookie 设置完成
-                            time.sleep(5)
+                            # 导航到 bing.com 再回到 rewards，触发 .live.com SSO cookie 设置
+                            logger.info("确保 SSO cookie 完整...")
+                            try:
+                                page.goto("https://www.bing.com", wait_until="domcontentloaded", timeout=15000)
+                                time.sleep(3)
+                                page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=15000)
+                                time.sleep(3)
+                            except Exception:
+                                pass
+                            # 保存前验证 cookie 完整性
+                            state = context.storage_state()
+                            live_cookies = [c for c in state.get("cookies", [])
+                                            if ".live.com" in c.get("domain", "") or "login.live.com" in c.get("domain", "")]
+                            if not live_cookies:
+                                logger.warning("警告：未检测到 .live.com SSO cookie！")
+                                logger.warning("请确保登录时 'Stay signed in?' 选 'Yes'，否则 rewards 会话过期后无法自动续期。")
+                            else:
+                                logger.info(f"检测到 {len(live_cookies)} 个 .live.com SSO cookie")
+                            if is_rewards_authenticated(page):
+                                logger.info("rewards 认证状态验证通过")
+                            else:
+                                logger.warning("警告：rewards 页面未检测到积分数据，登录可能未完全完成")
                             save_state(context, email)
                             logged_in = True
                             break
