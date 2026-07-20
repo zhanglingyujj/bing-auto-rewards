@@ -112,13 +112,11 @@ def is_rewards_authenticated(page):
 def sso_refresh(page):
     """rewards 会话过期但 .live.com SSO cookie 可能仍有效，通过 auth/login 触发 SSO 续期"""
     try:
-        # 直接导航到 auth/login 触发 OAuth SSO 流程
-        # 用 goto 比 click 更可控（click 会因导航链超时失败）
         try:
             page.goto("https://rewards.bing.com/auth/login",
                       wait_until="domcontentloaded", timeout=60000)
         except Exception:
-            pass  # SSO 重定向链可能触发多次导航，goto 超时可接受
+            pass
 
         logger.info(f"SSO 诊断: goto 后 URL: {page.url[:120]}")
 
@@ -134,7 +132,47 @@ def sso_refresh(page):
         final_url = page.url
         logger.info(f"SSO 诊断: 最终 URL: {final_url[:120]}")
 
-        # 诊断：如果仍在 login/auth 页面，记录页面内容
+        # 检测是否到了 2FA 验证码页面
+        is_2fa = False
+        try:
+            title = page.title()
+            if "Enter the code" in title or "输入代码" in title or "输入验证码" in title:
+                is_2fa = True
+        except Exception:
+            pass
+
+        if is_2fa:
+            logger.warning("SSO: 检测到 2FA 页面，请在手机上 approve（最多 120 秒）...")
+            # 尝试勾选 "Don't ask me again on this device"
+            try:
+                for sel in ["label:has-text('Don't ask')", "text='Don't ask me again'"]:
+                    try:
+                        el = page.locator(sel).first
+                        if el.is_visible(timeout=2000):
+                            el.click(timeout=3000)
+                            logger.info("SSO: 已勾选 'Don't ask me again on this device'")
+                            time.sleep(1)
+                            break
+                    except Exception:
+                        continue
+            except Exception:
+                pass
+
+            # 等待手机 approve 2FA，最多 120 秒
+            for i in range(60):
+                url = page.url
+                if "rewards.bing.com" in url and "auth" not in url and "login" not in url:
+                    logger.info(f"SSO: 2FA 已通过！URL: {url[:100]}")
+                    time.sleep(3)
+                    return is_rewards_authenticated(page)
+                if i % 10 == 0:
+                    logger.info(f"SSO: 等待 2FA approve[{i*2}s]...")
+                time.sleep(2)
+
+            logger.warning("SSO: 2FA 等待 120 秒超时")
+            return False
+
+        # 诊断：如果仍在 login/auth 页面（非 2FA），记录页面内容
         if "login" in final_url or "auth" in final_url:
             try:
                 title = page.title()
@@ -174,6 +212,7 @@ def try_state_login(browser, email):
             logger.info("rewards 会话已过期，尝试 SSO 续期...")
             if sso_refresh(page):
                 logger.info("SSO 续期成功")
+                save_state(context, email)  # 立即保存，确保设备信任 cookie 不丢失
             else:
                 logger.info("SSO 续期失败，需要重新登录")
                 context.close()
