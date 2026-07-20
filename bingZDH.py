@@ -75,8 +75,21 @@ def get_state_filename(email):
 
 def save_state(context, email):
     try:
-        context.storage_state(path=get_state_filename(email))
-        logger.info(f"已保存登录状态到 {get_state_filename(email)}")
+        state = context.storage_state()
+        # 精简 cookie：删除 analytics/tracking 和无关域名，避免超过 GitHub Secret 48KB 限制
+        remove_prefixes = ('ai_', 'MicrosoftApplications', '_clck', '_clsk', '_uet',
+                           'ak_bmsc', '_HPVN', '_Rw', '_SS', 'SRM_', 'SRCH', 'BFB',
+                           '__Host-XY', 'ipv6', '.MSA.Auth', 'MSFPC', '_clarity', 'esctx-')
+        block_domains = ('.msn.com', 'clarity.ms', '.c.clarity.ms', '.microsoft.com',
+                         'www2.bing.com', '.c.bing.com', 'www.bing.com')
+        remove_names = {'fpc', 'NAP', 'ANON', '_U', '_MsaRef', 'WLS', 'MR', 'Web-User', 'USRLOC'}
+        state['cookies'] = [c for c in state.get('cookies', [])
+                            if not any(c['name'].startswith(p) for p in remove_prefixes)
+                            and not any(c.get('domain', '').endswith(d) or c.get('domain', '') == d for d in block_domains)
+                            and c['name'] not in remove_names]
+        with open(get_state_filename(email), 'w', encoding='utf-8') as f:
+            json.dump(state, f, separators=(',', ':'))
+        logger.info(f"已保存登录状态到 {get_state_filename(email)}（{len(state['cookies'])} cookies）")
     except Exception as e:
         logger.warning(f"保存登录状态失败: {e}")
 
