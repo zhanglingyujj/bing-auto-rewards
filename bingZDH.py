@@ -81,8 +81,9 @@ def save_state(context, email):
                            'ak_bmsc', '_HPVN', '_Rw', '_SS', 'SRM_', 'SRCH', 'BFB',
                            '__Host-XY', 'ipv6', '.MSA.Auth', 'MSFPC', '_clarity', 'esctx-')
         block_domains = ('.msn.com', 'clarity.ms', '.c.clarity.ms', '.microsoft.com',
-                         'www2.bing.com', '.c.bing.com', 'www.bing.com')
-        remove_names = {'fpc', 'NAP', 'ANON', '_U', '_MsaRef', 'WLS', 'MR', 'Web-User', 'USRLOC'}
+                         'www2.bing.com', '.c.bing.com', 'www.bing.com', 'login.windows.net')
+        remove_names = {'fpc', 'NAP', 'ANON', '_U', '_MsaRef', 'WLS', 'MR', 'Web-User', 'USRLOC',
+                        '_EDGE_S', '_EDGE_V', '_C_ETH', 'MUIDB', 'OParams1'}
         state['cookies'] = [c for c in state.get('cookies', [])
                             if not any(c['name'].startswith(p) for p in remove_prefixes)
                             and not any(c.get('domain', '').endswith(d) or c.get('domain', '') == d for d in block_domains)
