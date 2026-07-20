@@ -142,8 +142,42 @@ def sso_refresh(page):
             pass
 
         if is_2fa:
-            logger.warning("SSO: 检测到 2FA 页面，请在手机上 approve（最多 120 秒）...")
-            # 尝试勾选 "Don't ask me again on this device"
+            logger.warning("SSO: 检测到 2FA 验证码页面，尝试切换到推送通知模式...")
+            # 点击 "Other ways to sign in" 切换到其他 2FA 方式
+            try:
+                other = page.get_by_text("Other ways to sign in", exact=False)
+                if other.count() > 0:
+                    other.first.click(timeout=5000)
+                    time.sleep(2)
+                    logger.info(f"SSO: 点击 'Other ways' 后页面内容: {page.inner_text('body')[:300].replace(chr(10), ' ')}")
+            except Exception as e:
+                logger.warning(f"SSO: 点击 'Other ways' 失败: {e}")
+
+            # 尝试选择推送通知 / Approve 选项
+            clicked_push = False
+            for sel in ["text='Approve'", "text='notification'", "text='推送'",
+                        "text='Approve on authenticator'", "text='Use my authenticator app'"]:
+                try:
+                    el = page.get_by_text(sel, exact=False)
+                    if el.count() > 0 and el.first.is_visible(timeout=2000):
+                        el.first.click(timeout=5000)
+                        logger.info(f"SSO: 已选择推送通知: {sel}")
+                        clicked_push = True
+                        time.sleep(2)
+                        break
+                except Exception:
+                    continue
+
+            if not clicked_push:
+                # 记录可用选项供诊断
+                try:
+                    body = page.inner_text("body")[:300].replace('\n', ' ')
+                    logger.warning(f"SSO: 未找到推送选项，当前页面内容: {body}")
+                except Exception:
+                    pass
+                return False
+
+            # 勾选 "Don't ask me again on this device"
             try:
                 for sel in ["label:has-text('Don't ask')", "text='Don't ask me again'"]:
                     try:
@@ -158,6 +192,7 @@ def sso_refresh(page):
             except Exception:
                 pass
 
+            logger.warning("SSO: 请在手机上 approve 推送通知（最多 120 秒）...")
             # 等待手机 approve 2FA，最多 120 秒
             for i in range(60):
                 url = page.url
