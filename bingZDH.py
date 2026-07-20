@@ -80,6 +80,45 @@ def save_state(context, email):
     except Exception as e:
         logger.warning(f"保存登录状态失败: {e}")
 
+def is_rewards_authenticated(page):
+    """验证 rewards 页面是否真正已登录（而非仅 URL 未跳转到登录页）"""
+    try:
+        html = page.content()
+        # 方式1：JSON 数据中有 availablePoints
+        if re.search(r'"availablePoints"\s*:\s*\d+', html):
+            return True
+        # 方式2：页面可见文本中有 "Available points" + 数字（新版 Rewards 页面）
+        text = page.inner_text("body")
+        if re.search(r'available\s*points\s*[\n\r\s]*[\d,]+', text, re.I):
+            return True
+        return False
+    except Exception:
+        return False
+
+def sso_refresh(page):
+    """rewards 会话过期但 .live.com SSO cookie 可能仍有效，通过 auth/login 触发 SSO 续期"""
+    try:
+        # 直接导航到 auth/login 触发 OAuth SSO 流程
+        # 用 goto 比 click 更可控（click 会因导航链超时失败）
+        try:
+            page.goto("https://rewards.bing.com/auth/login",
+                      wait_until="domcontentloaded", timeout=60000)
+        except Exception:
+            pass  # SSO 重定向链可能触发多次导航，goto 超时可接受
+
+        # 等待 SSO 完成：URL 回到 rewards.bing.com（非 auth/login），最多等 60 秒
+        for _ in range(30):
+            url = page.url
+            if "rewards.bing.com" in url and "auth" not in url and "login" not in url:
+                break
+            time.sleep(2)
+
+        time.sleep(3)  # 等 JS 渲染
+        return is_rewards_authenticated(page)
+    except Exception as e:
+        logger.warning(f"SSO 续期异常: {e}")
+        return False
+
 def try_state_login(browser, email):
     state_file = get_state_filename(email)
     if not os.path.exists(state_file):
@@ -96,12 +135,21 @@ def try_state_login(browser, email):
         page = context.new_page()
         page.goto(REWARDS_URL, wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
         time.sleep(3)
-        if "login.live.com" not in page.url and "login.microsoftonline.com" not in page.url:
-            logger.info("状态登录成功！")
-            return context
-        logger.info("状态已过期，需要重新登录")
-        context.close()
-        return None
+        if "login.live.com" in page.url or "login.microsoftonline.com" in page.url:
+            logger.info("状态已过期，需要重新登录")
+            context.close()
+            return None
+        # URL 未跳转不代表已登录（SSO cookie 仍在时不重定向，但 rewards 会话可能已过期）
+        if not is_rewards_authenticated(page):
+            logger.info("rewards 会话已过期，尝试 SSO 续期...")
+            if sso_refresh(page):
+                logger.info("SSO 续期成功")
+            else:
+                logger.info("SSO 续期失败，需要重新登录")
+                context.close()
+                return None
+        logger.info("状态登录成功！")
+        return context
     except Exception as e:
         logger.warning(f"加载状态失败: {e}")
         try:
@@ -137,6 +185,7 @@ def create_browser(playwright):
                 '--disable-blink-features=AutomationControlled',
                 '--disable-extensions',
                 '--disable-plugins',
+                '--disable-http2',
             ]
         )
     except Exception:
@@ -148,6 +197,7 @@ def create_browser(playwright):
                 '--disable-blink-features=AutomationControlled',
                 '--disable-extensions',
                 '--disable-plugins',
+                '--disable-http2',
             ]
         )
 
@@ -438,6 +488,22 @@ def click_reward_tasks(page, context, email):
             except Exception:
                 pass
 
+def goto_with_retry(page, url, retries=3, **kwargs):
+    """带重试的 page.goto，处理瞬时网络错误（如 ERR_HTTP2_PROTOCOL_ERROR）"""
+    last_err = None
+    for attempt in range(retries):
+        try:
+            page.goto(url, **kwargs)
+            return True
+        except Exception as e:
+            last_err = e
+            if attempt < retries - 1:
+                wait = random.randint(2, 5)
+                logger.warning(f"导航失败({attempt+1}/{retries}), {wait}s 后重试: {e}")
+                time.sleep(wait)
+    logger.warning(f"导航 {url} 重试 {retries} 次仍失败: {last_err}")
+    return False
+
 def search_for_points(page, email, search_words):
     """搜索赚积分"""
     logger.info(f"账号{email} 开始搜索赚积分...")
@@ -453,7 +519,9 @@ def search_for_points(page, email, search_words):
                 logger.info(f"暂停 {SLEEP_AFTER_4_SEARCH} 秒...")
                 time.sleep(SLEEP_AFTER_4_SEARCH)
 
-            page.goto(BING_URL, wait_until="domcontentloaded", timeout=WAIT_TIMEOUT)
+            if not goto_with_retry(page, BING_URL, retries=3,
+                                   wait_until="domcontentloaded", timeout=WAIT_TIMEOUT):
+                continue
 
             search_box = page.locator('#sb_form_q, textarea[name="q"], input[name="q"]').first
             search_box.wait_for(state="visible", timeout=10000)
