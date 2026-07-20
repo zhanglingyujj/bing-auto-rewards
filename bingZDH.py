@@ -579,7 +579,8 @@ def process_account_group(group_name, accounts, search_words):
                     # 全新登录
                     context = create_context(browser)
                     page = context.new_page()
-                    login_bing(page, email, password)
+                    if not login_bing(page, email, password):
+                        raise Exception(f"账号 {email} 登录失败（可能需要2FA），跳过后续操作")
                     save_state(context, email)
 
                 # 访问 Rewards 页面
@@ -601,8 +602,9 @@ def process_account_group(group_name, accounts, search_words):
                 # 最终积分
                 get_bing_points(page)
 
-                # 保存状态
-                save_state(context, email)
+                # 保存状态（仅登录状态有效时）
+                if is_rewards_authenticated(page):
+                    save_state(context, email)
 
                 logger.info(f"==== 账号组 {group_name} 账号 {email} 任务完成 ====")
 
